@@ -1,5 +1,5 @@
 `timescale 1ns/100ps
-
+`define limit_cycle 1000
 `define tb1
 `ifdef tb1
   `define CMD "p1_cmd.dat"
@@ -168,4 +168,7 @@ module test;
     end
   end
 
+  initial begin
+   #(`limit_cycle) $finish;
+  end
 endmodule

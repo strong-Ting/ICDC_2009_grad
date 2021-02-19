@@ -1,0 +1,35 @@
+s1(19Feb2021:13:29:56):  ncverilog testfixture.v ../src/NFC.v 
+s2(19Feb2021:13:30:03):  ncverilog testfixture.v ../src/NFC.v +access+r 
+s3(19Feb2021:13:30:27):  ncverilog testfixture.v ../src/NFC.v +access+r 
+s4(19Feb2021:13:30:28):  ncverilog testfixture.v ../src/NFC.v +access+r 
+s5(19Feb2021:13:30:54):  ncverilog testfixture.v ../src/NFC.v +access+r 
+s6(19Feb2021:13:32:00):  ncverilog testfixture.v ../src/NFC.v +access+r 
+s7(19Feb2021:13:32:30):  ncverilog testfixture.v ../src/NFC.v +define+FSDB +access+r 
+s8(19Feb2021:13:34:51):  ncverilog -f run.f +define+FSDB +access+r 
+s9(19Feb2021:13:35:00):  ncverilog -f run.f +define+FSDB +access+r 
+s10(19Feb2021:13:41:41):  ncverilog -f run.f +define+FSDB +access+r 
+s11(19Feb2021:13:43:05):  ncverilog -f run.f +define+FSDB +access+r 
+s12(19Feb2021:14:08:46):  ncverilog -f run.f +define+FSDB +access+r 
+s13(19Feb2021:14:21:32):  ncverilog -f run.f +define+FSDB +access+r 
+s14(19Feb2021:14:21:54):  ncverilog -f run.f +define+FSDB +access+r 
+s15(19Feb2021:14:22:22):  ncverilog -f run.f +define+FSDB +access+r 
+s16(19Feb2021:14:23:56):  ncverilog -f run.f +define+FSDB +access+r 
+s17(19Feb2021:14:29:23):  ncverilog -f run.f +define+FSDB +access+r 
+s18(19Feb2021:14:32:13):  ncverilog -f run.f +define+FSDB +access+r 
+s19(19Feb2021:14:32:48):  ncverilog -f run.f +define+FSDB +access+r 
+s20(19Feb2021:14:34:56):  ncverilog -f run.f +define+FSDB +access+r 
+s21(19Feb2021:14:39:05):  ncverilog -f run.f +define+FSDB +access+r 
+s22(19Feb2021:14:42:32):  ncverilog -f run.f +define+FSDB +access+r 
+s23(19Feb2021:14:43:42):  ncverilog -f run.f +define+FSDB +access+r 
+s24(19Feb2021:14:46:42):  ncverilog -f run.f +define+FSDB +access+r 
+s25(19Feb2021:14:47:09):  ncverilog -f run.f +define+FSDB +access+r 
+s26(19Feb2021:14:49:27):  ncverilog -f run.f +define+FSDB +access+r 
+s27(19Feb2021:14:50:38):  ncverilog -f run.f +define+FSDB +access+r 
+s28(19Feb2021:14:51:35):  ncverilog -f run.f +define+FSDB +access+r 
+s29(19Feb2021:14:52:29):  ncverilog -f run.f +define+FSDB +access+r 
+s30(19Feb2021:14:52:50):  ncverilog -f run.f +define+FSDB +access+r 
+s31(19Feb2021:14:53:48):  ncverilog -f run.f +define+FSDB +access+r 
+s32(19Feb2021:14:54:21):  ncverilog -f run.f +define+FSDB +access+r 
+s33(19Feb2021:14:58:50):  ncverilog -f run.f +define+FSDB +access+r 
+s34(19Feb2021:14:59:11):  ncverilog -f run.f +define+FSDB +access+r 
+s35(19Feb2021:15:01:16):  ncverilog -f run.f +define+FSDB +access+r 

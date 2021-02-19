@@ -1,0 +1,81 @@
+@verdi rc file Version 1.0
+[General]
+saveDB = TRUE
+relativePath = FALSE
+saveSingleView = FALSE
+saveNWaveWinId = 
+VerdiVersion = Verdi_O-2018.09
+[KeyNote]
+Line1 = Automatic Backup 0
+Line2 = Save Open Database Information: Yes
+Line3 = Path Option: Absolute Paths
+Line4 = Windows Option: All Windows
+[TestBench]
+ConstrViewShow = 0
+InherViewShow = 0
+FSDBMsgShow = 0
+AnnotationShow = 0
+powerDumped = 0
+[hb]
+postSimFile = /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/nfc.fsdb
+syncTime = 0
+viewport = 500 182 900 700 0 0 228 898
+activeNode = "test"
+activeScope = "test"
+activeFile = "testfixture.v"
+interactiveMode = False
+viewType = Source
+simulatorMode = False
+sourceBeginLine = 31
+baMode = False
+srcLineNum = True
+AutoWrap = True
+IdentifyFalseLogic = False
+syncSignal = False
+traceMode = Hierarchical
+showTraceInSchema = True
+paMode = False
+funcMode = False
+powerAwareAnnot = True
+amsAnnot = True
+traceCrossHier = True
+DnDtraceCrossHierOnly = True
+traceIncTopPort = False
+leadingZero = False
+signalPane = False
+Scope1 = "test"
+multipleSelection = 1 31 2 0 0
+sdfCheckUndef = FALSE
+simFlow = FALSE
+[hb.design]
+importCmd = "-f" "run.f" 
+invokeDir = /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim
+[hb.sourceTab.1]
+scope = test
+File = /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/testfixture.v
+Line = 32
+[nMemoryManager]
+FsdbFile = /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/nfc.fsdb
+UserActionNum = 0
+nMemWindowNum = 0
+[wave.0]
+viewPort = 0 27 900 254 100 65
+primaryWindow = TRUE
+SessionFile = /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/verdiLog/novas_autosave.ses.wave.0
+displayGrid = FALSE
+hierarchicalName = FALSE
+snap = TRUE
+displayLeadingZeros = FALSE
+fixDelta = FALSE
+displayCursorMarker = FALSE
+autoUpdate = FALSE
+highlightGlitchs = FALSE
+waveformSyncCursorMarker = FALSE
+waveformSyncHorizontalRange = FALSE
+waveformSyncVerticalscroll = FALSE
+displayErrors = TRUE
+displayMsgSymbols = TRUE
+showMsgDescriptions = TRUE
+autoFit = FALSE
+displayDeltaY = FALSE
+centerCursor = FALSE

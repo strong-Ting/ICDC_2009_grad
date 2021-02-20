@@ -1,5 +1,5 @@
 ncverilog: 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
-TOOL:	ncverilog	15.20-s039: Started on Feb 19, 2021 at 15:01:16 CST
+TOOL:	ncverilog	15.20-s039: Started on Feb 20, 2021 at 17:24:40 CST
 ncverilog
 	-f run.f
 		testfixture.v
@@ -7,8 +7,8 @@ ncverilog
 	+define+FSDB
 	+access+r
 Recompiling... reason: file '../src/NFC.v' is newer than expected.
-	expected: Fri Feb 19 14:59:10 2021
-	actual:   Fri Feb 19 15:01:15 2021
+	expected: Sat Feb 20 17:23:09 2021
+	actual:   Sat Feb 20 17:24:38 2021
 file: ../src/NFC.v
 	module worklib.NFC:v
 		errors: 0, warnings: 0
@@ -16,8 +16,8 @@ file: ../src/NFC.v
 	Elaborating the design hierarchy:
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.NFC:v <0x1995e75b>
-			streams:  16, words:  6083
+		worklib.NFC:v <0x4f5bcc47>
+			streams:  20, words:  8101
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -25,12 +25,12 @@ file: ../src/NFC.v
 		Modules:                 9       5
 		Primitives:             53       2
 		Timing outputs:         17      10
-		Registers:             173     173
+		Registers:             176     176
 		Scalar wires:           62       -
 		Expanded wires:         24       3
 		Vectored wires:          8       -
 		Named events:            2       2
-		Always blocks:          56      56
+		Always blocks:          58      58
 		Initial blocks:         39      39
 		Cont. assignments:      12      25
 		Pseudo assignments:      2       2
@@ -47,20 +47,6 @@ FSDB Dumper for IUS, Release Verdi_O-2018.09, Linux, 08/30/2018
 *Verdi* : Create FSDB file 'nfc.fsdb'
 *Verdi* : Begin traversing the scopes, layer (0).
 *Verdi* : End of traversing.
-
-Warning!  Timing violation
-           $hold( posedge WENeg:3 NS, CLE:3 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 3 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:3 NS, ALE:3 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 3 NS
-
 Command # 1: Write, A_flash = 00400H, A_memory = 00H, Length =  62.
 ERROR : flash[00400] = ff (expect = 68) 
 ERROR : flash[00401] = ff (expect = 6f) 
@@ -125,7 +111,138 @@ ERROR : flash[0043b] = ff (expect = 18)
 ERROR : flash[0043c] = ff (expect = 57) 
 ERROR : flash[0043d] = ff (expect = 17) 
 Command # 2: Read, A_flash = 00400H, A_memory = 40H, Length =  64.
-Simulation complete via $finish(1) at time 1 US + 0
-./testfixture.v:172    #(`limit_cycle) $finish;
+ERROR : mem[00] = xx (expect = 68) 
+ERROR : mem[01] = xx (expect = 6f) 
+ERROR : mem[02] = xx (expect = 0a) 
+ERROR : mem[03] = xx (expect = 33) 
+ERROR : mem[04] = xx (expect = 21) 
+ERROR : mem[05] = xx (expect = 66) 
+ERROR : mem[06] = xx (expect = 37) 
+ERROR : mem[07] = xx (expect = 74) 
+ERROR : mem[08] = xx (expect = 17) 
+ERROR : mem[09] = xx (expect = 21) 
+ERROR : mem[0a] = xx (expect = 12) 
+ERROR : mem[0b] = xx (expect = 11) 
+ERROR : mem[0c] = xx (expect = 6f) 
+ERROR : mem[0d] = xx (expect = 4a) 
+ERROR : mem[0e] = xx (expect = 46) 
+ERROR : mem[0f] = xx (expect = 12) 
+ERROR : mem[10] = xx (expect = 6d) 
+ERROR : mem[11] = xx (expect = 4f) 
+ERROR : mem[12] = xx (expect = 2c) 
+ERROR : mem[13] = xx (expect = 41) 
+ERROR : mem[14] = xx (expect = 33) 
+ERROR : mem[15] = xx (expect = 09) 
+ERROR : mem[16] = xx (expect = 1e) 
+ERROR : mem[17] = xx (expect = 0f) 
+ERROR : mem[18] = xx (expect = 17) 
+ERROR : mem[19] = xx (expect = 1e) 
+ERROR : mem[1a] = xx (expect = 35) 
+ERROR : mem[1b] = xx (expect = 06) 
+ERROR : mem[1c] = xx (expect = 73) 
+ERROR : mem[1d] = xx (expect = 78) 
+ERROR : mem[1e] = xx (expect = 3e) 
+ERROR : mem[1f] = xx (expect = 3e) 
+ERROR : mem[20] = xx (expect = 2b) 
+ERROR : mem[21] = xx (expect = 73) 
+ERROR : mem[22] = xx (expect = 2f) 
+ERROR : mem[23] = xx (expect = 0e) 
+ERROR : mem[24] = xx (expect = 63) 
+ERROR : mem[25] = xx (expect = 31) 
+ERROR : mem[26] = xx (expect = 1e) 
+ERROR : mem[27] = xx (expect = 33) 
+ERROR : mem[28] = xx (expect = 0c) 
+ERROR : mem[29] = xx (expect = 10) 
+ERROR : mem[2a] = xx (expect = 78) 
+ERROR : mem[2b] = xx (expect = 7a) 
+ERROR : mem[2c] = xx (expect = 49) 
+ERROR : mem[2d] = xx (expect = 07) 
+ERROR : mem[2e] = xx (expect = 1e) 
+ERROR : mem[2f] = xx (expect = 2d) 
+ERROR : mem[30] = xx (expect = 69) 
+ERROR : mem[31] = xx (expect = 01) 
+ERROR : mem[32] = xx (expect = 05) 
+ERROR : mem[33] = xx (expect = 15) 
+ERROR : mem[34] = xx (expect = 53) 
+ERROR : mem[35] = xx (expect = 5d) 
+ERROR : mem[36] = xx (expect = 52) 
+ERROR : mem[37] = xx (expect = 39) 
+ERROR : mem[38] = xx (expect = 46) 
+ERROR : mem[39] = xx (expect = 25) 
+ERROR : mem[3a] = xx (expect = 5f) 
+ERROR : mem[3b] = xx (expect = 18) 
+ERROR : mem[3c] = xx (expect = 57) 
+ERROR : mem[3d] = xx (expect = 17) 
+ERROR : mem[3e] = xx (expect = 00) 
+ERROR : mem[3f] = xx (expect = 00) 
+ERROR : mem[40] = xx (expect = 68) 
+ERROR : mem[41] = xx (expect = 6f) 
+ERROR : mem[42] = xx (expect = 0a) 
+ERROR : mem[43] = xx (expect = 33) 
+ERROR : mem[44] = xx (expect = 21) 
+ERROR : mem[45] = xx (expect = 66) 
+ERROR : mem[46] = xx (expect = 37) 
+ERROR : mem[47] = xx (expect = 74) 
+ERROR : mem[48] = xx (expect = 17) 
+ERROR : mem[49] = xx (expect = 21) 
+ERROR : mem[4a] = xx (expect = 12) 
+ERROR : mem[4b] = xx (expect = 11) 
+ERROR : mem[4c] = xx (expect = 6f) 
+ERROR : mem[4d] = xx (expect = 4a) 
+ERROR : mem[4e] = xx (expect = 46) 
+ERROR : mem[4f] = xx (expect = 12) 
+ERROR : mem[50] = xx (expect = 6d) 
+ERROR : mem[51] = xx (expect = 4f) 
+ERROR : mem[52] = xx (expect = 2c) 
+ERROR : mem[53] = xx (expect = 41) 
+ERROR : mem[54] = xx (expect = 33) 
+ERROR : mem[55] = xx (expect = 09) 
+ERROR : mem[56] = xx (expect = 1e) 
+ERROR : mem[57] = xx (expect = 0f) 
+ERROR : mem[58] = xx (expect = 17) 
+ERROR : mem[59] = xx (expect = 1e) 
+ERROR : mem[5a] = xx (expect = 35) 
+ERROR : mem[5b] = xx (expect = 06) 
+ERROR : mem[5c] = xx (expect = 73) 
+ERROR : mem[5d] = xx (expect = 78) 
+ERROR : mem[5e] = xx (expect = 3e) 
+ERROR : mem[5f] = xx (expect = 3e) 
+ERROR : mem[60] = xx (expect = 2b) 
+ERROR : mem[61] = xx (expect = 73) 
+ERROR : mem[62] = xx (expect = 2f) 
+ERROR : mem[63] = xx (expect = 0e) 
+ERROR : mem[64] = xx (expect = 63) 
+ERROR : mem[65] = xx (expect = 31) 
+ERROR : mem[66] = xx (expect = 1e) 
+ERROR : mem[67] = xx (expect = 33) 
+ERROR : mem[68] = xx (expect = 0c) 
+ERROR : mem[69] = xx (expect = 10) 
+ERROR : mem[6a] = xx (expect = 78) 
+ERROR : mem[6b] = xx (expect = 7a) 
+ERROR : mem[6c] = xx (expect = 49) 
+ERROR : mem[6d] = xx (expect = 07) 
+ERROR : mem[6e] = xx (expect = 1e) 
+ERROR : mem[6f] = xx (expect = 2d) 
+ERROR : mem[70] = xx (expect = 69) 
+ERROR : mem[71] = xx (expect = 01) 
+ERROR : mem[72] = xx (expect = 05) 
+ERROR : mem[73] = xx (expect = 15) 
+ERROR : mem[74] = xx (expect = 53) 
+ERROR : mem[75] = xx (expect = 5d) 
+ERROR : mem[76] = xx (expect = 52) 
+ERROR : mem[77] = xx (expect = 39) 
+ERROR : mem[78] = xx (expect = 46) 
+ERROR : mem[79] = xx (expect = 25) 
+ERROR : mem[7a] = xx (expect = 5f) 
+ERROR : mem[7b] = xx (expect = 18) 
+ERROR : mem[7c] = xx (expect = 57) 
+ERROR : mem[7d] = xx (expect = 17) 
+ERROR : mem[7e] = xx (expect = ff) 
+ERROR : mem[7f] = xx (expect = ff) 
+------------------------------------------
+There are         190 errors!
+-------------------FAIL-------------------
+Simulation complete via $finish(1) at time 852 NS + 0
+./testfixture.v:167       #2 $finish;
 ncsim> exit
-TOOL:	ncverilog	15.20-s039: Exiting on Feb 19, 2021 at 15:01:22 CST  (total: 00:00:06)
+TOOL:	ncverilog	15.20-s039: Exiting on Feb 20, 2021 at 17:24:49 CST  (total: 00:00:09)

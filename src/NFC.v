@@ -22,6 +22,8 @@ wire [6:0] CMD_LEN = cmd[6:0]; //cmd length
 reg [3:0] cs,ns; //main state 
 reg [3:0] cs_f,ns_f; //flash control state 
 reg [127:0] dirty_bits;
+reg [7:0] BLOCK_MEM [0:2047];
+reg [6:0] len_counter;
 //thri state gate
 wire [7:0] F_IN;
 reg [7:0] F_OUT;
@@ -126,6 +128,11 @@ always@(*) begin
 			if(F_RB == 1'd1) ns_f = F_DATA_R;
 			else ns_f = F_ADDR_2;
 		end
+		F_DATA_R: begin
+			if(len_counter == CMD_LEN) ns_f = F_DONE;
+			else ns_f = F_DATA_R;
+		end
+		F_DONE: ns_f = F_IDLE;
 		default: ns_f = F_IDLE;
 		endcase
 	end
@@ -134,28 +141,64 @@ always@(*) begin
 end
 
 //output logic 
+
+//done
 wire done = (cs == IDLE) ? 1'd1 : 1'd0;
+//F_CLE
 wire F_CLE = (cs == RST ||  cs_f == F_CMD) ? 1'd1 : 1'd0;
+//F_ALE
 wire F_ALE = (cs_f == F_ADDR_0 || 
 			  cs_f == F_ADDR_1 || 
 			  cs_f == F_ADDR_2) ? 1'd1 : 1'd0;
+//F_EN
 assign F_EN = ( cs == RST ||
 			cs_f == F_CMD || 
 			cs_f == F_ADDR_0 ||
 			cs_f == F_ADDR_1 || 
 			cs_f == F_ADDR_2 ) ? 1'd1 : 1'd0; //1 == write , 0 == read
-
-wire F_WEN = (cs == RST || cs_f == F_CMD) ? ~clk : 1'd0;
-wire F_REN = 1'd1;
+//F_WEN
+wire F_WEN = (cs == RST || 
+				cs_f == F_CMD ||
+				cs_f == F_ADDR_0 ||
+				cs_f == F_ADDR_1 || 
+				cs_f == F_ADDR_2 ) ? ~clk : 1'd1;
+//F_REN
+wire F_REN = (cs_f == F_DATA_R) ? clk : 1'd1;
+//F_OUT
 always @(*) begin
-	if(cs_f == F_CMD && cs == READ_F) begin
-		if(CMD_F_ADDR[8] == 1'd1) F_OUT = 8'h1;
-		else F_OUT = 8'h0;
-	end
-	else if(cs == RST) begin
+	if(cs == RST) begin
 		F_OUT = 8'hff;
 	end
+	else if(cs == READ_F) begin
+		if(cs_f == F_CMD) begin
+			if(CMD_F_ADDR[8] == 1'd1) F_OUT = 8'h1;
+			else F_OUT = 8'h0;
+		end
+		else if(cs_f == F_ADDR_0) F_OUT = CMD_F_ADDR[7:0];
+		else if(cs_f == F_ADDR_1) F_OUT = CMD_F_ADDR[16:9];
+		else if(cs_f == F_ADDR_2) F_OUT = {7'd0,CMD_F_ADDR[17]};
+		else F_OUT = 8'h0;
+	end
 	else F_OUT = 8'h0;
+end
+
+//len counter
+always@(posedge clk or posedge rst) begin
+	if(rst) len_counter <= 7'd127;
+	else if(cs_f == F_DATA_R) len_counter <= len_counter + 7'd1;
+end
+
+//BLOCK_MEM
+integer i;
+always@(posedge clk or posedge rst) begin
+	if(rst) begin
+		for(i=0;i<2048;i=i+1) begin
+			BLOCK_MEM[i] <= 8'd0;
+		end
+	end
+	else if(cs_f == F_DATA_R) begin
+		BLOCK_MEM[CMD_F_ADDR[11:0]+len_counter] <= F_IN;
+	end
 end
 
 endmodule

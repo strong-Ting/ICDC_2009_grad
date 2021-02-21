@@ -8,7 +8,7 @@
 testfixture.v
 ../src/NFC.v
 -DEFINE
-tb1
+tb2
 -DEFINE
 FSDB
 -CDSLIB

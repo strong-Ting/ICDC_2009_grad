@@ -18,7 +18,7 @@ module NFC(clk, rst, cmd, done, M_RW, M_A, M_D, F_IO, F_CLE, F_ALE, F_REN, F_WEN
 wire CMD_RW = cmd[32]; // cmd read write
 wire [17:0] CMD_F_ADDR = cmd[31:14]; //cmd flash start address
 wire [6:0] CMD_M_ADDR = cmd[13:7]; //cmd mem start address
-wire [6:0] CMD_LEN = cmd[6:0]; //cmd length
+wire [6:0] CMD_LEN = cmd[6:0] - 7'd1; //cmd length
 reg [3:0] cs,ns; //main state 
 reg [3:0] cs_f,ns_f; //flash control state 
 reg [127:0] dirty_bits;
@@ -95,7 +95,10 @@ always@(*) begin
 		if(cs_f == F_DONE) ns = WRITE_M;
 		else ns = READ_F;
 	end
-	WRITE_M: ns = DONE;
+	WRITE_M: begin
+		if(len_counter == CMD_LEN) ns = DONE;
+		else ns = WRITE_M;
+	end
 	CHECK_F: begin
 		if(dirty_bits[CMD_F_ADDR[17:11]]) ns = READ_B;
 		else ns = READ_M;
@@ -132,7 +135,7 @@ always@(*) begin
 			else ns_f = F_ADDR_2;
 		end
 		F_DATA_R: begin
-			if(len_counter == CMD_LEN) ns_f = F_DONE;
+			if(len_counter == (CMD_LEN+7'd1)) ns_f = F_DONE;
 			else ns_f = F_DATA_R;
 		end
 		F_DONE: ns_f = F_IDLE;
@@ -237,22 +240,13 @@ always @(*) begin
 	else F_OUT = 8'h0;
 end
 
-//len counter
-/*
-always@(negedge clk or posedge rst) begin
-	if(rst) len_counter <= 7'd0;
-	else if(cs_f == F_DATA_R) len_counter <= len_counter + 7'd1;
-	else if(cs == READ_M) len_counter <= len_counter + 7'd1;
-	else if(cs_f == F_DATA_W) len_counter <= len_counter + 7'd1;
-	else len_counter <= 7'd0;
-end*/
-
 //len counter posedge 
 always@(posedge clk or posedge rst) begin
 	if(rst) len_counter <= 7'd0;
-	else if(cs == READ_M) len_counter <= len_counter + 7'd1;
+	else if(cs == READ_M && F_RB == 1'd1) len_counter <= len_counter + 7'd1;
 	else if(cs_f == F_DATA_W) len_counter <= len_counter + 7'd1;
 	else if(cs_f == F_DATA_R) len_counter <= len_counter + 7'd1;
+	else if(cs == WRITE_M) len_counter <= len_counter + 7'd1;
 	else len_counter <= 7'd0;
 end
 
@@ -264,10 +258,10 @@ always@(posedge clk or posedge rst) begin
 			BLOCK_MEM[i] <= 8'd0;
 		end
 	end
-	else if(cs_f == F_DATA_R) begin
-		BLOCK_MEM[CMD_F_ADDR[10:0]+len_counter] <= F_IN;
+	else if(cs_f == F_DATA_R && F_RB == 1'd1) begin
+		BLOCK_MEM[CMD_F_ADDR[10:0]+len_counter-7'd1] <= F_IN;
 	end
-	else if(cs == READ_M) begin
+	else if(cs == READ_M && len_counter != 7'd0) begin
 		BLOCK_MEM[CMD_F_ADDR[10:0]+len_counter-7'd1] <= M_IN;
 	end
 end
@@ -275,12 +269,16 @@ end
 //M_A
 always@(*) begin
 	if(cs == READ_M) M_A = len_counter + CMD_M_ADDR;
+	else if(cs == WRITE_M) M_A = len_counter + CMD_M_ADDR;
 	else M_A = 7'd0;
 end
 
 //M_OUT
-
+always@(*) begin
+	if(cs == WRITE_M) M_OUT = BLOCK_MEM[CMD_F_ADDR[10:0]+len_counter];
+	else M_OUT = 7'd0;
+end
 //M_RW
-assign M_RW = (cs == READ_M) ? 1'd1 : 1'd1;
+assign M_RW = (cs == WRITE_M) ? 1'd0 : 1'd1;
 
 endmodule

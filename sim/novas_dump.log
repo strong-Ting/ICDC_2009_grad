@@ -81,14 +81,14 @@ argv[1]=-f
 argv[2]=run.f
 argv[3]=testfixture.v
 argv[4]=../src/NFC.v
-argv[5]=+define+tb1
+argv[5]=+define+tb2
 argv[6]=+define+FSDB
 argv[7]=+access+r
 argv[8]=+notimingchecks
 87 profile - 100
-          CPU/Mem usage: 0.020 sys,  0.030 user,  64.46M sys,  0.00M vm
+          CPU/Mem usage: 0.030 sys,  0.030 user,  64.44M sys,  0.00M vm
 88 VC callback profile - scalar:0 vector:0
-89 Sun Feb 21 16:28:07 2021
+89 Sun Feb 21 17:09:56 2021
 90 pliAppInit
 91 FSDB_GATE is disabled.
 92 Enable Parallel Dumping.
@@ -107,7 +107,7 @@ argv[8]=+notimingchecks
 105 Cell instance `test.m1'.
 106 *Verdi* : End of traversing.
 107 fsdbDumpvars traverse var: profile - 
-          CPU/Mem usage: 0.030 sys,  0.050 user,  147.36M sys,  0.00M vm
+          CPU/Mem usage: 0.040 sys,  0.050 user,  147.37M sys,  0.00M vm
                    incr: 0.000 sys,  0.010 user,  4.10M sys,  0.00M vm
                    accu: 0.000 sys,  0.010 user,  4.10M sys,  0.00M vm
               accu incr: 0.000 sys,  0.010 user,  4.10M sys,  0.00M vm
@@ -117,9 +117,9 @@ argv[8]=+notimingchecks
                  accu: 330 var,  258 idcode,  258 callback
             accu incr: 330 var,  258 idcode,  258 callback
 108 VC callback profile - scalar:0 vector:0
-109 Sun Feb 21 16:28:07 2021
+109 Sun Feb 21 17:09:56 2021
 110 fsdbDumpvars: profile - 
-          CPU/Mem usage: 0.030 sys,  0.050 user,  148.41M sys,  0.00M vm
+          CPU/Mem usage: 0.040 sys,  0.050 user,  148.42M sys,  0.00M vm
                    incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
                    accu: 0.000 sys,  0.010 user,  5.15M sys,  0.00M vm
               accu incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
@@ -129,16 +129,16 @@ argv[8]=+notimingchecks
                  accu: 330 var,  258 idcode,  258 callback
             accu incr: 0 var,  0 idcode,  0 callback
 111 VC callback profile - scalar:155 vector:103
-112 Sun Feb 21 16:28:07 2021
-113 End of simulation at 2352000
-114 VC callback profile - scalar:8295 vector:10304
-115 Sun Feb 21 16:28:07 2021
+112 Sun Feb 21 17:09:56 2021
+113 End of simulation at 7512000
+114 VC callback profile - scalar:24480 vector:18412
+115 Sun Feb 21 17:09:57 2021
 116 Begin FSDB profile info:
-117 FSDB Writer : bc1(8295) bcn(10304) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.121367) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+117 FSDB Writer : bc1(24480) bcn(18412) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.126304) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
 118 End FSDB profile info
 119 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:0
-120                        ProduceTime:0.106558166 ConsumerTime:0.000000000 Buffer:64MB
+120                        ProduceTime:0.132741695 ConsumerTime:0.000000000 Buffer:64MB
 121 SimExit
 122 Sim process exit

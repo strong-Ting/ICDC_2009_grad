@@ -2,7 +2,7 @@
 // File created by:  ncverilog
 // Do not modify this file
 //
-+define+tb1
++define+tb2
 +define+FSDB
 +access+r
 +notimingchecks
@@ -10,7 +10,7 @@
 +EMGRLOG
 ncverilog.log
 -XLSTIME
-1613896082
+1613898590
 -XLKEEP
 -XLMODE
 ./INCA_libs/irun.lnx86.15.20.nc

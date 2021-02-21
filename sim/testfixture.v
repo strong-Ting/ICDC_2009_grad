@@ -1,5 +1,5 @@
 `timescale 1ns/100ps
-`define limit_cycle 5000
+`define limit_cycle 50000
 `define tb1
 `ifdef tb1
   `define CMD "p1_cmd.dat"
@@ -89,7 +89,7 @@ module test;
     `ifdef FSDB
       $fsdbDumpfile("nfc.fsdb");
       $fsdbDumpvars;
-     // $fsdbDumpMDA;
+      //$fsdbDumpMDA;
     `endif
 
     `ifdef SDF

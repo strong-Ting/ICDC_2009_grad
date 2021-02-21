@@ -1,31 +1,36 @@
 ncverilog: 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
-TOOL:	ncverilog	15.20-s039: Started on Feb 21, 2021 at 16:28:02 CST
+TOOL:	ncverilog	15.20-s039: Started on Feb 21, 2021 at 17:09:50 CST
 ncverilog
 	-f run.f
 		testfixture.v
 		../src/NFC.v
-	+define+tb1
+	+define+tb2
 	+define+FSDB
 	+access+r
 	+notimingchecks
-Recompiling... reason: file '../src/NFC.v' is newer than expected.
-	expected: Sun Feb 21 16:27:19 2021
-	actual:   Sun Feb 21 16:27:59 2021
+Recompiling... reason: file './testfixture.v' is newer than expected.
+	expected: Sun Feb 21 17:06:22 2021
+	actual:   Sun Feb 21 17:09:49 2021
 file: testfixture.v
-`define tb1
-           |
-ncvlog: *W,MACNDF (testfixture.v,3|11): The text macro 'tb1' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
-file: ../src/NFC.v
-	module worklib.NFC:v
+  `define CMD "p2_cmd.dat"
+                          |
+ncvlog: *W,MACRDF (testfixture.v,11|26): text macro 'CMD' redefined - replaced with new definition.
+  `define MEM "p2_mem.dat"
+                          |
+ncvlog: *W,MACRDF (testfixture.v,12|26): text macro 'MEM' redefined - replaced with new definition.
+  `define NUM 4
+               |
+ncvlog: *W,MACRDF (testfixture.v,13|15): text macro 'NUM' redefined - replaced with new definition.
+	module worklib.test:v
 		errors: 0, warnings: 0
 	Total errors/warnings found outside modules and primitives:
-		errors: 0, warnings: 1
+		errors: 0, warnings: 3
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.NFC:v <0x6603d16e>
-			streams:  24, words: 14210
+		worklib.test:v <0x5ca8c58b>
+			streams:   7, words: 13648
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -38,7 +43,7 @@ file: ../src/NFC.v
 		Expanded wires:         39       5
 		Vectored wires:          9       -
 		Named events:            2       2
-		Always blocks:          59      59
+		Always blocks:          60      60
 		Initial blocks:         39      39
 		Cont. assignments:      14      28
 		Pseudo assignments:      2       2
@@ -55,76 +60,14 @@ FSDB Dumper for IUS, Release Verdi_O-2018.09, Linux, 08/30/2018
 *Verdi* : Create FSDB file 'nfc.fsdb'
 *Verdi* : Begin traversing the scopes, layer (0).
 *Verdi* : End of traversing.
-Command # 1: Write, A_flash = 00400H, A_memory = 00H, Length =  62.
-Command # 2: Read, A_flash = 00400H, A_memory = 40H, Length =  64.
-ERROR : mem[40] = 00 (expect = 68) 
-ERROR : mem[41] = 00 (expect = 6f) 
-ERROR : mem[42] = 00 (expect = 0a) 
-ERROR : mem[43] = 00 (expect = 33) 
-ERROR : mem[44] = 00 (expect = 21) 
-ERROR : mem[45] = 00 (expect = 66) 
-ERROR : mem[46] = 00 (expect = 37) 
-ERROR : mem[47] = 00 (expect = 74) 
-ERROR : mem[48] = 00 (expect = 17) 
-ERROR : mem[49] = 00 (expect = 21) 
-ERROR : mem[4a] = 00 (expect = 12) 
-ERROR : mem[4b] = 00 (expect = 11) 
-ERROR : mem[4c] = 00 (expect = 6f) 
-ERROR : mem[4d] = 00 (expect = 4a) 
-ERROR : mem[4e] = 00 (expect = 46) 
-ERROR : mem[4f] = 00 (expect = 12) 
-ERROR : mem[50] = 00 (expect = 6d) 
-ERROR : mem[51] = 00 (expect = 4f) 
-ERROR : mem[52] = 00 (expect = 2c) 
-ERROR : mem[53] = 00 (expect = 41) 
-ERROR : mem[54] = 00 (expect = 33) 
-ERROR : mem[55] = 00 (expect = 09) 
-ERROR : mem[56] = 00 (expect = 1e) 
-ERROR : mem[57] = 00 (expect = 0f) 
-ERROR : mem[58] = 00 (expect = 17) 
-ERROR : mem[59] = 00 (expect = 1e) 
-ERROR : mem[5a] = 00 (expect = 35) 
-ERROR : mem[5b] = 00 (expect = 06) 
-ERROR : mem[5c] = 00 (expect = 73) 
-ERROR : mem[5d] = 00 (expect = 78) 
-ERROR : mem[5e] = 00 (expect = 3e) 
-ERROR : mem[5f] = 00 (expect = 3e) 
-ERROR : mem[60] = 00 (expect = 2b) 
-ERROR : mem[61] = 00 (expect = 73) 
-ERROR : mem[62] = 00 (expect = 2f) 
-ERROR : mem[63] = 00 (expect = 0e) 
-ERROR : mem[64] = 00 (expect = 63) 
-ERROR : mem[65] = 00 (expect = 31) 
-ERROR : mem[66] = 00 (expect = 1e) 
-ERROR : mem[67] = 00 (expect = 33) 
-ERROR : mem[68] = 00 (expect = 0c) 
-ERROR : mem[69] = 00 (expect = 10) 
-ERROR : mem[6a] = 00 (expect = 78) 
-ERROR : mem[6b] = 00 (expect = 7a) 
-ERROR : mem[6c] = 00 (expect = 49) 
-ERROR : mem[6d] = 00 (expect = 07) 
-ERROR : mem[6e] = 00 (expect = 1e) 
-ERROR : mem[6f] = 00 (expect = 2d) 
-ERROR : mem[70] = 00 (expect = 69) 
-ERROR : mem[71] = 00 (expect = 01) 
-ERROR : mem[72] = 00 (expect = 05) 
-ERROR : mem[73] = 00 (expect = 15) 
-ERROR : mem[74] = 00 (expect = 53) 
-ERROR : mem[75] = 00 (expect = 5d) 
-ERROR : mem[76] = 00 (expect = 52) 
-ERROR : mem[77] = 00 (expect = 39) 
-ERROR : mem[78] = 00 (expect = 46) 
-ERROR : mem[79] = 00 (expect = 25) 
-ERROR : mem[7a] = 00 (expect = 5f) 
-ERROR : mem[7b] = 00 (expect = 18) 
-ERROR : mem[7c] = 00 (expect = 57) 
-ERROR : mem[7d] = 00 (expect = 17) 
-ERROR : mem[7e] = 00 (expect = ff) 
-ERROR : mem[7f] = 00 (expect = ff) 
+Command # 1: Write, A_flash = 00e01H, A_memory = 01H, Length = 105.
+Command # 2: Read, A_flash = 00e00H, A_memory = 03H, Length = 107.
+Command # 3: Write, A_flash = 1d904H, A_memory = 42H, Length =  60.
+Command # 4: Read, A_flash = 1d903H, A_memory = 00H, Length =  61.
 ------------------------------------------
-There are          64 errors!
--------------------FAIL-------------------
-Simulation complete via $finish(1) at time 2352 NS + 0
+Internal Memory check successfully!
+-------------------PASS-------------------
+Simulation complete via $finish(1) at time 7512 NS + 0
 ./testfixture.v:168       #2 $finish;
 ncsim> exit
-TOOL:	ncverilog	15.20-s039: Exiting on Feb 21, 2021 at 16:28:08 CST  (total: 00:00:06)
+TOOL:	ncverilog	15.20-s039: Exiting on Feb 21, 2021 at 17:09:57 CST  (total: 00:00:07)

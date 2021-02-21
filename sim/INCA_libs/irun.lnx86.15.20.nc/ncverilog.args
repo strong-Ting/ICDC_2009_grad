@@ -4,7 +4,7 @@
 //
 -f
 run.f
-+define+tb1
++define+tb2
 +define+FSDB
 +access+r
 +notimingchecks

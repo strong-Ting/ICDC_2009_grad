@@ -2,13 +2,15 @@
 // File created by:  ncverilog
 // Do not modify this file
 //
++define+tb1
 +define+FSDB
 +access+r
++notimingchecks
 -MESSAGES
 +EMGRLOG
 ncverilog.log
 -XLSTIME
-1613813080
+1613896082
 -XLKEEP
 -XLMODE
 ./INCA_libs/irun.lnx86.15.20.nc
@@ -22,4 +24,4 @@ ncverilog
 -XLVERSION
 "TOOL:	ncverilog	15.20-s039"
 -XLNAME
-./INCA_libs/irun.lnx86.15.20.nc/dics03.ee.yuntech.edu.tw_2561
+./INCA_libs/irun.lnx86.15.20.nc/dics03.ee.yuntech.edu.tw_29612

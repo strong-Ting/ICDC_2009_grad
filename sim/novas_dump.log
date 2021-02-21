@@ -21,7 +21,7 @@ BROWSER=/home/DICS_LAB/M10912039/.vscode-server/bin/622cb03f7e070a9670c94bae1a45
 COLORTERM=truecolor
 DISPLAY=140.125.44.75:0.0
 EDITOR=/usr/bin/vim
-GIT_ASKPASS=/home/DICS_LAB/M10912039/.vscode-server/bin/8490d3dde47c57ba65ec40dd192d014fd2113496/extensions/git/dist/askpass.sh
+GIT_ASKPASS=/home/DICS_LAB/M10912039/.vscode-server/bin/622cb03f7e070a9670c94bae1a45d78d7181fbd4/extensions/git/dist/askpass.sh
 GROUP=M10912039
 HISTCONTROL=ignoredups
 HISTSIZE=1000
@@ -38,7 +38,6 @@ LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=3
 MACHTYPE=x86_64
 MAIL=/var/spool/mail/M10912039
 MANPATH=/usr/cad/synopsys/synthesis/cur/doc/syn/man
-OLDPWD=/home/DICS_LAB/M10912039/CIC/CIC_2009_grad
 OSTYPE=linux
 PATH=/usr/cad/synopsys/synplify/cur/bin:/usr/bin/X11:/usr/cad/synopsys/coreConsultant/cur/bin:/usr/cad/synopsys/synthesis/cur/amd64/syn/bin:/usr/cad/synopsys/lc/cur/bin:/usr/bin/X11:/usr/cad/synopsys/primetime/cur/amd64/syn/bin:/usr/cad/synopsys/identify/cur/bin:/usr/cad/synopsys/icc2/cur/bin:/usr/cad/synopsys/verdi/cur/bin:/usr/cad/synopsys/verdi/cur/nLint/bin:/usr/cad/synopsys/icc/cur/amd64/syn/bin:/usr/cad/synopsys/spyglass/cur/SPYGLASS_HOME/bin:/usr/cad/synopsys/vcs/cur/bin:/usr/cad/synopsys/vcs/cur/linux/bin:/usr/cad/synopsys/vcs/cur/linux/util:/usr/cad/synopsys/vcs/cur/linux/flexlm:/usr/cad/cadence/INCISIV/cur/tools/bin:/usr/cad/cadence/INCISIV/cur/tools/vtools/vfault/bin:/usr/cad/cadence/INCISIV/cur/tools/dfII/bin:/home/DICS_LAB/M10912039/.vscode-server/bin/622cb03f7e070a9670c94bae1a45d78d7181fbd4/bin:/home/DICS_LAB/M10912039/.vscode-server/bin/622cb03f7e070a9670c94bae1a45d78d7181fbd4/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/DICS_LAB/M10912039/.local/bin:/home/DICS_LAB/M10912039/bin
 PRIMETIME=/usr/cad/synopsys/primetime/cur
@@ -62,10 +61,10 @@ VCS_CC=gcc
 VCS_HOME=/usr/cad/synopsys/vcs/cur/
 VENDOR=unknown
 VERDI_HOME=/usr/cad/synopsys/verdi/cur/
-VSCODE_GIT_ASKPASS_MAIN=/home/DICS_LAB/M10912039/.vscode-server/bin/8490d3dde47c57ba65ec40dd192d014fd2113496/extensions/git/dist/askpass-main.js
-VSCODE_GIT_ASKPASS_NODE=/home/DICS_LAB/M10912039/.vscode-server/bin/8490d3dde47c57ba65ec40dd192d014fd2113496/node
+VSCODE_GIT_ASKPASS_MAIN=/home/DICS_LAB/M10912039/.vscode-server/bin/622cb03f7e070a9670c94bae1a45d78d7181fbd4/extensions/git/dist/askpass-main.js
+VSCODE_GIT_ASKPASS_NODE=/home/DICS_LAB/M10912039/.vscode-server/bin/622cb03f7e070a9670c94bae1a45d78d7181fbd4/node
 VSCODE_GIT_IPC_HANDLE=/run/user/1001/vscode-git-cc1510a310.sock
-VSCODE_IPC_HOOK_CLI=/run/user/1001/vscode-ipc-ec033b73-14af-4bd8-bab4-6df68764fdc6.sock
+VSCODE_IPC_HOOK_CLI=/run/user/1001/vscode-ipc-22ed3722-8839-4d77-bdf4-013563dc4b79.sock
 XDG_DATA_DIRS=/home/DICS_LAB/M10912039/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 XDG_RUNTIME_DIR=/run/user/1001
 XDG_SESSION_ID=196
@@ -82,62 +81,64 @@ argv[1]=-f
 argv[2]=run.f
 argv[3]=testfixture.v
 argv[4]=../src/NFC.v
-argv[5]=+define+FSDB
-argv[6]=+access+r
-86 profile - 100
-          CPU/Mem usage: 0.030 sys,  0.030 user,  64.46M sys,  0.00M vm
-87 VC callback profile - scalar:0 vector:0
-88 Sat Feb 20 17:24:48 2021
-89 pliAppInit
-90 FSDB_GATE is disabled.
-91 Enable Parallel Dumping.
-92 pliAppMiscSet: New Sim Round
-93 pliEntryInit
-94 LIBSSCORE=found /usr/cad/synopsys/verdi/cur/share/PLI/IUS/LINUX/libsscore_ius152.so through $LD_LIBRARY_PATH setting.
-95 argv[0]: nfc.fsdb
-96 FSDB Dumper for IUS, Release Verdi_O-2018.09, Linux, 08/30/2018
-97 (C) 1996 - 2018 by Synopsys, Inc.
-98 sps_call_fsdbDumpfile at 0 : /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/testfixture.v(90)
-99 argv[0]: nfc.fsdb
-100 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
-101 *Verdi* : Create FSDB file 'nfc.fsdb'
-102 sps_call_fsdbDumpvars at 0 : /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/testfixture.v(91)
-103 *Verdi* : Begin traversing the scopes, layer (0).
-104 Cell instance `test.m1'.
-105 *Verdi* : End of traversing.
-106 fsdbDumpvars traverse var: profile - 
-          CPU/Mem usage: 0.040 sys,  0.060 user,  147.14M sys,  0.00M vm
-                   incr: 0.000 sys,  0.010 user,  3.88M sys,  0.00M vm
-                   accu: 0.000 sys,  0.010 user,  3.88M sys,  0.00M vm
-              accu incr: 0.000 sys,  0.010 user,  3.88M sys,  0.00M vm
+argv[5]=+define+tb1
+argv[6]=+define+FSDB
+argv[7]=+access+r
+argv[8]=+notimingchecks
+87 profile - 100
+          CPU/Mem usage: 0.020 sys,  0.030 user,  64.46M sys,  0.00M vm
+88 VC callback profile - scalar:0 vector:0
+89 Sun Feb 21 16:28:07 2021
+90 pliAppInit
+91 FSDB_GATE is disabled.
+92 Enable Parallel Dumping.
+93 pliAppMiscSet: New Sim Round
+94 pliEntryInit
+95 LIBSSCORE=found /usr/cad/synopsys/verdi/cur/share/PLI/IUS/LINUX/libsscore_ius152.so through $LD_LIBRARY_PATH setting.
+96 argv[0]: nfc.fsdb
+97 FSDB Dumper for IUS, Release Verdi_O-2018.09, Linux, 08/30/2018
+98 (C) 1996 - 2018 by Synopsys, Inc.
+99 sps_call_fsdbDumpfile at 0 : /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/testfixture.v(90)
+100 argv[0]: nfc.fsdb
+101 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+102 *Verdi* : Create FSDB file 'nfc.fsdb'
+103 sps_call_fsdbDumpvars at 0 : /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/testfixture.v(91)
+104 *Verdi* : Begin traversing the scopes, layer (0).
+105 Cell instance `test.m1'.
+106 *Verdi* : End of traversing.
+107 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.030 sys,  0.050 user,  147.36M sys,  0.00M vm
+                   incr: 0.000 sys,  0.010 user,  4.10M sys,  0.00M vm
+                   accu: 0.000 sys,  0.010 user,  4.10M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.010 user,  4.10M sys,  0.00M vm
 
-          Count usage: 334 var,  248 idcode,  248 callback
-                 incr: 334 var,  248 idcode,  248 callback
-                 accu: 334 var,  248 idcode,  248 callback
-            accu incr: 334 var,  248 idcode,  248 callback
-107 VC callback profile - scalar:0 vector:0
-108 Sat Feb 20 17:24:48 2021
-109 fsdbDumpvars: profile - 
-          CPU/Mem usage: 0.040 sys,  0.060 user,  148.20M sys,  0.00M vm
+          Count usage: 330 var,  258 idcode,  258 callback
+                 incr: 330 var,  258 idcode,  258 callback
+                 accu: 330 var,  258 idcode,  258 callback
+            accu incr: 330 var,  258 idcode,  258 callback
+108 VC callback profile - scalar:0 vector:0
+109 Sun Feb 21 16:28:07 2021
+110 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.030 sys,  0.050 user,  148.41M sys,  0.00M vm
                    incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
-                   accu: 0.000 sys,  0.010 user,  4.93M sys,  0.00M vm
+                   accu: 0.000 sys,  0.010 user,  5.15M sys,  0.00M vm
               accu incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
 
-          Count usage: 334 var,  248 idcode,  248 callback
+          Count usage: 330 var,  258 idcode,  258 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 334 var,  248 idcode,  248 callback
+                 accu: 330 var,  258 idcode,  258 callback
             accu incr: 0 var,  0 idcode,  0 callback
-110 VC callback profile - scalar:148 vector:100
-111 Sat Feb 20 17:24:48 2021
-112 End of simulation at 852000
-113 VC callback profile - scalar:5140 vector:4110
-114 Sat Feb 20 17:24:48 2021
-115 Begin FSDB profile info:
-116 FSDB Writer : bc1(5140) bcn(4110) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.122548) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+111 VC callback profile - scalar:155 vector:103
+112 Sun Feb 21 16:28:07 2021
+113 End of simulation at 2352000
+114 VC callback profile - scalar:8295 vector:10304
+115 Sun Feb 21 16:28:07 2021
+116 Begin FSDB profile info:
+117 FSDB Writer : bc1(8295) bcn(10304) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.121367) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
-117 End FSDB profile info
-118 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:0
-119                        ProduceTime:0.112236541 ConsumerTime:0.000000000 Buffer:64MB
-120 SimExit
-121 Sim process exit
+118 End FSDB profile info
+119 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:0
+120                        ProduceTime:0.106558166 ConsumerTime:0.000000000 Buffer:64MB
+121 SimExit
+122 Sim process exit

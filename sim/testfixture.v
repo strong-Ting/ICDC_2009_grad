@@ -1,5 +1,5 @@
 `timescale 1ns/100ps
-`define limit_cycle 1000
+`define limit_cycle 5000
 `define tb1
 `ifdef tb1
   `define CMD "p1_cmd.dat"
@@ -26,7 +26,7 @@
 `endif
 
 `define CYCLE 10
-`define SDFFILE  "NFC_syn.sdf"
+`define SDFFILE  "../syn/NFC_syn.sdf"
 `include "./t13rf128x8.v"
 `include "./flash.v"
 module test;
@@ -89,6 +89,7 @@ module test;
     `ifdef FSDB
       $fsdbDumpfile("nfc.fsdb");
       $fsdbDumpvars;
+     // $fsdbDumpMDA;
     `endif
 
     `ifdef SDF

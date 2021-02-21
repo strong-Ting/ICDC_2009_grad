@@ -2,7 +2,7 @@ Magic 271485
 Revision Verdi_O-2018.09
 
 ; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
-viewPort 1544 53 1344 777 100 65
+viewPort 1536 45 1344 777 141 65
 
 ; File list:
 ; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
@@ -16,8 +16,8 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 0.000000 101000.000000
-cursor 28381.61318300087
+zoom 0.000000 192860.017108
+cursor 65000.000000
 marker 0.000000
 
 ; user define markers
@@ -25,7 +25,7 @@ marker 0.000000
 ; visible top row signal index
 top 0
 ; marker line index
-markerPos 17
+markerPos 18
 
 ; event list
 ; addEvent event_name event_expression
@@ -81,15 +81,16 @@ aliasname NFC.cs_f
 addSignal -h 15 -UNSIGNED -HEX -holdScope cs_f[3:0]
 aliasname NFC.cs_f
 addSignal -h 15 -UNSIGNED -HEX -holdScope ns_f[3:0]
-addSignal -h 15 -holdScope F_CLE
-addSignal -h 15 -holdScope F_ALE
-addSignal -h 15 -holdScope F_EN
-addSignal -h 15 -holdScope F_IN[7:0]
-addSignal -h 15 -holdScope F_OUT[7:0]
-addSignal -h 15 -holdScope F_IO[7:0]
-addSignal -h 15 -holdScope F_RB
-addSignal -h 15 -holdScope F_REN
-addSignal -h 15 -holdScope F_WEN
+addSignal -h 15 -holdScope M_RW
+addSignal -h 15 -holdScope M_A[6:0]
+addSignal -h 15 -holdScope M_D[7:0]
+addSignal -h 15 -holdScope M_IN[7:0]
+addSignal -h 15 -holdScope M_OUT[7:0]
+addSignal -h 15 -holdScope len_counter[6:0]
+addSignal -h 15 -holdScope CMD_F_ADDR[17:0]
+addSignal -h 15 -holdScope CMD_LEN[6:0]
+addSignal -h 15 -holdScope CMD_M_ADDR[6:0]
+addSignal -h 15 -holdScope CMD_RW
 addGroup "G2"
 
 ; getSignalForm Scope Hierarchy Status
@@ -100,10 +101,13 @@ GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
 getSignalForm close
 
 "/test"
+"/test/top"
 
 SCOPE_LIST_BEGIN
 "/test"
 "/test/top"
+"/test/m1"
+"/test/f1"
 SCOPE_LIST_END
 
 GETSIGNALFORM_SCOPE_HIERARCHY_END

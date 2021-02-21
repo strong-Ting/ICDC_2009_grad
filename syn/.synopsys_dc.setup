@@ -4,7 +4,7 @@
 
 set company "CIC"
 set designer "Student"
-set search_path      "<your_designkit_path>/CBDK_IC_Contest_v2.0/SynopsysDC/db $search_path"
+set search_path      "/usr/cad/CBDK_IC_Contest_v2.1/SynopsysDC/db $search_path"
 set link_library     "slow.db fast.db dw_foundation.sldb"
 set target_library   "slow.db fast.db"
 set symbol_library   "generic.sdb"

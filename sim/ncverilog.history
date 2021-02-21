@@ -42,3 +42,72 @@ s41(20Feb2021:17:20:07):  ncverilog -f run.f +define+FSDB +access+r
 s42(20Feb2021:17:21:49):  ncverilog -f run.f +define+FSDB +access+r 
 s43(20Feb2021:17:23:11):  ncverilog -f run.f +define+FSDB +access+r 
 s44(20Feb2021:17:24:40):  ncverilog -f run.f +define+FSDB +access+r 
+s45(20Feb2021:20:32:18):  ncverilog -f run.f +define+FSDB +access+r 
+s46(21Feb2021:13:43:57):  ncverilog -f run.f +define+FSDB +access+r 
+s47(21Feb2021:13:44:58):  ncverilog -f run.f +define+FSDB +access+r 
+s48(21Feb2021:13:50:54):  ncverilog -f run.f +define+FSDB +access+r 
+s49(21Feb2021:14:02:33):  ncverilog -f run.f +define+FSDB +access+r 
+s50(21Feb2021:14:05:29):  ncverilog -f run.f +define+FSDB +access+r +notimingchecks 
+s51(21Feb2021:14:07:34):  ncverilog -f run.f +define+FSDB +access+r +notimingchecks 
+s52(21Feb2021:14:09:43):  ncverilog -f run.f +define+FSDB +access+r +notimingchecks 
+s53(21Feb2021:14:16:04):  ncverilog -f run_syn.f +define+SDF +define+FSDB +access+r +notimingchecks 
+s54(21Feb2021:14:16:25):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v +define+SDF +define+FSDB +access+r 
+s55(21Feb2021:14:17:42):  ncverilog -f run.f +define+FSDB +access+r +notimingchecks 
+s56(21Feb2021:14:20:58):  ncverilog -f run.f +define+FSDB +access+r +notimingchecks 
+s57(21Feb2021:14:21:58):  ncverilog -f run.f +define+FSDB +access+r +notimingchecks 
+s58(21Feb2021:14:22:10):  ncverilog -f run.f +define+FSDB +access+r +notimingchecks 
+s59(21Feb2021:14:23:17):  ncverilog -f run.f +define+FSDB +access+r +notimingchecks 
+s60(21Feb2021:14:24:55):  ncverilog -f run.f +define+FSDB +access+r +notimingchecks 
+s61(21Feb2021:14:25:26):  ncverilog -f run.f +define+FSDB +access+r +notimingchecks 
+s62(21Feb2021:14:25:56):  ncverilog -f run.f +define+FSDB +access+r +notimingchecks 
+s63(21Feb2021:14:26:21):  ncverilog -f run.f +define+FSDB +access+r +notimingchecks 
+s64(21Feb2021:14:27:05):  ncverilog -f run.f +define+FSDB +access+r +notimingchecks 
+s65(21Feb2021:14:29:34):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s66(21Feb2021:14:30:37):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s67(21Feb2021:14:31:40):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s68(21Feb2021:14:54:32):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s69(21Feb2021:14:55:20):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s70(21Feb2021:14:56:31):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s71(21Feb2021:15:27:29):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s72(21Feb2021:15:28:07):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s73(21Feb2021:15:31:24):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s74(21Feb2021:15:35:51):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s75(21Feb2021:15:36:32):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s76(21Feb2021:15:40:44):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s77(21Feb2021:15:42:23):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s78(21Feb2021:15:46:10):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r 
+s79(21Feb2021:15:46:51):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s80(21Feb2021:15:56:45):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s81(21Feb2021:15:58:48):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s82(21Feb2021:15:59:22):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s83(21Feb2021:16:03:00):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s84(21Feb2021:16:03:32):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s85(21Feb2021:16:11:03):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s86(21Feb2021:16:11:14):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s87(21Feb2021:16:11:45):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s88(21Feb2021:16:11:59):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s89(21Feb2021:16:13:46):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s90(21Feb2021:16:13:59):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s91(21Feb2021:16:15:36):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s92(21Feb2021:16:15:57):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s93(21Feb2021:16:16:37):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s94(21Feb2021:16:16:57):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s95(21Feb2021:16:17:11):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s96(21Feb2021:16:17:26):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s97(21Feb2021:16:18:18):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s98(21Feb2021:16:18:43):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s99(21Feb2021:16:20:26):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s100(21Feb2021:16:21:27):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s101(21Feb2021:16:21:56):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s102(21Feb2021:16:22:39):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s103(21Feb2021:16:23:06):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s104(21Feb2021:16:23:28):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s105(21Feb2021:16:23:43):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s106(21Feb2021:16:23:55):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s107(21Feb2021:16:24:52):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s108(21Feb2021:16:25:08):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s109(21Feb2021:16:25:37):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s110(21Feb2021:16:26:08):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s111(21Feb2021:16:27:21):  ncverilog -f run.f +define+tb2 +define+FSDB +access+r +notimingchecks 
+s112(21Feb2021:16:27:39):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 
+s113(21Feb2021:16:28:02):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r +notimingchecks 

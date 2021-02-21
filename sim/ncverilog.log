@@ -1,23 +1,31 @@
 ncverilog: 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
-TOOL:	ncverilog	15.20-s039: Started on Feb 20, 2021 at 17:24:40 CST
+TOOL:	ncverilog	15.20-s039: Started on Feb 21, 2021 at 16:28:02 CST
 ncverilog
 	-f run.f
 		testfixture.v
 		../src/NFC.v
+	+define+tb1
 	+define+FSDB
 	+access+r
+	+notimingchecks
 Recompiling... reason: file '../src/NFC.v' is newer than expected.
-	expected: Sat Feb 20 17:23:09 2021
-	actual:   Sat Feb 20 17:24:38 2021
+	expected: Sun Feb 21 16:27:19 2021
+	actual:   Sun Feb 21 16:27:59 2021
+file: testfixture.v
+`define tb1
+           |
+ncvlog: *W,MACNDF (testfixture.v,3|11): The text macro 'tb1' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
 file: ../src/NFC.v
 	module worklib.NFC:v
 		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.NFC:v <0x4f5bcc47>
-			streams:  20, words:  8101
+		worklib.NFC:v <0x6603d16e>
+			streams:  24, words: 14210
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -25,16 +33,16 @@ file: ../src/NFC.v
 		Modules:                 9       5
 		Primitives:             53       2
 		Timing outputs:         17      10
-		Registers:             176     176
-		Scalar wires:           62       -
-		Expanded wires:         24       3
-		Vectored wires:          8       -
+		Registers:             178     178
+		Scalar wires:           69       -
+		Expanded wires:         39       5
+		Vectored wires:          9       -
 		Named events:            2       2
-		Always blocks:          58      58
+		Always blocks:          59      59
 		Initial blocks:         39      39
-		Cont. assignments:      12      25
+		Cont. assignments:      14      28
 		Pseudo assignments:      2       2
-		Timing checks:         121      26
+		Timing checks:         121       -
 		Simulation timescale:  1ps
 	Writing initial simulation snapshot: worklib.test:v
 Loading snapshot worklib.test:v .................... Done
@@ -48,201 +56,75 @@ FSDB Dumper for IUS, Release Verdi_O-2018.09, Linux, 08/30/2018
 *Verdi* : Begin traversing the scopes, layer (0).
 *Verdi* : End of traversing.
 Command # 1: Write, A_flash = 00400H, A_memory = 00H, Length =  62.
-ERROR : flash[00400] = ff (expect = 68) 
-ERROR : flash[00401] = ff (expect = 6f) 
-ERROR : flash[00402] = ff (expect = 0a) 
-ERROR : flash[00403] = ff (expect = 33) 
-ERROR : flash[00404] = ff (expect = 21) 
-ERROR : flash[00405] = ff (expect = 66) 
-ERROR : flash[00406] = ff (expect = 37) 
-ERROR : flash[00407] = ff (expect = 74) 
-ERROR : flash[00408] = ff (expect = 17) 
-ERROR : flash[00409] = ff (expect = 21) 
-ERROR : flash[0040a] = ff (expect = 12) 
-ERROR : flash[0040b] = ff (expect = 11) 
-ERROR : flash[0040c] = ff (expect = 6f) 
-ERROR : flash[0040d] = ff (expect = 4a) 
-ERROR : flash[0040e] = ff (expect = 46) 
-ERROR : flash[0040f] = ff (expect = 12) 
-ERROR : flash[00410] = ff (expect = 6d) 
-ERROR : flash[00411] = ff (expect = 4f) 
-ERROR : flash[00412] = ff (expect = 2c) 
-ERROR : flash[00413] = ff (expect = 41) 
-ERROR : flash[00414] = ff (expect = 33) 
-ERROR : flash[00415] = ff (expect = 09) 
-ERROR : flash[00416] = ff (expect = 1e) 
-ERROR : flash[00417] = ff (expect = 0f) 
-ERROR : flash[00418] = ff (expect = 17) 
-ERROR : flash[00419] = ff (expect = 1e) 
-ERROR : flash[0041a] = ff (expect = 35) 
-ERROR : flash[0041b] = ff (expect = 06) 
-ERROR : flash[0041c] = ff (expect = 73) 
-ERROR : flash[0041d] = ff (expect = 78) 
-ERROR : flash[0041e] = ff (expect = 3e) 
-ERROR : flash[0041f] = ff (expect = 3e) 
-ERROR : flash[00420] = ff (expect = 2b) 
-ERROR : flash[00421] = ff (expect = 73) 
-ERROR : flash[00422] = ff (expect = 2f) 
-ERROR : flash[00423] = ff (expect = 0e) 
-ERROR : flash[00424] = ff (expect = 63) 
-ERROR : flash[00425] = ff (expect = 31) 
-ERROR : flash[00426] = ff (expect = 1e) 
-ERROR : flash[00427] = ff (expect = 33) 
-ERROR : flash[00428] = ff (expect = 0c) 
-ERROR : flash[00429] = ff (expect = 10) 
-ERROR : flash[0042a] = ff (expect = 78) 
-ERROR : flash[0042b] = ff (expect = 7a) 
-ERROR : flash[0042c] = ff (expect = 49) 
-ERROR : flash[0042d] = ff (expect = 07) 
-ERROR : flash[0042e] = ff (expect = 1e) 
-ERROR : flash[0042f] = ff (expect = 2d) 
-ERROR : flash[00430] = ff (expect = 69) 
-ERROR : flash[00431] = ff (expect = 01) 
-ERROR : flash[00432] = ff (expect = 05) 
-ERROR : flash[00433] = ff (expect = 15) 
-ERROR : flash[00434] = ff (expect = 53) 
-ERROR : flash[00435] = ff (expect = 5d) 
-ERROR : flash[00436] = ff (expect = 52) 
-ERROR : flash[00437] = ff (expect = 39) 
-ERROR : flash[00438] = ff (expect = 46) 
-ERROR : flash[00439] = ff (expect = 25) 
-ERROR : flash[0043a] = ff (expect = 5f) 
-ERROR : flash[0043b] = ff (expect = 18) 
-ERROR : flash[0043c] = ff (expect = 57) 
-ERROR : flash[0043d] = ff (expect = 17) 
 Command # 2: Read, A_flash = 00400H, A_memory = 40H, Length =  64.
-ERROR : mem[00] = xx (expect = 68) 
-ERROR : mem[01] = xx (expect = 6f) 
-ERROR : mem[02] = xx (expect = 0a) 
-ERROR : mem[03] = xx (expect = 33) 
-ERROR : mem[04] = xx (expect = 21) 
-ERROR : mem[05] = xx (expect = 66) 
-ERROR : mem[06] = xx (expect = 37) 
-ERROR : mem[07] = xx (expect = 74) 
-ERROR : mem[08] = xx (expect = 17) 
-ERROR : mem[09] = xx (expect = 21) 
-ERROR : mem[0a] = xx (expect = 12) 
-ERROR : mem[0b] = xx (expect = 11) 
-ERROR : mem[0c] = xx (expect = 6f) 
-ERROR : mem[0d] = xx (expect = 4a) 
-ERROR : mem[0e] = xx (expect = 46) 
-ERROR : mem[0f] = xx (expect = 12) 
-ERROR : mem[10] = xx (expect = 6d) 
-ERROR : mem[11] = xx (expect = 4f) 
-ERROR : mem[12] = xx (expect = 2c) 
-ERROR : mem[13] = xx (expect = 41) 
-ERROR : mem[14] = xx (expect = 33) 
-ERROR : mem[15] = xx (expect = 09) 
-ERROR : mem[16] = xx (expect = 1e) 
-ERROR : mem[17] = xx (expect = 0f) 
-ERROR : mem[18] = xx (expect = 17) 
-ERROR : mem[19] = xx (expect = 1e) 
-ERROR : mem[1a] = xx (expect = 35) 
-ERROR : mem[1b] = xx (expect = 06) 
-ERROR : mem[1c] = xx (expect = 73) 
-ERROR : mem[1d] = xx (expect = 78) 
-ERROR : mem[1e] = xx (expect = 3e) 
-ERROR : mem[1f] = xx (expect = 3e) 
-ERROR : mem[20] = xx (expect = 2b) 
-ERROR : mem[21] = xx (expect = 73) 
-ERROR : mem[22] = xx (expect = 2f) 
-ERROR : mem[23] = xx (expect = 0e) 
-ERROR : mem[24] = xx (expect = 63) 
-ERROR : mem[25] = xx (expect = 31) 
-ERROR : mem[26] = xx (expect = 1e) 
-ERROR : mem[27] = xx (expect = 33) 
-ERROR : mem[28] = xx (expect = 0c) 
-ERROR : mem[29] = xx (expect = 10) 
-ERROR : mem[2a] = xx (expect = 78) 
-ERROR : mem[2b] = xx (expect = 7a) 
-ERROR : mem[2c] = xx (expect = 49) 
-ERROR : mem[2d] = xx (expect = 07) 
-ERROR : mem[2e] = xx (expect = 1e) 
-ERROR : mem[2f] = xx (expect = 2d) 
-ERROR : mem[30] = xx (expect = 69) 
-ERROR : mem[31] = xx (expect = 01) 
-ERROR : mem[32] = xx (expect = 05) 
-ERROR : mem[33] = xx (expect = 15) 
-ERROR : mem[34] = xx (expect = 53) 
-ERROR : mem[35] = xx (expect = 5d) 
-ERROR : mem[36] = xx (expect = 52) 
-ERROR : mem[37] = xx (expect = 39) 
-ERROR : mem[38] = xx (expect = 46) 
-ERROR : mem[39] = xx (expect = 25) 
-ERROR : mem[3a] = xx (expect = 5f) 
-ERROR : mem[3b] = xx (expect = 18) 
-ERROR : mem[3c] = xx (expect = 57) 
-ERROR : mem[3d] = xx (expect = 17) 
-ERROR : mem[3e] = xx (expect = 00) 
-ERROR : mem[3f] = xx (expect = 00) 
-ERROR : mem[40] = xx (expect = 68) 
-ERROR : mem[41] = xx (expect = 6f) 
-ERROR : mem[42] = xx (expect = 0a) 
-ERROR : mem[43] = xx (expect = 33) 
-ERROR : mem[44] = xx (expect = 21) 
-ERROR : mem[45] = xx (expect = 66) 
-ERROR : mem[46] = xx (expect = 37) 
-ERROR : mem[47] = xx (expect = 74) 
-ERROR : mem[48] = xx (expect = 17) 
-ERROR : mem[49] = xx (expect = 21) 
-ERROR : mem[4a] = xx (expect = 12) 
-ERROR : mem[4b] = xx (expect = 11) 
-ERROR : mem[4c] = xx (expect = 6f) 
-ERROR : mem[4d] = xx (expect = 4a) 
-ERROR : mem[4e] = xx (expect = 46) 
-ERROR : mem[4f] = xx (expect = 12) 
-ERROR : mem[50] = xx (expect = 6d) 
-ERROR : mem[51] = xx (expect = 4f) 
-ERROR : mem[52] = xx (expect = 2c) 
-ERROR : mem[53] = xx (expect = 41) 
-ERROR : mem[54] = xx (expect = 33) 
-ERROR : mem[55] = xx (expect = 09) 
-ERROR : mem[56] = xx (expect = 1e) 
-ERROR : mem[57] = xx (expect = 0f) 
-ERROR : mem[58] = xx (expect = 17) 
-ERROR : mem[59] = xx (expect = 1e) 
-ERROR : mem[5a] = xx (expect = 35) 
-ERROR : mem[5b] = xx (expect = 06) 
-ERROR : mem[5c] = xx (expect = 73) 
-ERROR : mem[5d] = xx (expect = 78) 
-ERROR : mem[5e] = xx (expect = 3e) 
-ERROR : mem[5f] = xx (expect = 3e) 
-ERROR : mem[60] = xx (expect = 2b) 
-ERROR : mem[61] = xx (expect = 73) 
-ERROR : mem[62] = xx (expect = 2f) 
-ERROR : mem[63] = xx (expect = 0e) 
-ERROR : mem[64] = xx (expect = 63) 
-ERROR : mem[65] = xx (expect = 31) 
-ERROR : mem[66] = xx (expect = 1e) 
-ERROR : mem[67] = xx (expect = 33) 
-ERROR : mem[68] = xx (expect = 0c) 
-ERROR : mem[69] = xx (expect = 10) 
-ERROR : mem[6a] = xx (expect = 78) 
-ERROR : mem[6b] = xx (expect = 7a) 
-ERROR : mem[6c] = xx (expect = 49) 
-ERROR : mem[6d] = xx (expect = 07) 
-ERROR : mem[6e] = xx (expect = 1e) 
-ERROR : mem[6f] = xx (expect = 2d) 
-ERROR : mem[70] = xx (expect = 69) 
-ERROR : mem[71] = xx (expect = 01) 
-ERROR : mem[72] = xx (expect = 05) 
-ERROR : mem[73] = xx (expect = 15) 
-ERROR : mem[74] = xx (expect = 53) 
-ERROR : mem[75] = xx (expect = 5d) 
-ERROR : mem[76] = xx (expect = 52) 
-ERROR : mem[77] = xx (expect = 39) 
-ERROR : mem[78] = xx (expect = 46) 
-ERROR : mem[79] = xx (expect = 25) 
-ERROR : mem[7a] = xx (expect = 5f) 
-ERROR : mem[7b] = xx (expect = 18) 
-ERROR : mem[7c] = xx (expect = 57) 
-ERROR : mem[7d] = xx (expect = 17) 
-ERROR : mem[7e] = xx (expect = ff) 
-ERROR : mem[7f] = xx (expect = ff) 
+ERROR : mem[40] = 00 (expect = 68) 
+ERROR : mem[41] = 00 (expect = 6f) 
+ERROR : mem[42] = 00 (expect = 0a) 
+ERROR : mem[43] = 00 (expect = 33) 
+ERROR : mem[44] = 00 (expect = 21) 
+ERROR : mem[45] = 00 (expect = 66) 
+ERROR : mem[46] = 00 (expect = 37) 
+ERROR : mem[47] = 00 (expect = 74) 
+ERROR : mem[48] = 00 (expect = 17) 
+ERROR : mem[49] = 00 (expect = 21) 
+ERROR : mem[4a] = 00 (expect = 12) 
+ERROR : mem[4b] = 00 (expect = 11) 
+ERROR : mem[4c] = 00 (expect = 6f) 
+ERROR : mem[4d] = 00 (expect = 4a) 
+ERROR : mem[4e] = 00 (expect = 46) 
+ERROR : mem[4f] = 00 (expect = 12) 
+ERROR : mem[50] = 00 (expect = 6d) 
+ERROR : mem[51] = 00 (expect = 4f) 
+ERROR : mem[52] = 00 (expect = 2c) 
+ERROR : mem[53] = 00 (expect = 41) 
+ERROR : mem[54] = 00 (expect = 33) 
+ERROR : mem[55] = 00 (expect = 09) 
+ERROR : mem[56] = 00 (expect = 1e) 
+ERROR : mem[57] = 00 (expect = 0f) 
+ERROR : mem[58] = 00 (expect = 17) 
+ERROR : mem[59] = 00 (expect = 1e) 
+ERROR : mem[5a] = 00 (expect = 35) 
+ERROR : mem[5b] = 00 (expect = 06) 
+ERROR : mem[5c] = 00 (expect = 73) 
+ERROR : mem[5d] = 00 (expect = 78) 
+ERROR : mem[5e] = 00 (expect = 3e) 
+ERROR : mem[5f] = 00 (expect = 3e) 
+ERROR : mem[60] = 00 (expect = 2b) 
+ERROR : mem[61] = 00 (expect = 73) 
+ERROR : mem[62] = 00 (expect = 2f) 
+ERROR : mem[63] = 00 (expect = 0e) 
+ERROR : mem[64] = 00 (expect = 63) 
+ERROR : mem[65] = 00 (expect = 31) 
+ERROR : mem[66] = 00 (expect = 1e) 
+ERROR : mem[67] = 00 (expect = 33) 
+ERROR : mem[68] = 00 (expect = 0c) 
+ERROR : mem[69] = 00 (expect = 10) 
+ERROR : mem[6a] = 00 (expect = 78) 
+ERROR : mem[6b] = 00 (expect = 7a) 
+ERROR : mem[6c] = 00 (expect = 49) 
+ERROR : mem[6d] = 00 (expect = 07) 
+ERROR : mem[6e] = 00 (expect = 1e) 
+ERROR : mem[6f] = 00 (expect = 2d) 
+ERROR : mem[70] = 00 (expect = 69) 
+ERROR : mem[71] = 00 (expect = 01) 
+ERROR : mem[72] = 00 (expect = 05) 
+ERROR : mem[73] = 00 (expect = 15) 
+ERROR : mem[74] = 00 (expect = 53) 
+ERROR : mem[75] = 00 (expect = 5d) 
+ERROR : mem[76] = 00 (expect = 52) 
+ERROR : mem[77] = 00 (expect = 39) 
+ERROR : mem[78] = 00 (expect = 46) 
+ERROR : mem[79] = 00 (expect = 25) 
+ERROR : mem[7a] = 00 (expect = 5f) 
+ERROR : mem[7b] = 00 (expect = 18) 
+ERROR : mem[7c] = 00 (expect = 57) 
+ERROR : mem[7d] = 00 (expect = 17) 
+ERROR : mem[7e] = 00 (expect = ff) 
+ERROR : mem[7f] = 00 (expect = ff) 
 ------------------------------------------
-There are         190 errors!
+There are          64 errors!
 -------------------FAIL-------------------
-Simulation complete via $finish(1) at time 852 NS + 0
-./testfixture.v:167       #2 $finish;
+Simulation complete via $finish(1) at time 2352 NS + 0
+./testfixture.v:168       #2 $finish;
 ncsim> exit
-TOOL:	ncverilog	15.20-s039: Exiting on Feb 20, 2021 at 17:24:49 CST  (total: 00:00:09)
+TOOL:	ncverilog	15.20-s039: Exiting on Feb 21, 2021 at 16:28:08 CST  (total: 00:00:06)

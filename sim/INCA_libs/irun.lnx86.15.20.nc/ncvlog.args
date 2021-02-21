@@ -8,6 +8,8 @@
 testfixture.v
 ../src/NFC.v
 -DEFINE
+tb1
+-DEFINE
 FSDB
 -CDSLIB
 ./INCA_libs/irun.lnx86.15.20.nc/cdsrun.lib

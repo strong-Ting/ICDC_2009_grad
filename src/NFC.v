@@ -23,14 +23,22 @@ reg [3:0] cs,ns; //main state
 reg [3:0] cs_f,ns_f; //flash control state 
 reg [127:0] dirty_bits;
 reg [7:0] BLOCK_MEM [0:2047];
-reg [6:0] len_counter;
-//thri state gate
+reg [6:0] len_counter; //negedge counter
+//reg [6:0] len_counter; //posedge counter
+//thri state gate F_IO
 wire [7:0] F_IN;
 reg [7:0] F_OUT;
 wire F_EN;
 assign F_IO = (F_EN == 1'd1) ? F_OUT : 'bz;
 assign F_IN = F_IO;
+//thri state gate M_D
+reg [7:0] M_OUT;
+wire [7:0] M_IN;
+wire M_RW;
+assign M_D = (M_RW == 1'd1) ? 'bz : M_OUT;
+assign M_IN = M_D; 
 
+reg [6:0] M_A;
 
 parameter RST = 4'd0;
 parameter IDLE = 4'd1;
@@ -54,6 +62,9 @@ parameter F_DONE = 4'd6;
 parameter F_ADDR_0 = 4'd7;
 parameter F_ADDR_1 = 4'd8;
 parameter F_ADDR_2 = 4'd9;
+parameter F_CMD_01 = 4'd10;
+parameter F_CMD_80 = 4'd11;
+parameter F_CMD_10 = 4'd12;
 
 
 
@@ -84,18 +95,18 @@ always@(*) begin
 		if(cs_f == F_DONE) ns = WRITE_M;
 		else ns = READ_F;
 	end
-	WRITE_M: begin
-		ns = DONE;
-	end
+	WRITE_M: ns = DONE;
 	CHECK_F: begin
-		if(dirty_bits) ns = READ_B;
+		if(dirty_bits[CMD_F_ADDR[17:11]]) ns = READ_B;
 		else ns = READ_M;
 	end
 	READ_M: begin
-		ns = WRITE_F;
+		if(CMD_LEN == (len_counter-7'd1)) ns = WRITE_F;
+		else ns = READ_M;
 	end
 	WRITE_F: begin
-		ns = DONE;
+		if(cs_f == F_DONE) ns = DONE;
+		else ns = WRITE_F;
 	end
 	READ_B: begin
 		ns = ERASE;
@@ -112,18 +123,10 @@ always@(*) begin
 	case(ns)
 	READ_F: begin
 		case(cs_f)
-		F_IDLE: begin
-			ns_f = F_CMD;
-		end
-		F_CMD: begin
-			ns_f = F_ADDR_0;
-		end
-		F_ADDR_0: begin
-			ns_f = F_ADDR_1;
-		end
-		F_ADDR_1: begin
-			ns_f = F_ADDR_2;
-		end
+		F_IDLE: ns_f = F_CMD;
+		F_CMD:  ns_f = F_ADDR_0;
+		F_ADDR_0: ns_f = F_ADDR_1;
+		F_ADDR_1: ns_f = F_ADDR_2;
 		F_ADDR_2: begin
 			if(F_RB == 1'd1) ns_f = F_DATA_R;
 			else ns_f = F_ADDR_2;
@@ -131,6 +134,34 @@ always@(*) begin
 		F_DATA_R: begin
 			if(len_counter == CMD_LEN) ns_f = F_DONE;
 			else ns_f = F_DATA_R;
+		end
+		F_DONE: ns_f = F_IDLE;
+		default: ns_f = F_IDLE;
+		endcase
+	end
+	WRITE_F: begin
+		case(cs_f)
+		F_IDLE: begin
+			if(CMD_F_ADDR[8] == 1'd1) ns_f = F_CMD_01;
+			else ns_f = F_CMD_80;
+		end
+		F_CMD_01: begin
+			ns_f = F_CMD_80;
+		end
+		F_CMD_80: begin
+			ns_f = F_ADDR_0;
+		end
+		F_ADDR_0: ns_f = F_ADDR_1;
+		F_ADDR_1: ns_f = F_ADDR_2;
+		F_ADDR_2: ns_f = F_DATA_W;
+		F_DATA_W: begin
+			if(len_counter == CMD_LEN) ns_f = F_CMD_10;
+			else ns_f = F_DATA_W;
+		end
+		F_CMD_10: ns_f = F_WAIT;
+		F_WAIT: begin
+			if(F_RB == 1'd1) ns_f = F_DONE;
+			else ns_f = F_WAIT;
 		end
 		F_DONE: ns_f = F_IDLE;
 		default: ns_f = F_IDLE;
@@ -145,7 +176,11 @@ end
 //done
 wire done = (cs == IDLE) ? 1'd1 : 1'd0;
 //F_CLE
-wire F_CLE = (cs == RST ||  cs_f == F_CMD) ? 1'd1 : 1'd0;
+wire F_CLE = (	cs == RST ||  
+				cs_f == F_CMD ||
+				cs_f == F_CMD_01 || 
+				cs_f == F_CMD_10 || 
+				cs_f == F_CMD_80 ) ? 1'd1 : 1'd0;
 //F_ALE
 wire F_ALE = (cs_f == F_ADDR_0 || 
 			  cs_f == F_ADDR_1 || 
@@ -153,12 +188,20 @@ wire F_ALE = (cs_f == F_ADDR_0 ||
 //F_EN
 assign F_EN = ( cs == RST ||
 			cs_f == F_CMD || 
+			cs_f == F_CMD_80 ||
+			cs_f == F_CMD_01 ||
+			cs_f == F_CMD_10 ||
+			cs_f == F_DATA_W ||
 			cs_f == F_ADDR_0 ||
 			cs_f == F_ADDR_1 || 
 			cs_f == F_ADDR_2 ) ? 1'd1 : 1'd0; //1 == write , 0 == read
 //F_WEN
 wire F_WEN = (cs == RST || 
 				cs_f == F_CMD ||
+				cs_f == F_CMD_10 ||
+				cs_f == F_CMD_80 ||
+				cs_f == F_CMD_01 ||
+				cs_f == F_DATA_W ||
 				cs_f == F_ADDR_0 ||
 				cs_f == F_ADDR_1 || 
 				cs_f == F_ADDR_2 ) ? ~clk : 1'd1;
@@ -179,13 +222,38 @@ always @(*) begin
 		else if(cs_f == F_ADDR_2) F_OUT = {7'd0,CMD_F_ADDR[17]};
 		else F_OUT = 8'h0;
 	end
+	else if(cs == WRITE_F) begin
+		if(cs_f == F_CMD_01) F_OUT = 8'h1;
+		else if(cs_f == F_CMD_10) F_OUT = 8'h10;
+		else if(cs_f == F_CMD_80) F_OUT = 8'h80;
+		else if(cs_f == F_ADDR_0) F_OUT = CMD_F_ADDR[7:0];
+		else if(cs_f == F_ADDR_1) F_OUT = CMD_F_ADDR[16:9];
+		else if(cs_f == F_ADDR_2) F_OUT = {7'd0,CMD_F_ADDR[17]};
+		else if(cs_f == F_DATA_W) begin
+			F_OUT = BLOCK_MEM[CMD_F_ADDR[10:0]+len_counter];
+		end
+		else F_OUT = 8'h0;
+	end
 	else F_OUT = 8'h0;
 end
 
 //len counter
-always@(posedge clk or posedge rst) begin
-	if(rst) len_counter <= 7'd127;
+/*
+always@(negedge clk or posedge rst) begin
+	if(rst) len_counter <= 7'd0;
 	else if(cs_f == F_DATA_R) len_counter <= len_counter + 7'd1;
+	else if(cs == READ_M) len_counter <= len_counter + 7'd1;
+	else if(cs_f == F_DATA_W) len_counter <= len_counter + 7'd1;
+	else len_counter <= 7'd0;
+end*/
+
+//len counter posedge 
+always@(posedge clk or posedge rst) begin
+	if(rst) len_counter <= 7'd0;
+	else if(cs == READ_M) len_counter <= len_counter + 7'd1;
+	else if(cs_f == F_DATA_W) len_counter <= len_counter + 7'd1;
+	else if(cs_f == F_DATA_R) len_counter <= len_counter + 7'd1;
+	else len_counter <= 7'd0;
 end
 
 //BLOCK_MEM
@@ -197,8 +265,22 @@ always@(posedge clk or posedge rst) begin
 		end
 	end
 	else if(cs_f == F_DATA_R) begin
-		BLOCK_MEM[CMD_F_ADDR[11:0]+len_counter] <= F_IN;
+		BLOCK_MEM[CMD_F_ADDR[10:0]+len_counter] <= F_IN;
+	end
+	else if(cs == READ_M) begin
+		BLOCK_MEM[CMD_F_ADDR[10:0]+len_counter-7'd1] <= M_IN;
 	end
 end
+
+//M_A
+always@(*) begin
+	if(cs == READ_M) M_A = len_counter + CMD_M_ADDR;
+	else M_A = 7'd0;
+end
+
+//M_OUT
+
+//M_RW
+assign M_RW = (cs == READ_M) ? 1'd1 : 1'd1;
 
 endmodule

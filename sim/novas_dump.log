@@ -81,64 +81,63 @@ argv[1]=-f
 argv[2]=run.f
 argv[3]=testfixture.v
 argv[4]=../src/NFC.v
-argv[5]=+define+tb2
+argv[5]=+define+tb1
 argv[6]=+define+FSDB
 argv[7]=+access+r
-argv[8]=+notimingchecks
-87 profile - 100
-          CPU/Mem usage: 0.030 sys,  0.030 user,  64.44M sys,  0.00M vm
-88 VC callback profile - scalar:0 vector:0
-89 Sun Feb 21 17:09:56 2021
-90 pliAppInit
-91 FSDB_GATE is disabled.
-92 Enable Parallel Dumping.
-93 pliAppMiscSet: New Sim Round
-94 pliEntryInit
-95 LIBSSCORE=found /usr/cad/synopsys/verdi/cur/share/PLI/IUS/LINUX/libsscore_ius152.so through $LD_LIBRARY_PATH setting.
-96 argv[0]: nfc.fsdb
-97 FSDB Dumper for IUS, Release Verdi_O-2018.09, Linux, 08/30/2018
-98 (C) 1996 - 2018 by Synopsys, Inc.
-99 sps_call_fsdbDumpfile at 0 : /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/testfixture.v(90)
-100 argv[0]: nfc.fsdb
-101 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
-102 *Verdi* : Create FSDB file 'nfc.fsdb'
-103 sps_call_fsdbDumpvars at 0 : /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/testfixture.v(91)
-104 *Verdi* : Begin traversing the scopes, layer (0).
-105 Cell instance `test.m1'.
-106 *Verdi* : End of traversing.
-107 fsdbDumpvars traverse var: profile - 
-          CPU/Mem usage: 0.040 sys,  0.050 user,  147.37M sys,  0.00M vm
-                   incr: 0.000 sys,  0.010 user,  4.10M sys,  0.00M vm
-                   accu: 0.000 sys,  0.010 user,  4.10M sys,  0.00M vm
-              accu incr: 0.000 sys,  0.010 user,  4.10M sys,  0.00M vm
+86 profile - 100
+          CPU/Mem usage: 0.020 sys,  0.020 user,  64.47M sys,  0.00M vm
+87 VC callback profile - scalar:0 vector:0
+88 Sun Feb 21 23:52:38 2021
+89 pliAppInit
+90 FSDB_GATE is disabled.
+91 Enable Parallel Dumping.
+92 pliAppMiscSet: New Sim Round
+93 pliEntryInit
+94 LIBSSCORE=found /usr/cad/synopsys/verdi/cur/share/PLI/IUS/LINUX/libsscore_ius152.so through $LD_LIBRARY_PATH setting.
+95 argv[0]: nfc.fsdb
+96 FSDB Dumper for IUS, Release Verdi_O-2018.09, Linux, 08/30/2018
+97 (C) 1996 - 2018 by Synopsys, Inc.
+98 sps_call_fsdbDumpfile at 0 : /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/testfixture.v(90)
+99 argv[0]: nfc.fsdb
+100 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+101 *Verdi* : Create FSDB file 'nfc.fsdb'
+102 sps_call_fsdbDumpvars at 0 : /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/testfixture.v(91)
+103 *Verdi* : Begin traversing the scopes, layer (0).
+104 Cell instance `test.m1'.
+105 *Verdi* : End of traversing.
+106 fsdbDumpvars traverse var: profile - 
+          CPU/Mem usage: 0.030 sys,  0.030 user,  147.19M sys,  0.00M vm
+                   incr: 0.000 sys,  0.000 user,  3.90M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  3.90M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.000 user,  3.90M sys,  0.00M vm
 
-          Count usage: 330 var,  258 idcode,  258 callback
-                 incr: 330 var,  258 idcode,  258 callback
-                 accu: 330 var,  258 idcode,  258 callback
-            accu incr: 330 var,  258 idcode,  258 callback
-108 VC callback profile - scalar:0 vector:0
-109 Sun Feb 21 17:09:56 2021
-110 fsdbDumpvars: profile - 
-          CPU/Mem usage: 0.040 sys,  0.050 user,  148.42M sys,  0.00M vm
+          Count usage: 334 var,  262 idcode,  262 callback
+                 incr: 334 var,  262 idcode,  262 callback
+                 accu: 334 var,  262 idcode,  262 callback
+            accu incr: 334 var,  262 idcode,  262 callback
+107 VC callback profile - scalar:0 vector:0
+108 Sun Feb 21 23:52:38 2021
+109 fsdbDumpvars: profile - 
+          CPU/Mem usage: 0.030 sys,  0.030 user,  148.24M sys,  0.00M vm
                    incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
-                   accu: 0.000 sys,  0.010 user,  5.15M sys,  0.00M vm
+                   accu: 0.000 sys,  0.000 user,  4.95M sys,  0.00M vm
               accu incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
 
-          Count usage: 330 var,  258 idcode,  258 callback
+          Count usage: 334 var,  262 idcode,  262 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 330 var,  258 idcode,  258 callback
+                 accu: 334 var,  262 idcode,  262 callback
             accu incr: 0 var,  0 idcode,  0 callback
-111 VC callback profile - scalar:155 vector:103
-112 Sun Feb 21 17:09:56 2021
-113 End of simulation at 7512000
-114 VC callback profile - scalar:24480 vector:18412
-115 Sun Feb 21 17:09:57 2021
-116 Begin FSDB profile info:
-117 FSDB Writer : bc1(24480) bcn(18412) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.126304) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+110 VC callback profile - scalar:155 vector:107
+111 Sun Feb 21 23:52:38 2021
+112 End of simulation at 2962000
+113 VC callback profile - scalar:6684 vector:10252
+114 Sun Feb 21 23:52:38 2021
+115 Begin FSDB profile info:
+116 FSDB Writer : bc1(6684) bcn(10252) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.141015) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
-118 End FSDB profile info
-119 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:0
-120                        ProduceTime:0.132741695 ConsumerTime:0.000000000 Buffer:64MB
-121 SimExit
-122 Sim process exit
+117 End FSDB profile info
+118 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:0
+119                        ProduceTime:0.088829113 ConsumerTime:0.000000000 Buffer:64MB
+120 SimExit
+121 Sim process exit

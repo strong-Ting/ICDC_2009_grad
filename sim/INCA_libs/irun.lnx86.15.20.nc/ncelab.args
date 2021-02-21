@@ -2,14 +2,12 @@
 // File created by:  ncverilog
 // Do not modify this file
 //
-+define+tb2
++define+tb1
 +define+FSDB
 +access+r
-+notimingchecks
 -noshowtop
 -ACCESS
 +r
--NOTIMINGCHECKS
 -MESSAGES
 -XLMODE
 ./INCA_libs/irun.lnx86.15.20.nc

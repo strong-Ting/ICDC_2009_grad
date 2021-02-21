@@ -6,14 +6,16 @@ Report : timing
         -max_paths 1
 Design : NFC
 Version: P-2019.03
-Date   : Sun Feb 21 14:14:29 2021
+Date   : Sun Feb 21 23:38:40 2021
 ****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
 
 Operating Conditions: slow   Library: slow
 Wire Load Model Mode: top
 
-  Startpoint: cmd[7] (input port clocked by clk)
-  Endpoint: M_A[6] (output port clocked by clk)
+  Startpoint: clk (clock source 'clk')
+  Endpoint: F_WEN (output port clocked by clk)
   Path Group: clk
   Path Type: max
 
@@ -23,35 +25,22 @@ Wire Load Model Mode: top
 
   Point                                    Incr       Path
   -----------------------------------------------------------
-  clock clk (rise edge)                    0.00       0.00
-  clock network delay (ideal)              1.00       1.00
-  input external delay                     5.00       6.00 f
-  cmd[7] (in)                              0.03       6.03 f
-  add_219_S2/B[0] (NFC_DW01_add_0)         0.00       6.03 f
-  add_219_S2/U1/Y (CLKAND2X8)              0.10       6.13 f
-  add_219_S2/U1_1/CO (ADDFHX2)             0.28       6.42 f
-  add_219_S2/U4/Y (NAND2X1)                0.20       6.61 r
-  add_219_S2/U6/Y (NAND3X1)                0.20       6.81 f
-  add_219_S2/U1_3/CO (ADDFX2)              0.38       7.19 f
-  add_219_S2/U1_4/CO (ADDFXL)              0.50       7.70 f
-  add_219_S2/U1_5/CO (ADDFHX2)             0.28       7.97 f
-  add_219_S2/U1_6/Y (XOR3X1)               0.36       8.33 r
-  add_219_S2/SUM[6] (NFC_DW01_add_0)       0.00       8.33 r
-  U116/Y (NAND2X2)                         0.22       8.56 f
-  U115/Y (INVX20)                          0.43       8.99 r
-  M_A[6] (out)                             0.00       8.99 r
-  data arrival time                                   8.99
+  clock clk (fall edge)                    5.00       5.00
+  clk (in)                              1011.00 #  1016.00 f
+  U20770/Y (NAND2X4)                       1.81 #  1017.81 r
+  F_WEN (out)                              0.00    1017.81 r
+  data arrival time                                1017.81
 
   clock clk (rise edge)                   10.00      10.00
   clock network delay (ideal)              1.00      11.00
   clock uncertainty                       -1.00      10.00
-  output external delay                   -1.00       9.00
-  data required time                                  9.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
   -----------------------------------------------------------
-  data required time                                  9.00
-  data arrival time                                  -8.99
+  data required time                                  8.00
+  data arrival time                               -1017.81
   -----------------------------------------------------------
-  slack (MET)                                         0.01
+  slack (VIOLATED)                                -1009.81
 
 
 1

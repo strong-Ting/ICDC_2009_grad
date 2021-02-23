@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<goal_summary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="file://Dashboard/goal_xml.xsd">
+<!-- This file schema is internal to Atrenta DashBoard and subject to change in future without notice --> 
+<goal name="txv_verification/txv_glitch"/>
+<top name=""/>
+<dir name="/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/consolidated_reports/txv_verification_txv_glitch/"/>
+<log name="/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/txv_verification/txv_glitch/spyglass.log" link="data_files/_txv_verification-txv_glitch_spyglass.log"/>
+  <std_reports> 
+<report name="moresimple" link="data_files/_txv_verification-txv_glitch_moresimple.rpt" tooltip="moresimple.rpt" />
+<report name="no_msg_reporting_rules" link="data_files/_txv_verification-txv_glitch_no_msg_reporting_rules.rpt" tooltip="no_msg_reporting_rules.rpt" />
+  </std_reports> 
+<tech_reports> 
+   <technology name="(Not Available)"> 
+<report name="CDC-report" link="data_files/_txv_verification-txv_glitch_CDC-report.rpt.html" tooltip="CDC-report.rpt" />
+<report name="tc_unparsed_command" link="data_files/_txv_verification-txv_glitch_tc_unparsed_command.rpt.html" tooltip="tc_unparsed_command.rpt" />
+<report name="txv_clock_domain_report" link="data_files/_txv_verification-txv_glitch_txv_clock_domain_report.rpt.html" tooltip="txv_clock_domain_report.rpt" />
+<report name="txv" link="data_files/_txv_verification-txv_glitch_txv.rpt.html" tooltip="txv.rpt" />
+   </technology> 
+</tech_reports> 
+<statistics fatal="1" error="0" warning="0" info="0" waived_error="0" waived_warning="0" waived_info="0" /> 
+<tech_summary> 
+</tech_summary> 
+</goal_summary> 

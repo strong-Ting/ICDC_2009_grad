@@ -1,0 +1,6 @@
+INPUT@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/rdc/rdc_verify_struct/spyglass_reports@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/html_reports/data_files/@@NFC@@rdc-rdc_verify_struct@@
+COPY@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/rdc/rdc_verify_struct/spyglass_reports/moresimple.rpt@@data_files/NFC_rdc-rdc_verify_struct_moresimple.rpt@@
+COPY@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/rdc/rdc_verify_struct/spyglass_reports/no_msg_reporting_rules.rpt@@data_files/NFC_rdc-rdc_verify_struct_no_msg_reporting_rules.rpt@@
+REGEN@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/rdc/rdc_verify_struct/spyglass_reports/CDC-report.rpt@@data_files/NFC_rdc-rdc_verify_struct_CDC-report.rpt.html@@
+PROCESS@@clock-reset@@SpyGlass
+COPY@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/rdc/rdc_verify_struct/spyglass.log@@data_files/NFC_rdc-rdc_verify_struct_spyglass.log@@

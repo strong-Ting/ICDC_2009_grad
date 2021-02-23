@@ -1,0 +1,134 @@
+SpyGlass run started at 02:13:40 AM on Feb 22 2021 
+
+SpyGlass Predictive Analyzer(R) - Version SpyGlass_vP-2019.06
+Synopsys TestMAX(TM)
+Last compiled on Jun  2 2019
+
+All Rights Reserved. Use, disclosure or duplication
+without prior written permission of Synopsys Inc. is prohibited.
+Technical support: email spyglass_support@synopsys.com.
+
+
+Running SpyGlass 64-bit Executable: /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/obj/check.Linux4
+
+RULE-CHECKING IN MIXED MODE
+Loading Policy: spyglass (Version: SpyGlass_vP-2019.06) from path: /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/policies/spyglass
+Loading Shared library libspyglassrules-Linux4.spyso from /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/lib/libspyglassrules-Linux4.spyso 
+Loading Shared library libsdcInitRules-Linux4.spyso from /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/lib/libsdcInitRules-Linux4.spyso 
+Loading Shared library librmerules-Linux4.spyso from /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/lib/librmerules-Linux4.spyso 
+Version of Policy 'dft_dsm': SpyGlass_vP-2019.06
+Loading Shared library libDftRules-Linux4.spyso from /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/policies/dft/libDftRules-Linux4.spyso 
+Version of Policy 'dft': SpyGlass_vP-2019.06
+##build_id : P-2019.06
+##system   : Linux dics03.ee.yuntech.edu.tw 3.10.0-1160.15.2.el7.x86_64 #1 SMP Wed Feb 3 15:06:38 UTC 2021 x86_64
+##cwd      : /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim
+##lang     : Verilog+VHDL
+##args     : -mSpyGlass::Compatibility::v2_7_3 \
+             -mSpyGlass::Compatibility::v2_7_3 \
+             -mSpyGlass::Compatibility::v2_7_3 \
+             -nl \
+             -lib WORK ./spyglass-1/WORK \
+             -rules='Soc_01,Soc_02,Soc_07,Soc_08,Soc_09,Soc_10,Soc_11,Soc_12,Atspeed_21,Soc_01_Info,Soc_02_Info,Soc_07_Info,Soc_04,Info_Atspeed_21,Info_testmode,Diagnose_testmode' \
+             -policy='dft_dsm,dft,dft,dft' \
+             -batch \
+             -dbdir './spyglass-1/.SG_SaveRestoreDB' \
+             -wdir './spyglass-1/connectivity_verify/connectivity_verification' \
+             -mixed \
+             -sdc2sgdc \
+             -projectwdir './spyglass-1' \
+             -templatedir '/usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff' \
+             --goal_info 'connectivity_verify/connectivity_verification@' \
+             --template_info 'connectivity_verify/connectivity_verification' \
+             -report_incr_messages \
+             -enable_save_restore \
+             -enable_save_restore_builtin 'true' \
+             -64bit  \
+             ../src/NFC.v
+
+##verbosity level   : 2
+##exact cmdline arg : -batch -project spyglass-1.prj -goal connectivity_verify/connectivity_verification -64bit
+##spyglass_run.csh begins :
+;	cd /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim
+;	setenv SPYGLASS_LD_PRELOAD /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/lib/libreplacemalloc.so
+;	setenv SPYGLASS_DW_PATH /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/dw_support
+;	/usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/bin/spyglass  -batch -project spyglass-1.prj -goal connectivity_verify/connectivity_verification -64bit
+##spyglass_run.csh ends
+##files    : ../src/NFC.v 
+
+
+INFO [76]    Using './spyglass-1/WORK/64' as the Work Directory for 64bit precompiled dump.
+Checking Rule DFT_LP_POWERDATA_CHECK (Rule 1 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule PrecompileLibCheck01 (Rule 2 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule PrecompileLibCheck02 (Rule 3 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule PrecompileLibCheck03 (Rule 4 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule PrecompileLibCheck04 (Rule 5 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule ElabSummary (Rule 6 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule AbstractInterface (Rule 7 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_assume_path01 (Rule 8 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_sdcschema02 (Rule 9 of total 221) .... done (Time = 0.00s, Memory = 40.0K)
+Checking Rule SGDC_clock05 (Rule 10 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_clock09 (Rule 11 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_force_ta05 (Rule 12 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_require_path03 (Rule 13 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_require_value03 (Rule 14 of total 221) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_voltagedomain05 (Rule 15 of total 221) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_voltagedomain06 (Rule 16 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_voltagedomain07 (Rule 17 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_powerdomainoutputs02 (Rule 18 of total 221) .... done (Time = 0.00s, Memory = 32.0K)
+Checking Rule SGDC_supply01 (Rule 19 of total 221) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_waive01 (Rule 20 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive02 (Rule 21 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive03 (Rule 22 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive04 (Rule 23 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive05 (Rule 24 of total 221) .... done (Time = 0.00s, Memory = -32.0K)
+Checking Rule SGDC_waive06 (Rule 25 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive07 (Rule 26 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive08 (Rule 27 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive09 (Rule 28 of total 221) .... done (Time = 0.00s, Memory = 32.0K)
+Checking Rule SGDC_waive10 (Rule 29 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive11 (Rule 30 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive12 (Rule 31 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive13 (Rule 32 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive21 (Rule 33 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive22 (Rule 34 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive30 (Rule 35 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive32 (Rule 36 of total 221) .... done (Time = 0.00s, Memory = 32.0K)
+Checking Rule SGDC_waive33 (Rule 37 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive36 (Rule 38 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive38 (Rule 39 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_fifo01 (Rule 40 of total 221) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_libgroup01 (Rule 41 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_libgroup02 (Rule 42 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_libgroup04 (Rule 43 of total 221) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_power_data01 (Rule 44 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_ungroup01 (Rule 45 of total 221) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_abstract_port06 (Rule 46 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port14 (Rule 47 of total 221) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_abstract_port15 (Rule 48 of total 221) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_abstract_port18 (Rule 49 of total 221) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SDC2SGDC_INFO (Rule 50 of total 221) .... done (Time = 0.00s, Memory = 80.0K)
+Checking Rule SDC_ParamSanityCheck (Rule 51 of total 221) .... done (Time = 0.07s, Memory = 32.0K)
+Checking Rule SDC_Sanity_Rule (Rule 52 of total 221)SDC-file translator read from path : /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/auxi/sdcparser
+ .... done (Time = 0.01s, Memory = 0.0K)
+Checking Rule sdc_init_rule (Rule 53 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule CMD_ignorelibs01 (Rule 54 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule ReportRuleNotRun (Rule 55 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dsmParamCheck_00 (Rule 56 of total 221) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dsmSetup (Rule 57 of total 221)
+        ********** LICENSE FAILURE NOTIFICATION **********
+        Some of the required license features could not be checked out.
+
+        Feature name: soc_conn_adv not found
+
+        "soc_conn_adv" is a license token required by SpyGlass Connectivity Verify for connectivity verification
+
+        Please check your license setup, or contact your CAD administrator.
+        SpyGlass is aborting current run
+        ********** END OF LICENSE FAILURE NOTIFICATION **********
+
+
+FATAL : Rule-checking aborted - license failure
+SpyGlass Exit Code 4 (License failure, rule-checking aborted)
+SpyGlass total run-time is 0:0:2 (2 secs)
+SpyGlass total cpu-time is 1 secs
+SpyGlass run completed at 02:24:00 AM on Feb 22 2021

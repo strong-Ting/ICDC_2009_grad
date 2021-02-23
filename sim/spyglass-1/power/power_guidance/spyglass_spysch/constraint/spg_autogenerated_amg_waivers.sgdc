@@ -1,0 +1,4 @@
+#file_type internal
+waive -file q%/usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/auxi/gates/dw_interface_library.v% --delete_internal_use_only
+waive -file q%/usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/dw_support/wrappers/dw_interface_library_NONAMG.v% --delete_internal_use_only
+waive -file "./spyglass-1/power/power_guidance/spyglass_spysch/concorde/.cache_dir_amg/*.v" --delete_internal_use_only

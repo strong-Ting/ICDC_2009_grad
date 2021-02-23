@@ -1,0 +1,20 @@
+2 "ErrorAnalyzeBBox" 1
+"BBoxEng"
+["NFC","BB_SYNTH_ERR"]
+-1 "ElabSummary" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "ErrorAnalyzeBBox" 2
+"RULEGROUP"
+["Blackbox Resolution"]
+"BUILTIN"
+"1"
+-1 "PECHECK04" 3
+"TEMPLATE"
+["power/power_audit"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["power_est/pe_sanity_check"]

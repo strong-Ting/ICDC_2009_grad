@@ -1,0 +1,77 @@
+##This file is genrated to have command line decompiled Info even in Console
+##(To generate SIGN_OFF report having command line decompiled)
+Run Setup Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Option          Value             Origin  File                           LineNo
+===============================================================================
+--goal_info     constraints/sdc_exception_struct@ CmdLine -                              -
+--strict_sgdc_check <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 40
+-batch          <ON>              CmdLine -                              -
+-dbdir          ./spyglass-1/.SG_SaveRestoreDB CmdLine -                              -
+-enable_save_restore <ON>              CmdLine -                              -
+-enable_save_restore_builtin true              CmdLine -                              -
+-inferblackbox  <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 30
+-lib            WORK=>./spyglass-1/WORK CmdLine -                              -
+                SYNOPSYS=>$SPYGLASS_HOME/vhdl_libs/Linux4/SYNOPSYS Config  $SPYGLASS_HOME/.spyglass.setup 25
+-mixed          <ON>              CmdLine -                              -
+-nl             <ON>              CmdLine -                              -
+-policy         constraints       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_exception_struct.spq 29
+-projectwdir    ./spyglass-1      CmdLine -                              -
+-report         moresimple        Config  $SPYGLASS_HOME/.spyglass.setup 17
+-rules          False_Path01      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_exception_struct.spq 35
+                False_Path09      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_exception_struct.spq 36
+                MCP01             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_exception_struct.spq 37
+                MCP05             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_exception_struct.spq 38
+                TE_Conflict01     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_exception_struct.spq 39
+                Show_Case_Analysis CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_exception_struct.spq 41
+                Show_Clock_Propagation CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_exception_struct.spq 42
+                SCG01             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_exception_struct.spq 44
+                SCG02             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_exception_struct.spq 45
+                SCG03             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_exception_struct.spq 46
+                SCG04             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_exception_struct.spq 47
+                SCG05             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/constraints/sdc_exception_struct.spq 48
+-sortmethod     du                Config  $SPYGLASS_HOME/.spyglass.setup 27
+-template       constraints/sdc_exception_struct CmdLine -                              -
+-templatedir    /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff CmdLine -                              -
+-wdir           ./spyglass-1/constraints/sdc_exception_struct CmdLine -                              -
+<design_files>  ../src/NFC.v      APICall -                              -
+
+
+Rules Parameter
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Parameter       Origin  File                           LineNo
+===============================================================================
+
+
+Policy Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+NameOfPolicy    VersionNumber   Path (from where policy loaded)
+===============================================================================
+spyglass        SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/spyglass
+constraints     SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/constraints
+txv             SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/txv
+timing          SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/timing
+starcad-21      SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/starcad-21
+starc2005       SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/starc2005
+starc2002       SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/starc2002
+starc           SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/starc
+simulation      SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/simulation
+power_est       SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/power_est
+openmore        SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/openmore
+morelint        SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/morelint
+miscellaneous   SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/miscellaneous
+lowpower        5.6.1           $SPYGLASS_HOME/policies/lowpower
+lint            SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/lint
+latch           SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/latch
+erc             SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/erc
+dft_dsm         SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/dft_dsm
+dft             SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/dft
+const_intern1   SpyGlass_vL-2016.06 $SPYGLASS_HOME/policies/constraints
+clock-reset     SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/clock
+area            SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/area
+Audits          SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/Audits
+
+

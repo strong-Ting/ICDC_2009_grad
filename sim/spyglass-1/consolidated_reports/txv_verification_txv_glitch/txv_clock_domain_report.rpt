@@ -1,0 +1,21 @@
+
+###############################################################################################
+#
+# txv_clock_domain_report.rpt
+#
+# SpyGlass Version SpyGlass_vP-2019.06
+#
+# Report Generated on Mon Feb 22 2:21:1 PDT 2021
+#
+
+# Purpose: 
+# 	This report contains the domain and period of all the clocks specified in the SDC file
+
+# Format: 
+# This report contains the following section: 
+# Section A: List of clocks for each domain
+# Section B: Clocks for which domain could not be inferred, hence assumed synchronous to all the clocks
+# Section C: Generated clocks which are asynchronouse to their source clock
+#
+###############################################################################################
+

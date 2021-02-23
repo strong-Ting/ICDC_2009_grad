@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<goal_summary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="file://Dashboard/goal_xml.xsd">
+<!-- This file schema is internal to Atrenta DashBoard and subject to change in future without notice --> 
+<goal name="power/power_activity_check"/>
+<top name="NFC"/>
+<dir name="/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/consolidated_reports/power_power_activity_check/"/>
+<log name="/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/power/power_activity_check/spyglass.log" link="data_files/NFC_power-power_activity_check_spyglass.log"/>
+  <std_reports> 
+<report name="moresimple" link="data_files/NFC_power-power_activity_check_moresimple.rpt" tooltip="moresimple.rpt" />
+<report name="no_msg_reporting_rules" link="data_files/NFC_power-power_activity_check_no_msg_reporting_rules.rpt" tooltip="no_msg_reporting_rules.rpt" />
+  </std_reports> 
+<tech_reports> 
+   <technology name="Power( Power Estimation )"> 
+<report name="pe_debug_info" link="data_files/NFC_power-power_activity_check_pe_debug_info.rpt.html" tooltip="pe_debug_info.rpt" />
+<report name="pe_clock_gating_summary" link="data_files/NFC_power-power_activity_check_pe_clock_gating_summary.rpt.html" tooltip="pe_clock_gating_summary.rpt" />
+<report name="pe_design_stats" link="data_files/NFC_power-power_activity_check_pe_design_stats.rpt.html" tooltip="pe_design_stats.rpt" />
+<report name="pe_adv_reduction" link="data_files/NFC_power-power_activity_check_pe_adv_reduction.rpt.html" tooltip="pe_adv_reduction.rpt" />
+<report name="pe_reduction" link="data_files/NFC_power-power_activity_check_pe_reduction.rpt.html" tooltip="pe_reduction.rpt" />
+<report name="pe_wireload" link="data_files/NFC_power-power_activity_check_pe_wireload.rpt.html" tooltip="pe_wireload.rpt" />
+<report name="pe_cycle_power" link="data_files/NFC_power-power_activity_check_pe_cycle_power.rpt.html" tooltip="pe_cycle_power.rpt" />
+<report name="pe_summary" link="data_files/NFC_power-power_activity_check_pe_summary.rpt.html" tooltip="pe_summary.rpt" />
+<report name="pe_audit" link="data_files/NFC_power-power_activity_check_pe_audit.rpt.html" tooltip="pe_audit.rpt" />
+   </technology> 
+</tech_reports> 
+<statistics fatal="0" error="2" warning="0" info="3" waived_error="0" waived_warning="0" waived_info="0" /> 
+<tech_summary> 
+   <technology name="Power"> 
+   </technology> 
+</tech_summary> 
+</goal_summary> 

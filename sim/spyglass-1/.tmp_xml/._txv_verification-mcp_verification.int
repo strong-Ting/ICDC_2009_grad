@@ -1,0 +1,9 @@
+INPUT@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/txv_verification/mcp_verification/spyglass_reports@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/html_reports/data_files/@@@@txv_verification-mcp_verification@@
+COPY@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/txv_verification/mcp_verification/spyglass_reports/moresimple.rpt@@data_files/_txv_verification-mcp_verification_moresimple.rpt@@
+COPY@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/txv_verification/mcp_verification/spyglass_reports/no_msg_reporting_rules.rpt@@data_files/_txv_verification-mcp_verification_no_msg_reporting_rules.rpt@@
+REGEN@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/txv_verification/mcp_verification/spyglass_reports/CDC-report.rpt@@data_files/_txv_verification-mcp_verification_CDC-report.rpt.html@@
+REGEN@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/txv_verification/mcp_verification/spyglass_reports/tc_unparsed_command.rpt@@data_files/_txv_verification-mcp_verification_tc_unparsed_command.rpt.html@@
+REGEN@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/txv_verification/mcp_verification/spyglass_reports/txv_clock_domain_report.rpt@@data_files/_txv_verification-mcp_verification_txv_clock_domain_report.rpt.html@@
+REGEN@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/txv_verification/mcp_verification/spyglass_reports/txv.rpt@@data_files/_txv_verification-mcp_verification_txv.rpt.html@@
+PROCESS@@timing@@morelint@@lowpower@@area@@Audits@@const_intern1@@dft@@dft_dsm@@erc@@latch@@lint@@miscellaneous@@openmore@@power_est@@simulation@@starc@@starc2002@@starc2005@@clock-reset@@constraints@@txv@@SpyGlass
+COPY@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/txv_verification/mcp_verification/spyglass.log@@data_files/_txv_verification-mcp_verification_spyglass.log@@

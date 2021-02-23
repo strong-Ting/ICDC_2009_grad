@@ -1,0 +1,101 @@
+##This file is genrated to have command line decompiled Info even in Console
+##(To generate SIGN_OFF report having command line decompiled)
+Run Setup Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Option          Value             Origin  File                           LineNo
+===============================================================================
+--goal_info     dft/dft_best_practice@ CmdLine -                              -
+--strict_sgdc_check <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 40
+-batch          <ON>              CmdLine -                              -
+-dbdir          ./spyglass-1/.SG_SaveRestoreDB CmdLine -                              -
+-enable_save_restore <ON>              CmdLine -                              -
+-enable_save_restore_builtin true              CmdLine -                              -
+-inferblackbox  <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 30
+-lib            WORK=>./spyglass-1/WORK CmdLine -                              -
+                SYNOPSYS=>$SPYGLASS_HOME/vhdl_libs/Linux4/SYNOPSYS Config  $SPYGLASS_HOME/.spyglass.setup 25
+-mixed          <ON>              CmdLine -                              -
+-nl             <ON>              CmdLine -                              -
+-overloadrules  Async_07+msgLabel=Async_07_M1+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 96
+                Clock_11+msgLabel=Clock_11_M1+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 111
+                Latch_08+msgLabel=Latch_08_WRN_01+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 130
+-policy         dft               CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 70
+-projectwdir    ./spyglass-1      CmdLine -                              -
+-report         moresimple        Config  $SPYGLASS_HOME/.spyglass.setup 17
+-rules          Coverage_audit    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 87
+                Info_coverage     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 89
+                Async_02_capture  CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 91
+                Async_03          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 93
+                Async_07          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 95
+                Async_08          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 98
+                Async_11          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 100
+                BIST_01           CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 102
+                Clock_04          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 104
+                Clock_08          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 106
+                Clock_09          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 108
+                Clock_11          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 110
+                Clock_11_capture  CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 113
+                Clock_16          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 115
+                Clock_17          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 117
+                Clock_21          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 119
+                Clock_26          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 121
+                Clock_27          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 123
+                Clock_28          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 125
+                Latch_02          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 127
+                Latch_08          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 129
+                Latch_10          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 132
+                Scan_07           CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 134
+                Scan_22           CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 136
+                Scan_24           CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 138
+                Scan_25           CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 140
+                Scan_26           CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 142
+                Soc_04            CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 144
+                TA_09             CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 146
+                Topology_01       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 148
+                Topology_02       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 150
+                Topology_03       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 152
+                Topology_05       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 154
+                Topology_10       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 156
+                Topology_13       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 158
+                Tristate_06       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 160
+                Tristate_07_shift CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 162
+                Diagnose_testclock CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 164
+                Diagnose_testmode CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 166
+                Info_forcedScan   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 168
+                Info_inferredNoScan CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 170
+                Info_noFault      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 172
+                Info_noScan       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 174
+                Info_scanchain    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 176
+                Info_scanwrap     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 178
+                Info_synthRedundant CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 180
+                Info_testclock    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 182
+                Info_testmode     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 184
+                Info_testmode_conflict_01 CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 186
+                Info_uncontrollable CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 188
+                Info_undetectCause CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 190
+                Info_unobservable CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 192
+                Info_untestable   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 194
+                Info_unused       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_best_practice.spq 196
+-sortmethod     du                Config  $SPYGLASS_HOME/.spyglass.setup 27
+-template       dft/dft_best_practice CmdLine -                              -
+-templatedir    /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff CmdLine -                              -
+-wdir           ./spyglass-1/dft/dft_best_practice CmdLine -                              -
+<design_files>  ../src/NFC.v      APICall -                              -
+
+
+Rules Parameter
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Parameter       Origin  File                           LineNo
+===============================================================================
+
+
+Policy Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+NameOfPolicy    VersionNumber   Path (from where policy loaded)
+===============================================================================
+spyglass        SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/spyglass
+dft             SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/dft
+
+

@@ -1,0 +1,7 @@
+INPUT@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/constraints/sdc_exception_struct/spyglass_reports@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/html_reports/data_files/@@@@constraints-sdc_exception_struct@@
+COPY@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/constraints/sdc_exception_struct/spyglass_reports/moresimple.rpt@@data_files/_constraints-sdc_exception_struct_moresimple.rpt@@
+COPY@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/constraints/sdc_exception_struct/spyglass_reports/no_msg_reporting_rules.rpt@@data_files/_constraints-sdc_exception_struct_no_msg_reporting_rules.rpt@@
+REGEN@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/constraints/sdc_exception_struct/spyglass_reports/tc_unparsed_command.rpt@@data_files/_constraints-sdc_exception_struct_tc_unparsed_command.rpt.html@@
+COPY@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/constraints/sdc_exception_struct/spyglass_reports/tc_unparsed_command.rpt@@data_files/_constraints-sdc_exception_struct_tc_unparsed_command.rpt@@
+PROCESS@@timing@@morelint@@lowpower@@area@@Audits@@clock-reset@@const_intern1@@dft@@dft_dsm@@erc@@latch@@lint@@miscellaneous@@openmore@@power_est@@simulation@@starc@@starc2002@@starc2005@@txv@@constraints@@SpyGlass
+COPY@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/constraints/sdc_exception_struct/spyglass.log@@data_files/_constraints-sdc_exception_struct_spyglass.log@@

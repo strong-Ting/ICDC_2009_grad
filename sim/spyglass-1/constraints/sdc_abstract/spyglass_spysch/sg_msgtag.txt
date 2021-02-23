@@ -1,0 +1,7 @@
+-1 "Const_Sanity_Rule" 3
+"TEMPLATE"
+["constraints/sdc_abstract"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["constraints/Prereqs"]

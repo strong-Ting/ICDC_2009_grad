@@ -1,0 +1,6 @@
+
+param@@-cstratime@@7200@@
+param@@-abort_max@@10@@
+param@@-txv_clock_period_precision@@3@@
+param@@-txv_fp_split_c2c@@yes@@
+param@@-txv_rca_run_time@@10@@

@@ -1,0 +1,7 @@
+-1 "Av_license01" 3
+"TEMPLATE"
+["adv_lint/adv_lint_struct"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["auto-verify/Sanity"]

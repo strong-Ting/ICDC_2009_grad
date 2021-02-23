@@ -1,0 +1,179 @@
+##This file is genrated to have command line decompiled Info even in Console
+##(To generate SIGN_OFF report having command line decompiled)
+Run Setup Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Option          Value             Origin  File                           LineNo
+===============================================================================
+--goal_info     cdc/cdc_verify@   CmdLine -                              -
+--strict_sgdc_check <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 40
+-batch          <ON>              CmdLine -                              -
+-dbdir          ./spyglass-1/.SG_SaveRestoreDB CmdLine -                              -
+-decompile_block_constraints <ON>              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 97
+-enable_const_prop_thru_seq <ON>              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 77
+-enable_save_restore <ON>              CmdLine -                              -
+-enable_save_restore_builtin true              CmdLine -                              -
+-inferblackbox  <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 30
+-lib            WORK=>./spyglass-1/WORK CmdLine -                              -
+                SYNOPSYS=>$SPYGLASS_HOME/vhdl_libs/Linux4/SYNOPSYS Config  $SPYGLASS_HOME/.spyglass.setup 25
+-mixed          <ON>              CmdLine -                              -
+-nl             <ON>              CmdLine -                              -
+-overloadrules  Ac_clockperiod01+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 105
+                Clock_info03a+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 112
+                Clock_info05+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 115
+                Clock_info05a+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 118
+                Clock_info05b+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 121
+                Ac_resetvalue01+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 124
+                Reset_info09a+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 127
+                Clock_converge01+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 130
+                Reset_check03+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 135
+                Reset_check11+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 138
+                Reset_check12+severity=Error+msgLabel=NORMAL_WARNING CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 141
+                Reset_check12+severity=Info+msgLabel=CORNER_WARNING CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 142
+                Clock_info03c+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 147
+                Clock_sync05+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 174
+                Clock_sync06+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 178
+                Reset_sync02+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 186
+-policy         clock-reset       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 70
+-projectwdir    ./spyglass-1      CmdLine -                              -
+-report         moresimple        Config  $SPYGLASS_HOME/.spyglass.setup 17
+-rules          Ac_clockperiod01  CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 104
+                Ac_clockperiod02  CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 107
+                Ac_clockperiod03  CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 109
+                Clock_info03a     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 111
+                Clock_info05      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 114
+                Clock_info05b     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 120
+                Ac_resetvalue01   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 123
+                Reset_info09a     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 126
+                Clock_converge01  CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 129
+                Ar_converge01     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 132
+                Reset_check03     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 134
+                Reset_check11     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 137
+                Reset_check12     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 140
+                Clock_info03b     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 144
+                Clock_info03c     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 146
+                Setup_port01      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 149
+                Setup_blackbox01  CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 151
+                Clock_check10     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 153
+                Ac_initstate01    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 155
+                Ar_syncrstactive01 CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 157
+                Ar_syncrstcombo01 CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 159
+                Ar_syncrstload01  CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 161
+                Ar_syncrstload02  CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 163
+                Ar_syncrstpragma01 CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 165
+                Ar_syncrstrtl01   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 167
+                Ac_unsync01       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 169
+                Ac_unsync02       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 171
+                Clock_sync05      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 173
+                Clock_sync05a     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 175
+                Clock_sync06      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 177
+                Clock_sync06a     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 179
+                Ar_unsync01       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 181
+                Ar_asyncdeassert01 CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 183
+                Reset_sync02      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 185
+                Reset_sync04      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 188
+                Ac_datahold01a    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 190
+                Ac_conv01         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 192
+                Ac_conv02         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 194
+                Ac_conv03         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 196
+                Ac_conv04         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 198
+                Ac_coherency06    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 200
+                Ac_glitch03       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 202
+                Ac_cdc01a         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 205
+                Ac_crossing01     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 207
+                Ac_sync01         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 209
+                Ac_sync02         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 211
+                Ar_sync01         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 213
+                Ar_syncdeassert01 CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 215
+                Clock_info15      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 217
+                Setup_quasi_static01 CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 219
+                Ar_syncrst_setupcheck01 CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 221
+                Info_Case_Analysis CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 223
+                Clock_info05c     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 225
+                Clock_glitch05    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 227
+                Clock_info01      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 236
+                Reset_info01      CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 238
+                FalsePathSetup    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 240
+                Setup_library01   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 242
+-sdc_generate_cfp yes               CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 94
+-sortmethod     du                Config  $SPYGLASS_HOME/.spyglass.setup 27
+-template       cdc/cdc_verify    CmdLine -                              -
+-templatedir    /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff CmdLine -                              -
+-use_advcdc_features <ON>              CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 78
+-wdir           ./spyglass-1/cdc/cdc_verify CmdLine -                              -
+<design_files>  ../src/NFC.v      APICall -                              -
+
+
+Rules Parameter
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Parameter       Origin  File                           LineNo
+===============================================================================
+-allow_combo_logic CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 203
+VALUE -- yes
+(KNOWN_PARAM)
+-allow_merged_qualifier CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 234
+VALUE -- strict
+(KNOWN_PARAM)
+-cdc_qualifier_depth CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 230
+VALUE -- 3
+(KNOWN_PARAM)
+-cdc_reduce_pessimism CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 93
+VALUE -- mbit_macro,no_convergence_at_syncreset,no_convergence_at_enable,use_multi_arc,clock_crossing,no_unate_reconv,clock_on_ports,ignore_multi_domain
+(KNOWN_PARAM)
+-check_multiclock_bbox CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 229
+VALUE -- yes
+(KNOWN_PARAM)
+-clock_reduce_pessimism CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 233
+VALUE -- latch_en,mux_sel_derived,check_enable_for_glitch,ignore_same_domain
+(KNOWN_PARAM)
+-conv_sync_seq_depth CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 231
+VALUE -- 1
+(KNOWN_PARAM)
+-conv_sync_seq_depth_opt CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 232
+VALUE -- yes
+(KNOWN_PARAM)
+-distributed_fifo CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 86
+VALUE -- yes
+(KNOWN_PARAM)
+-enable_and_sync CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 85
+VALUE -- yes
+(KNOWN_PARAM)
+-enable_debug_data CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 87
+VALUE -- yes
+(KNOWN_PARAM)
+-enable_mux_sync CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 84
+VALUE -- all
+(KNOWN_PARAM)
+-fa_msgmode     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 91
+VALUE -- all
+(KNOWN_PARAM)
+-fa_vcdfulltrace CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 90
+VALUE -- allnets
+(KNOWN_PARAM)
+-handle_combo_arc CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 95
+VALUE -- yes
+(KNOWN_PARAM)
+-hier_wild_card CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 88
+VALUE -- no
+(KNOWN_PARAM)
+-reset_reduce_pessimism CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 92
+VALUE -- same_data_reset_flop,remove_overlap
+(KNOWN_PARAM)
+-strict_sync_check CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 89
+VALUE -- yes
+(KNOWN_PARAM)
+-use_inferred_abstract_port CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/cdc/cdc_verify.spq 98
+VALUE -- yes
+(KNOWN_PARAM)
+
+
+Policy Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+NameOfPolicy    VersionNumber   Path (from where policy loaded)
+===============================================================================
+spyglass        SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/spyglass
+clock-reset     SpyGlass_vP-2019.06 $SPYGLASS_HOME/policies/clock
+
+

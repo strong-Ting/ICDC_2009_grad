@@ -1,0 +1,173 @@
+read_file -type verilog ../src/NFC.v
+
+
+
+current_goal Design_Read -alltop
+
+
+link_design -force
+
+gui_select_message -rule DetectTopDesignUnits -msg {Module NFC is a top level design unit}
+gui_select_message -rule ElabSummary -msg {Please refer file './spyglass-1/Design_Read/spyglass_reports/SpyGlass/elab_summary.rpt' for elab summary report}
+link_design -force
+
+set_option report_incr_messages yes
+set_option designread_enable_synthesis yes
+compile_design -force
+
+gui_load_schematic -ms -is NFC
+gui_select_message -rule ErrorAnalyzeBBox -msg {UnsynthesizedDU: Design Unit 'NFC' (elaborated name 'NFC') not synthesizable; SYNTH_5273 error(s) found during synthesis}
+gui_load_schematic -ms -is NFC
+gui_select_message -rule SYNTH_5273 -msg {NFC -> Number of bits (16384) for net/variable 'BLOCK_MEM' is greater than mthresh value 4096. Set the 'mthresh' option to a value greater than the indicated number of bits}
+gui_load_schematic -ms -is NFC
+gui_select_message -rule SYNTH_5273 -msg {NFC -> Number of bits (16384) for net/variable 'BLOCK_MEM' is greater than mthresh value 4096. Set the 'mthresh' option to a value greater than the indicated number of bits}
+gui_select_message -rule checkCMD_mthresh -msg {'1' modules are unsynthesized and inferred as black-box due to mthresh value '4096', this may affect QOR}
+gui_load_schematic -ms -is NFC
+gui_select_message -rule SYNTH_5273 -msg {NFC -> Number of bits (16384) for net/variable 'BLOCK_MEM' is greater than mthresh value 4096. Set the 'mthresh' option to a value greater than the indicated number of bits}
+mthresh
+gui_select_message -rule checkCMD_mthresh -msg {'1' modules are unsynthesized and inferred as black-box due to mthresh value '4096', this may affect QOR}
+
+
+current_goal lint/lint_rtl -alltop
+run_goal
+current_goal lint/lint_turbo_rtl -alltop
+run_goal
+current_goal lint/lint_functional_rtl -alltop
+run_goal
+current_goal lint/lint_abstract -alltop
+run_goal
+current_goal adv_lint/adv_lint_struct -alltop
+run_goal
+current_goal adv_lint/adv_lint_verify -alltop
+run_goal
+current_goal constraints/sdc_audit -alltop
+run_goal
+current_goal constraints/sdc_check -alltop
+run_goal
+current_goal constraints/sdc_exception_struct -alltop
+run_goal
+current_goal constraints/sdc_redundancy -alltop
+run_goal
+current_goal constraints/sdc_abstract -alltop
+run_goal
+current_goal txv_verification/fp_verification -alltop
+run_goal
+current_goal txv_verification/mcp_verification -alltop
+run_goal
+current_goal txv_verification/fp_mcp_verification -alltop
+run_goal
+current_goal txv_verification/txv_run_audit -alltop
+run_goal
+current_goal txv_verification/txv_glitch -alltop
+run_goal
+current_goal txv_verification/txv_rtl_gen -alltop
+run_goal
+current_goal txv_verification/txv_sdc_migration -alltop
+run_goal
+current_goal cdc/cdc_setup_check -alltop
+run_goal
+current_goal cdc/clock_reset_integrity -alltop
+run_goal
+current_goal cdc/cdc_verify_struct -alltop
+run_goal
+current_goal cdc/cdc_verify -alltop
+run_goal
+current_goal cdc/cdc_abstract -alltop
+run_goal
+current_goal rdc/rdc_verify_struct -alltop
+run_goal
+current_goal dft/dft_scan_ready -alltop
+run_goal
+current_goal dft/dft_best_practice -alltop
+run_goal
+current_goal dft/dft_bist_ready -alltop
+run_goal
+current_goal dft/dft_dsm_best_practice -alltop
+run_goal
+current_goal dft/dft_dsm_random_resistance -alltop
+run_goal
+current_goal dft/dft_abstract -alltop
+run_goal
+current_goal power/power_audit -alltop
+run_goal
+current_goal power/power_activity_check -alltop
+run_goal
+current_goal power/power_gen_pesd -alltop
+run_goal
+current_goal power/power_calibration -alltop
+run_goal
+current_goal power/power_est_average -alltop
+run_goal
+current_goal power/power_est_profiling -alltop
+run_goal
+current_goal power/power_reduction_adv -alltop
+run_goal
+current_goal power/power_mem_reduction -alltop
+run_goal
+current_goal power/power_guidance -alltop
+run_goal
+current_goal power_verification/power_verif_audit -alltop
+run_goal
+current_goal power_verification/power_verif_noninstr -alltop
+run_goal
+current_goal power_verification/power_verif_instr_rtl -alltop
+run_goal
+current_goal power_verification/power_verif_abstract -alltop
+run_goal
+current_goal physical/lint_physical -alltop
+run_goal
+current_goal physical/physical_analysis_signoff -alltop
+run_goal
+current_goal physical_aware_power/physical_power_postfloorplan -alltop
+run_goal
+current_goal physical_aware_power/power_est_average -alltop
+run_goal
+current_goal rtl2netlist/rtl2netlist_migration -alltop
+run_goal
+current_goal connectivity_verify/connectivity_verification -alltop
+run_goal
+current_goal lint/lint_rtl -alltop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+remove_goal_option report
+set_goal_option report sca checksum ignored_rules elab_summary ignore_summary stop_summary spyglass_violations sign_off_sevlabel sign_off moresimple_filesort moresimple_rulesort waiver inline summary_sevlabel sev_count count score summary moresimple_turbo moresimple_sevclass no_msg_reporting_rules drag moresimple_error moresimple_warning moresimple simple
+
+
+
+
+
+
+
+gui_exit
+gui_exit

@@ -1,0 +1,5 @@
+INPUT@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/Design_Read/spyglass_reports@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/html_reports/data_files/@@NFC@@Design_Read@@
+COPY@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/Design_Read/spyglass_reports/moresimple.rpt@@data_files/NFC_Design_Read_moresimple.rpt@@
+COPY@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/Design_Read/spyglass_reports/no_msg_reporting_rules.rpt@@data_files/NFC_Design_Read_no_msg_reporting_rules.rpt@@
+PROCESS@@timing@@morelint@@lowpower@@area@@Audits@@clock-reset@@const_intern1@@constraints@@dft@@dft_dsm@@erc@@latch@@lint@@miscellaneous@@openmore@@power_est@@simulation@@starc@@starc2002@@starc2005@@txv@@SpyGlass
+COPY@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/Design_Read/spyglass.log@@data_files/NFC_Design_Read_spyglass.log@@

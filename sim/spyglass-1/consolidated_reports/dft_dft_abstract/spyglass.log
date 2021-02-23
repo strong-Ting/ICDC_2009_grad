@@ -1,0 +1,701 @@
+SpyGlass run started at 02:13:40 AM on Feb 22 2021 
+
+SpyGlass Predictive Analyzer(R) - Version SpyGlass_vP-2019.06
+Synopsys TestMAX(TM)
+Last compiled on Jun  2 2019
+
+All Rights Reserved. Use, disclosure or duplication
+without prior written permission of Synopsys Inc. is prohibited.
+Technical support: email spyglass_support@synopsys.com.
+
+
+Running SpyGlass 64-bit Executable: /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/obj/check.Linux4
+
+RULE-CHECKING IN MIXED MODE
+Loading Policy: spyglass (Version: SpyGlass_vP-2019.06) from path: /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/policies/spyglass
+Loading Shared library libspyglassrules-Linux4.spyso from /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/lib/libspyglassrules-Linux4.spyso 
+Loading Shared library libsdcInitRules-Linux4.spyso from /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/lib/libsdcInitRules-Linux4.spyso 
+Loading Shared library librmerules-Linux4.spyso from /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/lib/librmerules-Linux4.spyso 
+Version of Policy 'dft': SpyGlass_vP-2019.06
+Loading Shared library libDftRules-Linux4.spyso from /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/policies/dft/libDftRules-Linux4.spyso 
+##build_id : P-2019.06
+##system   : Linux dics03.ee.yuntech.edu.tw 3.10.0-1160.15.2.el7.x86_64 #1 SMP Wed Feb 3 15:06:38 UTC 2021 x86_64
+##cwd      : /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim
+##lang     : Verilog+VHDL
+##args     : -mSpyGlass::Compatibility::v2_7_3 \
+             -mSpyGlass::Compatibility::v2_7_3 \
+             -mSpyGlass::Compatibility::v2_7_3 \
+             -nl \
+             -lib WORK ./spyglass-1/WORK \
+             -rules='Soc_00' \
+             -policy='dft' \
+             -batch \
+             -dbdir './spyglass-1/.SG_SaveRestoreDB' \
+             -wdir './spyglass-1/dft/dft_abstract' \
+             -mixed \
+             -projectwdir './spyglass-1' \
+             -templatedir '/usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff' \
+             --goal_info 'dft/dft_abstract@' \
+             -block_abstract \
+             --template_info 'dft/dft_abstract' \
+             -report_incr_messages \
+             -enable_save_restore \
+             -enable_save_restore_builtin 'true' \
+             -dftTreatBBoxAsScanwrapped=on \
+             -64bit  \
+             ../src/NFC.v
+
+##verbosity level   : 2
+##exact cmdline arg : -batch -project spyglass-1.prj -goal dft/dft_abstract -64bit
+##spyglass_run.csh begins :
+;	cd /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim
+;	setenv SPYGLASS_LD_PRELOAD /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/lib/libreplacemalloc.so
+;	setenv SPYGLASS_DW_PATH /usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/dw_support
+;	/usr/cad/synopsys/spyglass/2019.06/SPYGLASS_HOME/bin/spyglass  -batch -project spyglass-1.prj -goal dft/dft_abstract -64bit
+##spyglass_run.csh ends
+##files    : ../src/NFC.v 
+
+
+INFO [76]    Using './spyglass-1/WORK/64' as the Work Directory for 64bit precompiled dump.
+Checking Rule DFT_LP_POWERDATA_CHECK (Rule 1 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule PrecompileLibCheck01 (Rule 2 of total 178) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule PrecompileLibCheck02 (Rule 3 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule PrecompileLibCheck03 (Rule 4 of total 178) .... done (Time = 0.00s, Memory = 32.0K)
+Checking Rule PrecompileLibCheck04 (Rule 5 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule ElabSummary (Rule 6 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule AbstractInterface (Rule 7 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_assume_path01 (Rule 8 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_sdcschema02 (Rule 9 of total 178) .... done (Time = 0.00s, Memory = 32.0K)
+Checking Rule SGDC_clock05 (Rule 10 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_clock09 (Rule 11 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_force_ta05 (Rule 12 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_require_path03 (Rule 13 of total 178) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_require_value03 (Rule 14 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_voltagedomain05 (Rule 15 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_voltagedomain06 (Rule 16 of total 178) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_voltagedomain07 (Rule 17 of total 178) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_powerdomainoutputs02 (Rule 18 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_supply01 (Rule 19 of total 178) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_waive01 (Rule 20 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive02 (Rule 21 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive03 (Rule 22 of total 178) .... done (Time = 0.00s, Memory = 1128.0K)
+Checking Rule SGDC_waive04 (Rule 23 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive05 (Rule 24 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive06 (Rule 25 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive07 (Rule 26 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive08 (Rule 27 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive09 (Rule 28 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive10 (Rule 29 of total 178) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_waive11 (Rule 30 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive12 (Rule 31 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive13 (Rule 32 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive21 (Rule 33 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive22 (Rule 34 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive30 (Rule 35 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive32 (Rule 36 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive33 (Rule 37 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive36 (Rule 38 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive38 (Rule 39 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_fifo01 (Rule 40 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_libgroup01 (Rule 41 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_libgroup02 (Rule 42 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_libgroup04 (Rule 43 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_power_data01 (Rule 44 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_ungroup01 (Rule 45 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port06 (Rule 46 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port14 (Rule 47 of total 178) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_abstract_port15 (Rule 48 of total 178) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_abstract_port18 (Rule 49 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule sdc_init_rule (Rule 50 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule CMD_ignorelibs01 (Rule 51 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule ReportRuleNotRun (Rule 52 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftSetup (Rule 53 of total 178) .... done (Time = 0.01s, Memory = 120.0K)
+Checking Rule dftSGDCDefineMacroCheck_01 (Rule 54 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftSGDCSTX_000 (Rule 55 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftSGDCSTX_073 (Rule 56 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftSGDCSTX_058 (Rule 57 of total 178) .... done (Time = 0.00s, Memory = -1128.0K)
+Checking Rule dftCumulativeFaultStatusFileCheck (Rule 58 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftSGDCSTX_051 (Rule 59 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftSGDCSTX_053 (Rule 60 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftSGDCSTX_054 (Rule 61 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftSGDCSTX_055 (Rule 62 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftSGDCSTX_072 (Rule 63 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftSGDCSTX_074 (Rule 64 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftSGDCSTX_076 (Rule 65 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftSGDCSTX_077 (Rule 66 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftSGDCSTX_078 (Rule 67 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftSGDCSTX_079 (Rule 68 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftSGDCSTX_080 (Rule 69 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftSGDCSTX_082 (Rule 70 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftSGDCSTX_075 (Rule 71 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftParamCheck_00 (Rule 72 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftParamCheck_01 (Rule 73 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule dftParamCheck_02 (Rule 74 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule Info_stil_to_sgdc (Rule 75 of total 178) .... done (Time = 0.00s, Memory = 8.0K)
+ Reading waiver file "./spyglass-1/dft/dft_abstract/spyglass_spysch/waiver/pragma2Waiver.swl" ...
+Checking Rule ReportStopSummary (Rule 76 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule ReportIgnoreSummary (Rule 77 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring NOM started: 2 sec, 1.91 sec, 1426120 KB, 3686840 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring NOM started: 2 sec, 1.91 sec, 1426120 KB, 3686840 KB
+
+INFO [235]    Restoring design database from directory './spyglass-1/.SG_SaveRestoreDB/autogenerated__default_snapshot' ...
+              done
+
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring NOM completed: 2 sec, 1.91 sec, 1463184 KB, 3686840 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring NOM completed: 0 sec, 0.00 sec, 37064 KB, 0 KB
+     (Memory Used = 37064.0K(incr), 1463184.0K(tot), Cpu Time = 0.01s(incr))
+Checking Rule InferBlackBox (Rule 78 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Modules = 0
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Instances = 0
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Nets = 0
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Terminals = 0
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Instances per Module (max and avg) = 0, 0
+ SYNTH_5273          -            -            SynthesisError                Checking Rule checkCMD_mthresh (Rule 79 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring SDE Data started: 2 sec, 1.92 sec, 1464016 KB, 3686840 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring SDE Data started: 0 sec, 0.00 sec, 832 KB, 0 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring SDE Data completed: 2 sec, 1.92 sec, 1464016 KB, 3686840 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring SDE Data completed: 0 sec, 0.00 sec, 0 KB, 0 KB
+     (Memory Used = 0.0K(incr), 1464016.0K(tot), Cpu Time = 0.00s(incr))
+Checking Rule SGDC_waive37 (Rule 80 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule DetectTopDesignUnits (Rule 81 of total 178) Detected 1 top level design units: 
+     NFC
+ .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule GenerateConfMap (Rule 82 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Performing semantic checks on SGDC contents
+..... SGDC semantic checks completed. (Time = 0.00s, Memory = 56.0K)
+Checking Rule SGDC_testmode03 (Rule 83 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule ReportUngroup (Rule 84 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+##SGDEBUG [BENCHMARK_ABSOLUTE]: VS rule checking finished...: 2 sec, 1.97 sec, 1464064 KB, 3686840 KB
+##SGDEBUG [BENCHMARK_INCR]: VS rule checking finished...: 0 sec, 0.06 sec, 48 KB, 0 KB
+Checking Rule AnalyzeBBox (Rule 85 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule ReportCheckDataSummary (Rule 86 of total 178) .... done (Time = 0.00s, Memory = 0.0K)
+
+Applying user specified and internally generated waivers on violation database .... done (Time = 0.00s)
+
+Generating data for Console...
+##SGDEBUG [PEAK_VMSIZE_END_RULE]: 3686840 KB for entire run at 'SDC2SGDCPARSEW_1.Init' stage
+##SGDEBUG [PEAK_SWAP_MEMORY_END_RULE]: 0 KB for entire run
+##SGDEBUG [VMPEAK_MEMORY]: 3686916 KB for entire run
+##SGDEBUG [PEAK_RSS_MEMORY]: 1003628 KB for entire run
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Rule checking finished: 3 sec, 2.10 sec, 1464128 KB, 3686836 KB
+##SGDEBUG [BENCHMARK_INCR]: Rule checking finished: 1 sec, 0.13 sec, 64 KB, -4 KB
+
+
+=====================================================================================
+							Rule Parameter Table
+=====================================================================================
+
+	PARAMETER-NAME                                     VALUE                DEFAULT VALUE
+-------------------------------------------------------------------------------------
+	-allow_clock_on_output_port                        no                   no
+	-check_clock_group_violations                      no                   no
+	-debug_proc                                        no                   no
+	-dft3BitClock                                      off                  off
+	-dftAllowClockPropagationThroughCGC                off                  off
+	-dftDebugData                                      bp_off               bp_off
+	-dftDesignState                                    pre_scan_stitched    pre_scan_stitched
+	-dftFlowMonitor                                    off                  off
+	-dftGenerateConstraintDS                           on                   on
+	-dftMethodologyFlow                                off                  off
+	-dftMethodologyFlowSeverity                        fatal                fatal
+	-dftSetAllBBScanwrapped                            off                  off
+	-dftSetAllLatchT                                   off                  off
+	-dftSetAllTriEnableObs                             off                  off
+	-dftSetLatchFedByTClkAsT                           off                  off
+	-dftShowClocksInUniqueColor                        off                  off
+	-dftTMPropThruFF                                   off                  off
+	-dftTestclockCycles                                30                   30
+	-dftTreatBBoxAsScanwrapped                         on                   off
+	-dftTreatFlipFlopsAsScan                           off                  off
+	-dftTreatLatchesAsTransparent                      off                  off
+	-dftTreatResetAsTestMode                           off                  off
+	-dftUseOffStateOfClockInClockPropagation           on                   on
+	-dft_ATPG_stuckAt_fault_report_path                UNDEFINED            UNDEFINED
+	-dft_ATPG_stuckAt_fault_report_type                None                 None
+	-dft_all_scan_chains_defined                       yes                  yes
+	-dft_allow_inactive_resets_from_ff                 on                   on
+	-dft_allow_inactive_resets_from_scan_ff            on                   on
+	-dft_allow_path_from_enable_to_cgc_clkout          off                  off
+	-dft_allow_reconvergence_in_flat_cgc               off                  off
+	-dft_allow_sequential_propagation_during_clock_simulation off                  off
+	-dft_autofix_testclock_signal                      atrenta_generated_port_tclk atrenta_generated_port_tclk
+	-dft_autofix_testmode_signal                       atrenta_generated_port_tm atrenta_generated_port_tm
+	-dft_capture_clock_control_for_no_fault            FF                   FF
+	-dft_cgc_enabling_condition_for_pre_scan_stitched_treatment enable_tied_te_cgc enable_missing_te_cgc enable_tied_te_cgc enable_missing_te_cgc
+	-dft_cgc_pre_scan_stitched_treatment_only_to_tied_test_enable off                  off
+	-dft_check_path_name_for_instance_suffix           off                  off
+	-dft_check_path_name_for_register_suffix           off                  off
+	-dft_clock_shaper_preserve_root                    off                  off
+	-dft_clock_tree_endpoints                          FF LD MEM BB         FF LD MEM BB
+	-dft_collapse_equivalent_faults                    off                  off
+	-dft_combinational_loop_analysis_effort_level      1                    1
+	-dft_conn_check_pulse_based_sensitized_path        on                   on
+	-dft_conn_group_show_status                        off                  off
+	-dft_conn_treat_fail_as_strict_fail                off                  off
+	-dft_conn_treat_pass_as_strict_pass                on                   on
+	-dft_coverage_report_depth                         0                    0
+	-dft_dc_1_pass_tpi                                 off                  off
+	-dft_dc_enable_utp_rpt                             on                   on
+	-dft_dc_tp_clock_info                              off                  off
+	-dft_dc_tp_count                                   -1                   -1
+	-dft_dc_tp_honor_no_test_point_for_target          all                  all
+	-dft_dc_tp_register_sharing_ratio                  0                    0
+	-dft_dc_tp_rrf_percent                             -1                   -1
+	-dft_dc_tp_ta_percent                              -1                   -1
+	-dft_debug_simulation_condition                    off                  off
+	-dft_detect_shadow_latches                         on                   on
+	-dft_disable_truthtable_approach                   none                 none
+	-dft_enable_CRG_01                                 off                  off
+	-dft_enable_checks_for_all_cgc                     off                  off
+	-dft_enable_clock_pin_for_clock_11                 off                  off
+	-dft_enable_shadow_wrapper_test_points             on                   on
+	-dft_enable_tcl_based_user_macro                   off                  off
+	-dft_generate_no_fault_and_add_fault_report        on                   on
+	-dft_generate_robustness_audit_report              on                   on
+	-dft_identify_equivalent_faults                    off                  off
+	-dft_identify_lockup_latch_only_through_buffers    off                  off
+	-dft_ignore_constant_supply_flip_flops             off                  off
+	-dft_ignore_inout_ports_as_driver                  on                   on
+	-dft_ignore_unate_reconvergence                    on                   on
+	-dft_ignore_x_sources                              none                 none
+	-dft_infer_clock_gating_cell                       hierarchical         hierarchical
+	-dft_infer_clock_gating_cell_test_enable           TEST_ENABLE SCAN_ENABLE TEN TE T SE TEST_EN TEST_ENABLE SCAN_ENABLE TEN TE T SE TEST_EN
+	-dft_infer_flop_enable                             E EN LH ENABLE DEN   E EN LH ENABLE DEN
+	-dft_infer_mux                                     on                   on
+	-dft_infer_sequential_propagation_as_no_scan       off                  off
+	-dft_infer_ser_redundancy_cell_enable              off                  off
+	-dft_info_x_source_show_rrf_probabilities          off                  off
+	-dft_lib_cgc_ignore_enable_polarity                on                   on
+	-dft_list_latches_of_type                          off                  off
+	-dft_loadable_non_scan_cells                       off                  off
+	-dft_mark_scan_flip_flop_observability_based_on_capture_clock off                  off
+	-dft_max_files_in_a_direcotry                      2000                 2000
+	-dft_max_flops_in_diagnose_scan_chain_violation_schematic 3                    3
+	-dft_maximum_number_of_messages_with_spreadsheet   1000                 1000
+	-dft_maximum_number_of_rows_with_schematic         10                   10
+	-dft_one_hot_clock_pulse_limit                     1                    1
+	-dft_pos_detect_fault_analysis                     off                  off
+	-dft_potential_clock_name_patterns                 clk clock            clk clock
+	-dft_potential_enable_name_patterns                en rst set clr clear tmode testmode test_mode test_se en rst set clr clear tmode testmode test_mode test_se
+	-dft_power_ground_signal_list                      GND GROUND POWER VCC VDD VSS GND GROUND POWER VCC VDD VSS
+	-dft_reset_pin_blockage_computation_only_based_on_other_async_pins off                  off
+	-dft_scannable_latches                             off                  off
+	-dft_set_scan_wrap_on_memory                       on                   on
+	-dft_show_rule_name_in_audit                       on                   on
+	-dft_show_scan_clock_tree                          2                    2
+	-dft_show_schematic_info_in_coverage_audit         off                  off
+	-dft_show_spreadsheet_path_in_message              on                   on
+	-dft_stil2sgdc_large_event_flow                    on                   on
+	-dft_stop_simulation_at_mux_with_unknown_select    off                  off
+	-dft_store_tcl_query_data                          sg_shell             sg_shell
+	-dft_suggest_potential_constraints                 on                   on
+	-dft_support_flip_flop_bank                        on                   on
+	-dft_support_special_flops                         on                   on
+	-dft_synthesis_view_expand_macros                  off                  off
+	-dft_tmax_compatibility                            off                  off
+	-dft_tp_allowed_path_depth                         0                    0
+	-dft_tp_enable_target_tag                          off                  off
+	-dft_tp_for_core_wrapped_designs                   off                  off
+	-dft_treat_primary_inputs_as_x_source              off                  off
+	-dft_treat_primary_outputs_as_unobservable         off                  off
+	-dft_treat_primary_port_as_valid_clock_point_for_cgc_check off                  off
+	-dft_treat_suffix_as_pattern                       off                  off
+	-dft_use_cumulative_fault_status                   off                  off
+	-dft_use_fsdb_for_test_setup                       off                  off
+	-dft_use_one_hot_clock_pulse                       off                  off
+	-dft_use_simulation_based_unblocked_path_check_for_scan_chain_tracing off                  off
+	-dft_use_specified_and_inferred_clocks             off                  off
+	-dft_use_stable_simulation_conditions              off                  off
+	-dft_xs_tp_min_capture_points                      1                    1
+	-force_genclk_for_txv                              no                   no
+	-ignoreBlackBoxDuringSimulation                    off                  off
+	-ignoreBlackBoxDuringTestability                   off                  off
+	-library_gen_clock_naming                          yes                  yes
+	-netlist_clock_polarity                            yes                  yes
+	-populate_comboelements_for_minmax_in_fromto       no                   no
+	-post_clock_group_population                       no                   no
+	-preserve_path                                     no                   no
+	-pt                                                yes                  yes
+	-show_all_sdc_violations                           no                   no
+	-show_sdc_progress                                 no                   no
+	-suppress_sdc_violation_in_abstract                no                   no
+	-tc_cache_empty_collections                        no                   no
+	-tc_disable_caching                                no                   no
+	-tc_ignored_commands                               unspecified          unspecified
+	-tc_stop_parsing_ignored_commands                  no                   no
+	-truncate_through                                  yes                  yes
+	-useFirstSource                                    off                  off
+	-write_sdc                                         no                   no
+=====================================================================================
+
+
+
+=====================================================================================
+                               Rule Status Table
+
+ RULE-NAME                      POLICY-NAME     ENABLED VIOL-CNT RULE-TYPE   ERROR-MSG         
+=====================================================================================
+ Coverage_audit                 dft             No             - FLATDU2_PRD_WL   -               
+ Info_DftDebugData              dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_18                    dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_17                    dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_16                    dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_15                    dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_14                    dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_13                    dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_12                    dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_11                    dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_10                    dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_09                    dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_08_shift              dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_08_capture            dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_07_shift              dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_07_capture            dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_06                    dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_05                    dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_04_shift              dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_04_capture            dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_03                    dft             No             - FLATDU2_PRD_WL   -               
+ Tristate_01                    dft             No             - FLATDU2_PRD_WL   -               
+ Topology_17                    dft             No             - FLATDU2_PRD_WL   -               
+ Topology_16                    dft             No             - FLATDU2_PRD_WL   -               
+ Topology_15                    dft             No             - FLATDU2_PRD_WL   -               
+ Topology_14                    dft             No             - FLATDU2_PRD_WL   -               
+ Topology_13                    dft             No             - FLATDU2_PRD_WL   -               
+ Topology_12                    dft             No             - FLATDU2_PRD_WL   -               
+ Topology_11                    dft             No             - FLATDU2_PRD_WL   -               
+ Topology_10                    dft             No             - FLATDU2_PRD_WL   -               
+ Topology_09                    dft             No             - FLATDU2_PRD_WL   -               
+ Topology_07_flat               dft             No             - FLATDU2_PRD_WL   -               
+ Topology_05                    dft             No             - FLATDU2_PRD_WL   -               
+ Topology_04                    dft             No             - FLATDU2_PRD_WL   -               
+ Topology_03                    dft             No             - FLATDU2_PRD_WL   -               
+ Topology_02                    dft             No             - FLATDU2_PRD_WL   -               
+ Topology_01                    dft             No             - FLATDU2_PRD_WL   -               
+ TA_10                          dft             No             - FLATDU2_PRD_WL   -               
+ TA_09                          dft             No             - FLATDU2_PRD_WL   -               
+ TA_08                          dft             No             - FLATDU2_PRD_WL   -               
+ TA_07                          dft             No             - FLATDU2_PRD_WL   -               
+ TA_06                          dft             No             - FLATDU2_PRD_WL   -               
+ TA_02                          dft             No             - FLATDU2_PRD_WL   -               
+ TA_01                          dft             No             - FLATDU2_PRD_WL   -               
+ Scan_47                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_46                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_45                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_44                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_43                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_42                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_41                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_40                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_39                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_38                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_36                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_35                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_34                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_33                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_32                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_31                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_30                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_29                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_28                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_27                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_26                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_25                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_24                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_23                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_22                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_21                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_20                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_19                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_18                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_17                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_16                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_11                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_08                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_07                        dft             No             - FLATDU2_PRD_WL   -               
+ Scan_06                        dft             No             - FLATDU2_PRD_WL   -               
+ RAM_11                         dft             No             - FLATDU2_PRD_WL   -               
+ RAM_10                         dft             No             - FLATDU2_PRD_WL   -               
+ RAM_09                         dft             No             - FLATDU2_PRD_WL   -               
+ RAM_08                         dft             No             - FLATDU2_PRD_WL   -               
+ RAM_07                         dft             No             - FLATDU2_PRD_WL   -               
+ RAM_06                         dft             No             - FLATDU2_PRD_WL   -               
+ RAM_05                         dft             No             - FLATDU2_PRD_WL   -               
+ RAM_04                         dft             No             - FLATDU2_PRD_WL   -               
+ RAM_03                         dft             No             - FLATDU2_PRD_WL   -               
+ RAM_02                         dft             No             - FLATDU2_PRD_WL   -               
+ RAM_01                         dft             No             - FLATDU2_PRD_WL   -               
+ Power_01                       dft             No             - FLATDU2_PRD_WL   -               
+ Info_latchMapping              dft             No             - FLATDU2_PRD_WL   -               
+ Info_latch                     dft             No             - FLATDU2_PRD_WL   -               
+ Latch_19                       dft             No             - FLATDU2_PRD_WL   -               
+ Latch_18                       dft             No             - FLATDU2_PRD_WL   -               
+ Latch_16                       dft             No             - FLATDU2_PRD_WL   -               
+ Latch_15                       dft             No             - FLATDU2_PRD_WL   -               
+ Latch_10                       dft             No             - FLATDU2_PRD_WL   -               
+ Latch_08                       dft             No             - FLATDU2_PRD_WL   -               
+ Latch_06                       dft             No             - FLATDU2_PRD_WL   -               
+ Latch_04                       dft             No             - FLATDU2_PRD_WL   -               
+ Latch_02                       dft             No             - FLATDU2_PRD_WL   -               
+ Latch_01                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_30                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_29                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_28                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_27                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_26                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_25                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_24                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_23                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_22                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_21                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_18                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_17                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_16                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_14                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_11_capture               dft             No             - FLATDU2_PRD_WL   -               
+ Clock_11                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_10                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_09                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_08                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_05                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_04                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_03                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_02                       dft             No             - FLATDU2_PRD_WL   -               
+ Clock_01                       dft             No             - FLATDU2_PRD_WL   -               
+ BIST_05                        dft             No             - FLATDU2_PRD_WL   -               
+ BIST_04                        dft             No             - FLATDU2_PRD_WL   -               
+ BIST_03                        dft             No             - FLATDU2_PRD_WL   -               
+ BIST_02                        dft             No             - FLATDU2_PRD_WL   -               
+ BIST_01                        dft             No             - FLATDU2_PRD_WL   -               
+ Async_17                       dft             No             - FLATDU2_PRD_WL   -               
+ Async_16                       dft             No             - FLATDU2_PRD_WL   -               
+ Async_15                       dft             No             - FLATDU2_PRD_WL   -               
+ Async_13                       dft             No             - FLATDU2_PRD_WL   -               
+ Async_12                       dft             No             - FLATDU2_PRD_WL   -               
+ Async_11                       dft             No             - FLATDU2_PRD_WL   -               
+ Async_10                       dft             No             - FLATDU2_PRD_WL   -               
+ Async_09                       dft             No             - FLATDU2_PRD_WL   -               
+ Async_08                       dft             No             - FLATDU2_PRD_WL   -               
+ Async_07Lssd                   dft             No             - FLATDU2_PRD_WL   -               
+ Async_07                       dft             No             - FLATDU2_PRD_WL   -               
+ Async_06                       dft             No             - FLATDU2_PRD_WL   -               
+ Async_05                       dft             No             - FLATDU2_PRD_WL   -               
+ Async_04                       dft             No             - FLATDU2_PRD_WL   -               
+ Async_03                       dft             No             - FLATDU2_PRD_WL   -               
+ Async_02_shift                 dft             No             - FLATDU2_PRD_WL   -               
+ Async_02_capture               dft             No             - FLATDU2_PRD_WL   -               
+ Async_01                       dft             No             - FLATDU2_PRD_WL   -               
+ Info_dBist                     dft             No             - FLATDU2_PRD_WL   -               
+ Info_scanwrap                  dft             No             - FLATDU2_PRD_WL   -               
+ Info_blackboxDriver            dft             No             - FLATDU2_PRD_WL   -               
+ Info_addFault                  dft             No             - FLATDU2_PRD_WL   -               
+ Info_stilFile                  dft             No             - FLATDU2_PRD_WL   -               
+ Info_scanchain                 dft             No             - FLATDU2_PRD_WL   -               
+ Info_inferredNoScan            dft             No             - FLATDU2_PRD_WL   -               
+ Info_forcedScan                dft             No             - FLATDU2_PRD_WL   -               
+ Info_noScan                    dft             No             - FLATDU2_PRD_WL   -               
+ Info_noFault                   dft             No             - FLATDU2_PRD_WL   -               
+ Info_memories                  dft             No             - FLATDU2_PRD_WL   -               
+ Info_memoryforce               dft             No             - FLATDU2_PRD_WL   -               
+ Info_memorywritedisable        dft             No             - FLATDU2_PRD_WL   -               
+ dftSGDCSTX_081                 dft             No             - VSTOPDU        -               
+ Info_testclock                 dft             No             - FLATDU2_PRD_WL   -               
+ Info_unstable_testmode_registers dft             No             - FLATDU2_PRD_WL   -               
+ Info_testmode_conflict_01      dft             No             - FLATDU2_PRD_WL   -               
+ Info_testmode                  dft             No             - FLATDU2_PRD_WL   -               
+ Info_undetectCause             dft             No             - FLATDU2_PRD_WL   -               
+ Info_coverageAtGateLevel       dft             No             - FLATDU2_PRD_WL   -               
+ Info_potDetectable             dft             No             - FLATDU2_PRD_WL   -               
+ Info_coverage                  dft             No             - FLATDU2_PRD_WL   -               
+ Info_logicalRedundant          dft             No             - FLATDU2_PRD_WL   -               
+ Info_untestable                dft             No             - FLATDU2_PRD_WL   -               
+ Info_unobservable              dft             No             - FLATDU2_PRD_WL   -               
+ Info_pwrGndSim                 dft             No             - FLATDU2_PRD_WL   -               
+ Info_path                      dft             No             - FLATDU2_PRD_WL   -               
+ Info_uncontrollable            dft             No             - FLATDU2_PRD_WL   -               
+ Info_unused                    dft             No             - FLATDU2_PRD_WL   -               
+ Info_synthRedundant            dft             No             - FLATDU2_PRD_WL   -               
+ Info_selective_test_point      dft             No             - FLATDU2_PRD_WL   -               
+ Info_levelize                  dft             No             - FLATDU2_PRD_WL   -               
+ Diagnose_testclock             dft             No             - FLATDU2_PRD_WL   -               
+ Diagnose_testmode              dft             No             - FLATDU2_PRD_WL   -               
+ CreateDebugSGDC                dft             No             - FLATDU2_PRD_WL   -               
+ dumpBlackBox                   dft             No             - FLATDU2_PRD_WL   -               
+ dftMultiplyDrivenPowerRail     dft             No             - FLATDU2_PRD_WL   -               
+ Conn_12                        dft             No             - FLATDU2_PRD_WL   -               
+ Conn_11                        dft             No             - FLATDU2_PRD_WL   -               
+ Soc_12                         dft             No             - FLATDU2_PRD_WL   -               
+ Soc_11                         dft             No             - FLATDU2_PRD_WL   -               
+ Info_define_tag                dft             No             - FLATDU2_PRD_WL   -               
+ Conn_18                        dft             No             - FLATDU2_PRD_WL   -               
+ Conn_17                        dft             No             - FLATDU2_PRD_WL   -               
+ Conn_16                        dft             No             - FLATDU2_PRD_WL   -               
+ Conn_15                        dft             No             - FLATDU2_PRD_WL   -               
+ Conn_14                        dft             No             - FLATDU2_PRD_WL   -               
+ Conn_10                        dft             No             - FLATDU2_PRD_WL   -               
+ Conn_09                        dft             No             - FLATDU2_PRD_WL   -               
+ Conn_08                        dft             No             - FLATDU2_PRD_WL   -               
+ Conn_07                        dft             No             - FLATDU2_PRD_WL   -               
+ Conn_02                        dft             No             - FLATDU2_PRD_WL   -               
+ Conn_01                        dft             No             - FLATDU2_PRD_WL   -               
+ CR_06                          dft             No             - FLATDU2_PRD_WL   -               
+ CR_05                          dft             No             - SETUP          -               
+ CR_04                          dft             No             - SETUP          -               
+ CR_03                          dft             No             - SETUP          -               
+ CR_02                          dft             No             - SETUP          -               
+ CR_01                          dft             No             - SETUP          -               
+ Soc_14                         dft             No             - FLATDU2_PRD_WL   -               
+ Soc_10                         dft             No             - FLATDU2_PRD_WL   -               
+ Soc_09                         dft             No             - FLATDU2_PRD_WL   -               
+ Soc_08                         dft             No             - FLATDU2_PRD_WL   -               
+ Soc_07_Info                    dft             No             - FLATDU2_PRD_WL   -               
+ Soc_07                         dft             No             - FLATDU2_PRD_WL   -               
+ Soc_06                         dft             No             - VSTOPDU        -               
+ Soc_04                         dft             No             - FLATDU2_PRD_WL   -               
+ Soc_02_Info                    dft             No             - FLATDU2_PRD_WL   -               
+ Soc_02                         dft             No             - FLATDU2_PRD_WL   -               
+ Soc_01_Info                    dft             No             - FLATDU2_PRD_WL   -               
+ Soc_01                         dft             No             - FLATDU2_PRD_WL   -               
+ Soc_05                         dft             No             - FLATDU2_PRD_WL   -               
+ Clock_06                       dft             No             - VSTOPDU        -               
+ Topology_07_rtl      (Verilog) dft             No             - RTLTOPDU       -               
+ dftSGDCExistence_00            dft             No             - RTLALLDULIST   -               
+ dftAutoFixSelective            dft             No             - FLATDU2_PRD_WL   -               
+ dftFLATDU_RFExit               dft             Yes            0 FLATDU2_PRD_WL   -               
+ Info_generated_reports         dft             Yes            0 FLATDU2_PRD_WL   -               
+ Info_dft_deprecated            dft             Yes            0 FLATDU2_PRD_WL   -               
+ Info_stil_to_sgdc              dft             Yes            0 SETUP          -               
+ Diagnose_ScanChain             dft             Yes            0 FLATDU2_PRD_WL   -               
+ dftParamCheck_02               dft             Yes            0 SETUP          -               
+ dftParamCheck_01               dft             Yes            0 SETUP          -               
+ dftParamCheck_00               dft             Yes            0 SETUP          -               
+ dftSGDCSTX_075                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_071                 dft             Yes            0 FLATDU2_PRD_WL   -               
+ dftSGDCSTX_070                 dft             Yes            0 FLATDU2_PRD_WL   -               
+ dftSGDCDefineMacroCheck_02     dft             Yes            0 FLATDU2_PRD_WL   -               
+ dftSGDCSTX_082                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_080                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_079                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_078                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_077                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_076                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_074                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_072                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_068                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_067                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_066                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_065                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_064                 dft             Yes            0 FLATDU2_PRD_WL   -               
+ Soc_00                         dft             Yes            0 FLATDU2_PRD_WL   -               
+ dftUserMacroSanityCheck_01     dft             Yes            0 FLATDU2_PRD_WL   -               
+ dftSGDCSTX_063                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_062                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_057                 dft             Yes            0 FLATDU2_PRD_WL   -               
+ dftSGDCSTX_055                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_054                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_053                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_051                 dft             Yes            0 SETUP          -               
+ dftFLATDU_RFSetUp              dft             Yes            0 FLATDU2_PRD_WL   -               
+ dftSGDCSTX_069                 dft             Yes            0 FLATDU2_PRD_WL   -               
+ dftSGDCSTX_061                 dft             Yes            0 FLATDU2_PRD_WL   -               
+ dftSGDCSTX_060                 dft             Yes            0 FLATDU2_PRD_WL   -               
+ dftSGDCSTX_059                 dft             Yes            0 FLATDU2_PRD_WL   -               
+ dftVSTOPDUExit                 dft             Yes            0 VSTOPDU        -               
+ dftVSTOPDUSetUp                dft             Yes            0 VSTOPDU        -               
+ dftRTLTOPDUExit                dft             Yes            0 RTLTOPDU       -               
+ dftOptional_Constraint_Check   dft             Yes            0 VSTOPDU        -               
+ dftMandatory_Constraint_Check  dft             Yes            0 VSTOPDU        -               
+ dftRTLTOPDUSetUp               dft             Yes            0 RTLTOPDU       -               
+ dftCumulativeFaultStatusFileCheck dft             Yes            0 SETUP          -               
+ dftSGDCSTX_058                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_073                 dft             Yes            0 SETUP          -               
+ dftSGDCSTX_000                 dft             Yes            0 SETUP          -               
+ dftSGDCDefineMacroCheck_01     dft             Yes            0 SETUP          -               
+ DFT_LP_LIB_DATA                dft             Yes            0 VSTOPDU        -               
+ DFT_LP_POWERDATA_CHECK         dft             Yes            0 SETUP          -               
+ dftSetup                       dft             Yes            0 SETUP          -               
+ checkCMD_mthresh               SpyGlass        Yes            1 SETUP          -               
+ SYNTH_5273                     SpyGlass        Yes            1 SETUP          -               
+ ElabSummary                    SpyGlass        Yes            1 SETUP          -               
+ ErrorAnalyzeBBox               SpyGlass        Yes            1 SETUP          -               
+ DetectTopDesignUnits           SpyGlass        Yes            1 SETUP          -               
+-------------------------------------------------------------------------------------
+Note: VSDU type of rules (as seen in the above table) are not run on
+      unsynthesized modules reported by 'ErrorAnalyzeBBox/InfoAnalyzeBBox' messages
+      (Please see messages starting with keyword 'UnsynthesizedDU')
+
+##status : SpyGlass Rule Checking Complete.
+
+---------------------------------------------------------------------------------------------
+Results Summary:
+---------------------------------------------------------------------------------------------
+   Goal Run           :      dft/dft_abstract
+   Command-line read  :      0 error,      0 warning,      0 information message 
+** Design Read        :      1 error,      0 warning,      3 information messages
+      Found 1 top module:
+         NFC   (file: ../src/NFC.v)
+
+   Blackbox Resolution:      1 error,      0 warning,      0 information message 
+   SGDC Checks        :      0 error,      0 warning,      0 information message 
+   -------------------------------------------------------------------------------------
+   Total              :      2 errors,     0 warning,      3 information messages
+
+  Total Number of Generated Messages     :         5 (2 errors, 0 warning, 3 Infos)
+  Number of Reported Messages            :         5 (2 errors, 0 warning, 3 Infos)
+
+  NOTE: It is recommended to first fix/reconcile fatals/errors reported on
+        lines starting with ** as subsequent issues might be related to it.
+        Please re-run SpyGlass once ** prefixed lines are fatal/error clean.
+
+---------------------------------------------------------------------------------------------
+
+
+
+SpyGlass Rule Checking Complete.
+
+Generating moresimple report from './spyglass-1/dft/dft_abstract/spyglass.vdb' to './spyglass-1/dft/dft_abstract/spyglass_reports/moresimple.rpt' ....
+
+Generating runsummary report from './spyglass-1/dft/dft_abstract/spyglass.vdb' ....
+
+Generating no_msg_reporting_rules report from './spyglass-1/dft/dft_abstract/spyglass.vdb' to './spyglass-1/dft/dft_abstract/spyglass_reports/no_msg_reporting_rules.rpt' ....
+
+Policy specific data (reports) are present in the directory './spyglass-1/dft/dft_abstract/spyglass_reports'.
+
+SpyGlass critical reports for the current run are present in directory './spyglass-1/consolidated_reports/dft_dft_abstract/'.
+
+
+---------------------------------------------------------------------------------------------------
+Results Summary:
+---------------------------------------------------------------------------------------------------
+   Goal Run           :      dft/dft_abstract
+   Top Module         :      NFC
+---------------------------------------------------------------------------------------------------
+   Reports Directory: 
+   /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/consolidated_reports/dft_dft_abstract/ 
+
+   SpyGlass LogFile: 
+    /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/dft/dft_abstract/spyglass.log 
+
+   Standard Reports: 
+     moresimple.rpt          no_msg_reporting_rules.rpt       
+
+   HTML report:
+    /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/html_reports/goals_summary.html
+  
+
+   Technology Reports:  
+     <Not Available>
+   
+   
+---------------------------------------------------------------------------------------------------
+   Goal Violation Summary:
+       Waived   Messages:                      0 Errors,      0 Warnings,      0 Infos
+       Reported Messages:         0 Fatals,    2 Errors,      0 Warnings,      3 Infos
+---------------------------------------------------------------------------------------------------
+   
+---------------------------------------------------------------------------------------------------
+ 
+SpyGlass Exit Code 0 (Rule-checking completed with errors)
+SpyGlass total run-time is 0:0:2 (2 secs)
+SpyGlass total cpu-time is 3 secs
+SpyGlass run completed at 02:22:48 AM on Feb 22 2021

@@ -6,7 +6,6 @@ link
 #Setting Clock Constraints
 source -echo -verbose NFC.sdc
 write_script > check_script.log
-check_time > check_time.log
 check_design > check_design.log
 #Synthesis all design
 compile_ultra

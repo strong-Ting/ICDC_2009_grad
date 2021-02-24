@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-`define limit_cycle 600000
+`define limit_cycle 90000
 `define tb1
 `ifdef tb1
   `define CMD "p1_cmd.dat"
@@ -25,7 +25,7 @@
   `define NUM 10
 `endif
 
-`define CYCLE 10
+`define CYCLE 15
 `define SDFFILE  "../syn/NFC_syn.sdf"
 `include "./t13rf128x8.v"
 `include "./flash.v"

@@ -5,6 +5,12 @@
         "module",
         1
     ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        3
+    ],
     "BUFFER": [
         "BUFFER",
         "sIeQK",
@@ -16,11 +22,5 @@
         "x9Hvb",
         "module",
         2
-    ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module",
-        3
     ]
 }

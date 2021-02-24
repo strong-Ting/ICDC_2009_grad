@@ -3,7 +3,10 @@
 // Do not modify this file
 //
 -f
-run.f
-+define+tb1
+run_syn.f
+-v
+/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v
++define+tb3
++define+SDF
 +define+FSDB
 +access+r

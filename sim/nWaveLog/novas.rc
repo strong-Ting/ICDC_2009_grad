@@ -388,12 +388,13 @@ openFileDlg = 467,182,602,483
 saveSigDlg = 1940,248,551,386
 schExtrFSM = 624,371,287,105
 SetWindowTimeUnitDialog = 1991,390,433,86
-qWaveSignalDialog = 799,187,800,479
 QwWarnMsgDlg = 458,247,600,250
 QwUserAskDlg = 798,512,324,130
-restoreSigDlg = 492,204,551,438
 TraceXSettingWithMode = 512,206,511,435
 vgifToolTipViewerU = 1243,254,278,254
+restoreSigDlg = 876,208,551,438
+ActiveFileDialog = 1978,297,460,272
+qWaveSignalDialog = 368,184,800,479
 [Relationship]
 hideRecursiceNode = FALSE
 [Session Cache]
@@ -766,8 +767,8 @@ waveform_vertical_scroll_bar = TRUE
 scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
-getSignalForm = 380 294 800 479 164 381 390 89
-viewPort = 769 31 766 792 141 65
+getSignalForm = 368 184 800 479 164 381 390 89
+viewPort = 7 68 766 792 141 65
 signalSpacing = 5
 digitalSignalHeight = 15
 analogSignalHeight = 98

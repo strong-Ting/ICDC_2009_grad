@@ -3,7 +3,7 @@
 Report : area
 Design : NFC
 Version: P-2019.03
-Date   : Tue Feb 23 23:51:01 2021
+Date   : Wed Feb 24 19:24:58 2021
 ****************************************
 
 Library(s) Used:
@@ -11,20 +11,20 @@ Library(s) Used:
     slow (File: /usr/cad/CBDK_IC_Contest_v2.1/SynopsysDC/db/slow.db)
 
 Number of ports:                           65
-Number of nets:                         75824
-Number of cells:                        74413
-Number of combinational cells:          57972
-Number of sequential cells:             16439
+Number of nets:                         78667
+Number of cells:                        75951
+Number of combinational cells:          59355
+Number of sequential cells:             16587
 Number of macros/black boxes:               0
-Number of buf/inv:                       2692
-Number of references:                     168
+Number of buf/inv:                       3443
+Number of references:                     167
 
-Combinational area:             556524.842548
-Buf/Inv area:                    47640.926429
-Noncombinational area:          531742.782959
+Combinational area:             508098.008318
+Buf/Inv area:                    35524.884853
+Noncombinational area:          538101.244694
 Macro/Black Box area:                0.000000
-Net Interconnect area:         8982913.317810
+Net Interconnect area:        10722329.115173
 
-Total cell area:               1088267.625507
-Total area:                   10071180.943317
+Total cell area:               1046199.253012
+Total area:                   11768528.368185
 1

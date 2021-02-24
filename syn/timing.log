@@ -7,7 +7,7 @@ Report : timing
         -max_paths 1
 Design : NFC
 Version: P-2019.03
-Date   : Tue Feb 23 23:51:01 2021
+Date   : Wed Feb 24 19:24:58 2021
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -15,8 +15,8 @@ Date   : Tue Feb 23 23:51:01 2021
 Operating Conditions: slow   Library: slow
 Wire Load Model Mode: top
 
-  Startpoint: cmd[15] (input port clocked by clk)
-  Endpoint: M_OUT_reg[1]
+  Startpoint: cmd[18] (input port clocked by clk)
+  Endpoint: M_OUT_reg[5]
             (falling edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -29,51 +29,36 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              1.00       1.00
-  input external delay                     5.00       6.00 r
-  cmd[15] (in)                             0.05       6.05 r
-  U24724/Y (INVX12)                        0.05       6.10 f
-  U40661/Y (NAND2X8)                       0.06       6.16 r
-  U40660/Y (NAND2X8)                       0.07       6.23 f
-  U40908/Y (NAND2X8)                       0.10       6.32 r
-  U41167/Y (NAND2X8)                       0.10       6.42 f
-  U40673/Y (NAND2X8)                       0.12       6.55 r
-  U40672/Y (XOR2X4)                        0.17       6.72 r
-  U41368/Y (INVX12)                        0.12       6.84 f
-  U40940/Y (NAND2X8)                       0.18       7.02 r
-  U48814/Y (NOR2X8)                        0.12       7.13 f
-  U23432/Y (INVX12)                        0.08       7.21 r
-  U29395/Y (INVX20)                        0.06       7.27 f
-  U76668/Y (NAND2X8)                       0.10       7.38 r
-  U21641/Y (BUFX16)                        0.13       7.50 r
-  U23115/Y (INVX16)                        0.05       7.56 f
-  U49603/Y (BUFX20)                        0.19       7.75 f
-  U24127/Y (AOI22X2)                       0.25       8.00 r
-  U20465/Y (OAI2BB1X4)                     0.14       8.14 f
-  U21680/Y (NOR3X8)                        0.13       8.27 r
-  U46526/Y (AND3X8)                        0.17       8.43 r
-  U39367/Y (NAND3X8)                       0.09       8.52 f
-  U29485/Y (NAND2X8)                       0.07       8.59 r
-  U46033/Y (NAND2X8)                       0.08       8.67 f
-  U42791/Y (CLKINVX2)                      0.08       8.75 r
-  U23603/Y (AND3XL)                        0.45       9.20 r
-  U23842/Y (NAND3X2)                       0.15       9.35 f
-  U29479/Y (NAND2BX1)                      0.26       9.61 f
-  U21834/Y (CLKINVX1)                      0.12       9.73 r
-  U23561/Y (NAND2XL)                       0.16       9.89 f
-  M_OUT_reg[1]/D (DFFNSRX1)                0.00       9.89 f
-  data arrival time                                   9.89
+  input external delay                     5.00       6.00 f
+  cmd[18] (in)                             0.04       6.04 f
+  U24905/Y (BUFX12)                        0.13       6.17 f
+  U24898/Y (CLKBUFX3)                      0.44       6.60 f
+  U21798/Y (NOR2X4)                        0.23       6.83 r
+  U27515/Y (NOR2X2)                        0.19       7.02 f
+  U26887/Y (INVXL)                         0.47       7.49 r
+  U27767/Y (NOR2X1)                        0.20       7.69 f
+  U25984/Y (AOI21XL)                       0.47       8.16 r
+  U25266/Y (XOR2X2)                        0.43       8.59 f
+  U28450/Y (NOR2X1)                        0.76       9.35 r
+  U21212/Y (AND2X4)                        0.47       9.81 r
+  U77837/Y (OAI21X2)                       0.16       9.97 f
+  U65891/Y (OAI2BB1X2)                     0.14      10.11 r
+  U75580/Y (NOR2X4)                        0.10      10.21 f
+  U80035/Y (NAND4X4)                       0.12      10.33 r
+  M_OUT_reg[5]/D (DFFNSRX4)                0.00      10.33 r
+  data arrival time                                  10.33
 
   clock clk (fall edge)                    5.00       5.00
   clock network delay (ideal)              1.00       6.00
   clock uncertainty                       -1.00       5.00
-  M_OUT_reg[1]/CKN (DFFNSRX1)              0.00       5.00 f
-  library setup time                      -0.26       4.74
-  data required time                                  4.74
+  M_OUT_reg[5]/CKN (DFFNSRX4)              0.00       5.00 f
+  library setup time                       0.00       5.00
+  data required time                                  5.00
   -----------------------------------------------------------
-  data required time                                  4.74
-  data arrival time                                  -9.89
+  data required time                                  5.00
+  data arrival time                                 -10.33
   -----------------------------------------------------------
-  slack (VIOLATED)                                   -5.15
+  slack (VIOLATED)                                   -5.33
 
 
 1

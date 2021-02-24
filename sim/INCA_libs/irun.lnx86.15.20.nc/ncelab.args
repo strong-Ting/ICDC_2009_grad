@@ -2,7 +2,8 @@
 // File created by:  ncverilog
 // Do not modify this file
 //
-+define+tb1
++define+tb3
++define+SDF
 +define+FSDB
 +access+r
 -noshowtop

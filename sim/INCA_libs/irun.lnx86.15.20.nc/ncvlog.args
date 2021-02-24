@@ -6,9 +6,13 @@
 ./INCA_libs/irun.lnx86.15.20.nc
 -RUNMODE
 testfixture.v
-../src/NFC.v
+../syn/NFC_syn.v
+-VFILE
+/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v
 -DEFINE
-tb1
+tb3
+-DEFINE
+SDF
 -DEFINE
 FSDB
 -CDSLIB

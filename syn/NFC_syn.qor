@@ -1,0 +1,98 @@
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : qor
+Design : NFC
+Version: P-2019.03
+Date   : Tue Feb 23 23:51:01 2021
+****************************************
+
+
+  Timing Path Group 'clk'
+  -----------------------------------
+  Levels of Logic:              29.00
+  Critical Path Length:          3.89
+  Critical Path Slack:          -5.15
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:       -474.63
+  No. of Violating Paths:     3855.00
+  Worst Hold Violation:         -0.74
+  Total Hold Violation:        -62.63
+  No. of Hold Violations:      587.00
+  -----------------------------------
+
+  Timing Path Group 'default'
+  -----------------------------------
+  Levels of Logic:               0.00
+  Critical Path Length:          0.00
+  Critical Path Slack:           0.00
+  Critical Path Clk Period:       n/a
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          0
+  Hierarchical Port Count:          0
+  Leaf Cell Count:              74411
+  Buf/Inv Cell Count:            2692
+  Buf Cell Count:                1671
+  Inv Cell Count:                1021
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:     57988
+  Sequential Cell Count:        16423
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:   556524.842548
+  Noncombinational Area:
+                        531742.782959
+  Buf/Inv Area:          47640.926429
+  Total Buffer Area:         34581.13
+  Total Inverter Area:       13059.80
+  Macro/Black Box Area:      0.000000
+  Net Area:            8982913.317810
+  -----------------------------------
+  Cell Area:           1088267.625507
+  Design Area:        10071180.943317
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:         75824
+  Nets With Violations:             5
+  Max Trans Violations:             1
+  Max Cap Violations:               5
+  -----------------------------------
+
+
+  Hostname: dics03.ee.yuntech.edu.tw
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.04
+  Logic Optimization:                  3.33
+  Mapping Optimization:              920.82
+  -----------------------------------------
+  Overall Compile Time:             1198.76
+  Overall Compile Wall Clock Time:  1216.43
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 5.15  TNS: 474.63  Number of Violating Paths: 3855
+
+
+  Design (Hold)  WNS: 0.74  TNS: 62.63  Number of Violating Paths: 587
+
+  --------------------------------------------------------------------
+
+
+1

@@ -219,17 +219,19 @@ Selection-LineColor = ID_BLUE2
 Selection-LineWidth = 1
 [FSM_Dlg-Print]
 Orientation = Landscape
+[FileBrowser]
+nWaveRestoreRCDirHistory = "\"/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/signal.rc\""
 [Form]
 version = Verdi_O-2018.09
 wave/unknownSave.fm = 100,100,520,275
 [General]
 autoSaveSession = FALSE
 TclAutoSource = 
-cmd_enter_form = FALSE
 SyncBrowserDir = TRUE
-SignalCaseInSensitive = FALSE
-ShowWndCtntDuringResizing = FALSE
 version = Verdi_O-2018.09
+SignalCaseInSensitive = FALSE
+cmd_enter_form = FALSE
+ShowWndCtntDuringResizing = FALSE
 [GlobalProp]
 ErrWindow_Font = Helvetica_M_R_12
 [Globals]
@@ -276,6 +278,8 @@ bScpecifyCellNameCase = False
 bSpecifyPinNameCase = False
 CellNameToCase = 
 PinNameToCase = 
+[InteractiveDebug]
+tbvLocalWatchArrayLimit = 50
 [Language]
 EditWindow_Font = COURIER12
 Background = ID_WHITE
@@ -314,6 +318,9 @@ showCoverGroup = TRUE
 showProperty = TRUE
 showSequence = TRUE
 showDollarUnit = TRUE
+[NavigationField]
+DisplayInWaveformSignalPane = FALSE
+SearchFilterMatchCase = FALSE
 [OldFontRC]
 Wave_legend_window_font = -f COURIER12 -c ID_CYAN5
 Wave_value_window_font = -f COURIER12 -c ID_CYAN5
@@ -377,22 +384,24 @@ savePropDtl = TRUE
 [QtDialog]
 fileWithNote = 441,202,653,443
 FileWithNoteForm_base = 441,202,653,443
-openFileDlg = 1907,192,602,483
+openFileDlg = 467,182,602,483
 saveSigDlg = 1940,248,551,386
 schExtrFSM = 624,371,287,105
-QwUserAskDlg = 798,512,324,110
-restoreSigDlg = 1932,214,551,438
-QwWarnMsgDlg = 458,247,600,250
 SetWindowTimeUnitDialog = 1991,390,433,86
-qWaveSignalDialog = 380,294,800,479
+qWaveSignalDialog = 799,187,800,479
+QwWarnMsgDlg = 458,247,600,250
+QwUserAskDlg = 798,512,324,130
+restoreSigDlg = 492,204,551,438
+TraceXSettingWithMode = 512,206,511,435
+vgifToolTipViewerU = 1243,254,278,254
 [Relationship]
 hideRecursiceNode = FALSE
 [Session Cache]
-2 = /home/DICS_LAB/M10912039/verdiLog/novas_autosave.ses
 3 = string (session file name)
 4 = string (session file name)
 5 = string (session file name)
 1 = /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/verdiLog/novas_autosave.ses
+2 = /home/DICS_LAB/M10912039/verdiLog/novas_autosave.ses
 [Simulation]
 scsPath = scsim
 scsOption = 
@@ -418,13 +427,15 @@ vcs_mixPath = simv
 vcs_mixOption = -vhdlrun "-vhpi debussy:FSDBDumpCmd"
 scs_mixPath = scsim
 scs_mixOption = -vhpi debussy:FSDBDumpCmd
-interactiveDebugging = {True, False}
-KeepBreakPoints = False
 ScsDebugAll = False
 simType = {vcssv, xl, nc, vcs, mti, mti_vlog, vhnc, scs, mixnc}
 thirdpartyIdx = -1
 iscCmdSep = FALSE
 NoAppendOption = False
+bSVTBMode = TRUE
+SimMode = TRUE
+interactiveDebugging = TRUE
+KeepBreakPoints = FALSE
 [SimulationPlus]
 xlPath = verilog
 xlOption = 
@@ -448,20 +459,25 @@ vcs_mixPath = simv
 vcs_mixOption = -vhdlrun "-vhpi debussy:FSDBDumpCmd"
 scs_mixPath = scsim
 scs_mixOption = -vhpi debussy:FSDBDumpCmd
-vcs_svPath = simv
-vcs_svOption = 
-simType = vcssv
 thirdpartyIdx = -1
-interactiveDebugging = FALSE
-KeepBreakPoints = FALSE
 iscCmdSep = FALSE
 ScsDebugAll = FALSE
 NoAppendOption = FALSE
 invokeSimPath = work
 restoreSimState = FALSE
 enableReverseDebug = FALSE
+simType = vcssv
+bSVTBMode = TRUE
+SimMode = TRUE
+interactiveDebugging = TRUE
+KeepBreakPoints = FALSE
+vcs_svPath = ./simv
+uvmAware = TRUE
+smartlog = TRUE
+vcs_svOption = -sml=verdi
 [SimulationPlus2]
 eventDumpUnfinish = FALSE
+dumpPowerRoot = FALSE
 [Source]
 wordWrapOn = TRUE
 viewReuse = TRUE
@@ -482,12 +498,13 @@ not_ask_for_source_path = FALSE
 expandMacroOn = TRUE
 [SourceVHDL]
 vhSimType = NC-VHDL
-ohSimType = VerilogXL
+ohSimType = VCS
 [TclShell]
 nLineSize = 1024
 [Test]
 verbose_progress = FALSE
 [TestBenchBrowser]
+DataViewTooltip = TRUE
 -showUVMDynamicHierTreeWin = FALSE
 [Text]
 hdlTypeName = blue4
@@ -655,6 +672,44 @@ Button2 = "Next 1000 Time" "#1000 $stop;.\n"
 Button1 = "Dump All Signals" "$fsdbDumpvars;\n"
 [VIA]
 viaLogViewerDefaultRuleOneSearchForm = "share/VIA/Apps/PredefinedRules/Misc/Onesearch_rule.rc"
+viaLogViewerDefaultRuleInterForm = "share/VIA/Apps/PredefinedRules/UVM_OVM_i_rule.rc"
+[VIA.interactiveDebug.preference]
+DefaultDisplayTimeUnit = "1.000000ns"
+DefaultLogTimeUnit = "1.000000ns"
+[VIA.interactiveDebug.preference.vgifColumnSettingRC]
+[VIA.interactiveDebug.preference.vgifColumnSettingRC.setting0]
+parRuleSets = "/usr/cad/synopsys/verdi/cur/share/VIA/Apps/PredefinedParRules/par_rule_OVM.rc /usr/cad/synopsys/verdi/cur/share/VIA/Apps/PredefinedParRules/par_rule_UVM.rc /usr/cad/synopsys/verdi/cur/share/VIA/Apps/PredefinedParRules/par_rule_LP.rc /usr/cad/synopsys/verd\
+i/cur/share/VIA/Apps/PredefinedParRules/par_rule_VCS.rc "
+[VIA.interactiveDebug.preference.vgifColumnSettingRC.setting0.column0]
+name = Type
+width = 60
+visualIndex = 3
+isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+[VIA.interactiveDebug.preference.vgifColumnSettingRC.setting0.column1]
+name = Code
+width = 60
+visualIndex = 2
+isHidden = FALSE
+isUserChangeColumnVisible = FALSE
+[VIA.interactiveDebug.preference.vgifColumnSettingRC.setting0.column2]
+name = Severity
+width = 60
+visualIndex = 1
+isHidden = FALSE
+isUserChangeColumnVisible = FALSE
+[VIA.interactiveDebug.preference.vgifColumnSettingRC.setting0.column3]
+name = Message
+width = 2000
+visualIndex = 4
+isHidden = FALSE
+isUserChangeColumnVisible = FALSE
+[VIA.interactiveDebug.preference.vgifColumnSettingRC.setting0.column4]
+name = Time
+width = 60
+visualIndex = 0
+isHidden = FALSE
+isUserChangeColumnVisible = FALSE
 [VIA.oneSearch.preference]
 DefaultDisplayTimeUnit = "1.000000ns"
 DefaultLogTimeUnit = "1.000000ns"
@@ -662,9 +717,9 @@ DefaultLogTimeUnit = "1.000000ns"
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0]
 parRuleSets = ""
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column0]
-name = Time
+name = Severity
 width = 60
-visualIndex = 0
+visualIndex = 1
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
@@ -674,23 +729,25 @@ visualIndex = 4
 isHidden = FALSE
 isUserChangeColumnVisible = FALSE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
-name = Code
+name = Time
 width = 60
-visualIndex = 2
+visualIndex = 0
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
-name = Severity
-width = 60
-visualIndex = 1
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
 name = Type
 width = 60
 visualIndex = 3
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
+name = Code
+width = 60
+visualIndex = 2
+isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+[VIA.parRule]
+parRulePathInterForm = ""
 [Vi]
 ViFont = "Clean 14"
 ViBG = white
@@ -706,7 +763,11 @@ ovaForbidSuccessColor = -c ID_GREEN5
 SigGroupRuleFile = 
 DisplayFileName = FALSE
 waveform_vertical_scroll_bar = TRUE
-viewPort = 0 27 900 254 100 65
+scope_to_save_with_macro
+open_file_dir
+open_rc_file_dir
+getSignalForm = 380 294 800 479 164 381 390 89
+viewPort = 769 31 766 792 141 65
 signalSpacing = 5
 digitalSignalHeight = 15
 analogSignalHeight = 98
@@ -772,6 +833,7 @@ analogVoltageStyle = pwl
 analogCurrentStyle = pwl
 analogOthersStyle = pwl
 busSignalLayer = -c ID_ORANGE8
+busXLayer = -c ID_RED5
 busZLayer = -c ID_ORANGE6
 busMixedLayer = -c ID_GREEN5
 busNotComputedLayer = -c ID_GRAY1
@@ -900,7 +962,6 @@ ResolveSymbolicLink = TRUE
 signal_rc_abspath = TRUE
 signal_rc_no_natural_bus_range = FALSE
 save_scope_with_macro = FALSE
-scope_to_save_with_macro
 TipInSignalWin = FALSE
 DisplayPackedSiganlInBitwiseManner = FALSE
 DisplaySignalTypeAheadOfSignalName = TRUE ICON
@@ -975,9 +1036,9 @@ curveWindow_Drag&Drop_Mode = TRUE
 hspiceIncOpenMode = TRUE
 pcSelectMode = TRUE
 hierarchyDelimiter = /
+RecentFile1 = "\"/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/signal.rc\""
+RecentFile2 = "\"/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/nfc.fsdb\""
 open_file_time_range = FALSE
-open_file_dir
-open_rc_file_dir
 value_window_aligment = Right
 signal_window_alignment = Auto
 ShowDeltaTime = TRUE
@@ -1009,8 +1070,6 @@ SEQAddDriverLoadInSameGroup = TRUE
 autoSyncCursorMarker = FALSE
 autoSyncHorizontalRange = FALSE
 autoSyncVerticalScroll = FALSE
-getSignalForm = 380 294 800 479 164 381 390 89
-RecentFile1 = "\"/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/nfc.fsdb\""
 [cov_hier_name_column]
 justify = TRUE
 [coverageColors]
@@ -1064,6 +1123,7 @@ HvpMergeTool =
 ShowMergeMenuItem = FALSE
 fsmScoreMode = transition
 [eco]
+NameRule = 
 IsFreezeSilicon = FALSE
 cellQuantityManagement = FALSE
 ManageMode = INSTANCE_NAME
@@ -1071,7 +1131,6 @@ SpareCellsPinsManagement = TRUE
 LogCommitReport = FALSE
 InputPinStatus = 1
 OutputPinStatus = 2
-NameRule = 
 RevisedComponentColor = ID_BLUE5
 SpareCellColor = ID_RED5
 UserName = M10912039
@@ -1260,6 +1319,15 @@ TPOption =
 AddImportArgument = TRUE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -tcl
+[tSchema]
+tempNetPattern = 
+trXStopAtBlackBox = TRUE
+trXVCOnly = TRUE
+trXIgnoreSetup = 
+trXShowOnTFV = TRUE
+trXCauseCNT = 1
+trXCycleCNT = 0
+trXTraceCauses = 2
 [turboSchema_Printer_Options]
 Orientation = Landscape
 [turbo_library]

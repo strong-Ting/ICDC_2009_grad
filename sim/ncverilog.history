@@ -341,3 +341,14 @@ s340(23Feb2021:19:41:54):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r
 s341(23Feb2021:19:46:07):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r 
 s342(23Feb2021:19:53:34):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r 
 s343(23Feb2021:19:53:53):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r 
+s344(23Feb2021:22:24:34):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb1 +define+SDF +define+FSDB +access+r 
+s345(23Feb2021:22:47:45):  ncverilog testfixture.v ../syn/NFC_syn.v -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v +define+p1 +define+SDF 
+s346(23Feb2021:22:51:04):  ncverilog testfixture.v ../syn/NFC_syn.v -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v +define+tb1 +define+SDF 
+s347(23Feb2021:22:51:32):  ncverilog testfixture.v ../syn/NFC_syn.v -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v +define+tb1 +define+SDF +define+FSDB +access+r 
+s348(24Feb2021:13:07:47):  ncverilog testfixture.v ../syn/NFC_syn.v -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13.v +define+tb1 +define+SDF +define+FSDB +access+r 
+s349(24Feb2021:14:13:24):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r 
+s350(24Feb2021:14:14:08):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r 
+s351(24Feb2021:14:18:13):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r 
+s352(24Feb2021:14:18:22):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r 
+s353(24Feb2021:14:19:03):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r 
+s354(24Feb2021:14:22:43):  ncverilog -f run.f +define+tb1 +define+FSDB +access+r 

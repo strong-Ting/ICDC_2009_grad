@@ -1,0 +1,48 @@
+ 
+****************************************
+check_design summary:
+Version:     P-2019.03
+Date:        Tue Feb 23 23:01:09 2021
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                              15
+    Cells do not drive (LINT-1)                                    15
+
+Tristate                                                           16
+    Single tristate driver drives an input pin (LINT-63)           16
+--------------------------------------------------------------------------------
+
+Warning: In design 'NFC', cell 'B_93' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'B_94' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C71291' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C71345' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C71351' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C71420' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C71461' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C71465' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C71469' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C71473' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C71486' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C71492' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C71496' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C71502' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C71503' does not drive any nets. (LINT-1)
+Warning: Net 'F_IO[0]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'F_IO[1]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'F_IO[2]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'F_IO[3]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'F_IO[4]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'F_IO[5]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'F_IO[6]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'F_IO[7]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'M_D[0]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'M_D[1]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'M_D[2]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'M_D[3]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'M_D[4]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'M_D[5]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'M_D[6]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'M_D[7]' has a single tri-state driver.  (LINT-63)
+1

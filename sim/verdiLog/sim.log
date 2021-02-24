@@ -1,0 +1,271 @@
+Command: /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/simv -ucli -sml=verdi +UVM_VERDI_TRACE=UVM_AWARE +fsdb+gate=off -ucli2Proc -l /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/verdiLog/sim.log
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09; Runtime version O-2018.09;  Feb 23 22:31 2021
+
+ucli% synUtils::getArch
+linux
+ucli% loaddl -simv /usr/cad/synopsys/verdi/cur//share/PLI/VCS/LINUX/libnovas.so LoadFSDBDumpCmd;LoadFSDBDumpCmd
+LoadFSDBDumpCmd success
+ucli% config ckptfsdbcheck off;config endofsim noexit;config onfail {enable all};config followactivescope on;catch {setUcliVerdiConnected};set watch::resultTagsForVerdiBP {<ucli_break_bp_status_begin> <ucli_break_bp_status_end>};cbug::config pretty_print auto;fsdbDumpfile {/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/inter.fsdb}; fsdbDumpflush;
+*Verdi* Loading libsscore_vcs201809.so
+FSDB Dumper for VCS, Release Verdi_O-2018.09, Linux, 08/30/2018
+(C) 1996 - 2018 by Synopsys, Inc.
+*Verdi* : Create FSDB file '/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/inter.fsdb'
+*Verdi* : Flush all FSDB Files at 0 ps.
+
+ucli% sps_interactive
+*Verdi* : Enable RPC Server(20438)
+
+ucli% ucliCore::getToolPID
+20438
+ucli% ucliCore::getToolPID
+20438
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% puts $ucliCore::nativeUcliMode
+0
+
+ucli% ucliCore::getToolTopPID
+20438
+ucli% pid
+20451
+ucli% synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.M10912039.20438 }
+
+ucli% if { [info vars watch::vcbp_str_len_limit_of_get_value] != ""} {set watch::vcbp_str_len_limit_of_get_value 1024}
+1024
+ucli% info command stateVerdiChangeCB
+
+ucli% proc stateVerdiChangeCB args { if {$ucliGUI::state eq "terminated"} {puts "\nVERDI_SIM_Terminated\n";catch {setVerdiSimTerminated}}}
+
+ucli% trace variable ucliGUI::state wu stateVerdiChangeCB
+
+ucli% if {[catch {rename synopsys::restore verdiHack::restore} ]} {puts "0"}
+
+ucli% proc synopsys::restore {args} { verdiHack::restore $args; puts "\nVERDI_SIM_RESTORE\n"}
+
+ucli% if {[catch {rename quit verdiHack::quit} ]} {puts "0"}
+
+ucli% proc quit {args} { if {[string length $args] == 0} { verdiHack::quit; } elseif {([string equal "-h" $args] == 1)||([string equal "-he" $args] == 1)||([string equal "-hel" $args] == 1)||([string equal "-help" $args] == 1)} { puts "\n quit           # Exit the simulation.\n \[-noprompt\]        (Exit the simulation and Verdi.)\n"} elseif {([string equal "-n" $args] == 1)||([string equal "-no" $args] == 1)||([string equal "-nop" $args] == 1)||([string equal "-nopr" $args] == 1)||([string equal "-nopro" $args] == 1)||([string equal "-noprom" $args] == 1)||([string equal "-nopromp" $args] == 1)||([string equal "-noprompt" $args] == 1)} { puts "\nVERDI_EXIT_N\n" } else { verdiHack::quit $args; } }
+
+ucli% if {[catch {rename exit verdiHack::exit} ]} {puts "0"}
+
+ucli% proc exit {args} { if {[string length $args] == 0} { verdiHack::exit; } elseif {([string equal "-h" $args] == 1)||([string equal "-he" $args] == 1)||([string equal "-hel" $args] == 1)||([string equal "-help" $args] == 1)} { puts "\n exit           # Exit the simulation.\n \[-noprompt\]        (Exit the simulation and Verdi.)\n"} elseif {([string equal "-n" $args] == 1)||([string equal "-no" $args] == 1)||([string equal "-nop" $args] == 1)||([string equal "-nopr" $args] == 1)||([string equal "-nopro" $args] == 1)||([string equal "-noprom" $args] == 1)||([string equal "-nopromp" $args] == 1)||([string equal "-noprompt" $args] == 1)} { puts "\nVERDI_EXIT_N\n" } else { verdiHack::exit $args; } }
+
+ucli% proc checkpoint::beforeRecreate {} { sps_interactive }
+
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% save::getUserdefinedProcs
+::stateVerdiChangeCB ::LoadFSDBDumpCmd
+ucli% info procs
+ipi_get_str fsdbDumpMDAByFile fsdbDumpMDA echo fsdbDumpMemNow fsdbAutoSwitchDumpfile unknown sps_interactive auto_import stat fsdbDumpfile setenv auto_execok pkg_mkIndex stateVerdiChangeCB fsdbDumpSingle proc_body ipi_begin fsdbDumpoff getenv fsdbDumplimit fsdbDumpPattern ipi_handle fsdbDumpvarsByFile fsdbDumpMDAInScope lminus ipi_sim_get interp ls auto_load_index proc_args fsdbAddRuntimeSignal fsdbDumpSC print_message_info ridbDump fsdbDumpSVAoff fsdbSuppress fsdbDumpvars help fsdbDumpMDAOnChange ipi_control auto_qualify fsdbDumpMem tclPkgUnknown printenv ipi_handle_by_name helpdoc fsdbDumpMemInScope fsdbDumpFinish is_true fsdbDumpon sh fsdbQueryInfo puts LoadFSDBDumpCmd fsdbDumpPSL fsdbDumpSVA ipi_end wrapperSpecmanSn fsdbDumpSVAon fsdbDumpClassObjectByFile is_false auto_load fsdbDumpPSLon ipi_get_int64 fsdbSubstituteHier ipi_get_value ipi_iterate exit fsdbDumpMemInFile tclLog fsdbDumpflush get_unix_variable mem_debug ipi_scan fsdbDumpPSLoff fsdbDumpClassObject fsdbDumpvarsToFile set_unix_variable bgerror fsdbDumpStrength clock add_group fsdbSwitchDumpfile source add_wave unsetenv fsdbDumpvarsES readline fsdbDisplay ipi_handle_free set_group ipi_get quit define_proc_attributes tclPkgSetup fsdbDumpMDANow ipi_init_play_tcl fsdbDumpIO
+ucli% lappend ucliCore::resultTagsForVerdi <?special_verdi_begin?> <?special_verdi_end?>
+<?special_verdi_begin?> <?special_verdi_end?>
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% fsdbDumpflush 
+*Verdi* : Flush all FSDB Files at 0 ps.
+
+ucli% senv
+activeDomain: Verilog
+activeFile: 
+activeFrame: 
+activeLine: 0
+activeScope: test
+activeThread: 
+endCol: 0
+file: 
+frame: 
+fsdbFilename: 
+hasTB: 0
+inputFilename: 
+keyFilename: ucli.key
+line: 0
+logFilename: /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/verdiLog/sim.log
+macroIndex: -1
+macroOffset: -1
+pid: 20438
+scope: test
+startCol: 0
+state: stopped
+thread: 
+time: 0
+timePrecision: 1 ps
+vcdFilename: 
+vpdFilename:
+ucli% puts $::ucliCore::cbug_active
+0
+
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% checkpoint -list -all
+There are no checkpoints present.
+ucli% stop
+No stop points are set
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% run
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+
+"./flash.v", 472: Timing violation in test.f1
+    $hold( posedge WENeg:3000, ALE:3000, limit: 1000 );
+
+"./flash.v", 471: Timing violation in test.f1
+    $hold( posedge WENeg:3000, CLE:3000, limit: 1000 );
+
+
+"./flash.v", 477: Timing violation in test.f1
+    $width( negedge WENeg:45000,  : 45000, limit: 3000 );
+
+"./flash.v", 444: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:45000, IO7:45000, limit: 1000 );
+
+"./flash.v", 443: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:45000, IO6:45000, limit: 1000 );
+
+"./flash.v", 442: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:45000, IO5:45000, limit: 1000 );
+
+"./flash.v", 441: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:45000, IO4:45000, limit: 1000 );
+
+"./flash.v", 440: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:45000, IO3:45000, limit: 1000 );
+
+"./flash.v", 439: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:45000, IO2:45000, limit: 1000 );
+
+"./flash.v", 438: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:45000, IO1:45000, limit: 1000 );
+
+"./flash.v", 437: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:45000, IO0:45000, limit: 1000 );
+
+"./flash.v", 471: Timing violation in test.f1
+    $hold( posedge WENeg:45000, CLE:45000, limit: 1000 );
+
+Command # 1: Write, A_flash = 00400H, A_memory = 00H, Length =  62.
+
+"./flash.v", 477: Timing violation in test.f1
+    $width( negedge WENeg:2065000,  : 2065000, limit: 3000 );
+
+"./flash.v", 444: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:2065000, IO7:2065000, limit: 1000 );
+
+"./flash.v", 443: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:2065000, IO6:2065000, limit: 1000 );
+
+"./flash.v", 442: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:2065000, IO5:2065000, limit: 1000 );
+
+"./flash.v", 441: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:2065000, IO4:2065000, limit: 1000 );
+
+"./flash.v", 440: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:2065000, IO3:2065000, limit: 1000 );
+
+"./flash.v", 439: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:2065000, IO2:2065000, limit: 1000 );
+
+"./flash.v", 438: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:2065000, IO1:2065000, limit: 1000 );
+
+"./flash.v", 437: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:2065000, IO0:2065000, limit: 1000 );
+
+"./flash.v", 471: Timing violation in test.f1
+    $hold( posedge WENeg:2065000, CLE:2065000, limit: 1000 );
+
+Command # 2: Read, A_flash = 00400H, A_memory = 40H, Length =  64.
+
+"./flash.v", 477: Timing violation in test.f1
+    $width( negedge WENeg:2385000,  : 2385000, limit: 3000 );
+
+"./flash.v", 444: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:2385000, IO7:2385000, limit: 1000 );
+
+"./flash.v", 443: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:2385000, IO6:2385000, limit: 1000 );
+
+"./flash.v", 442: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:2385000, IO5:2385000, limit: 1000 );
+
+"./flash.v", 441: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:2385000, IO4:2385000, limit: 1000 );
+
+"./flash.v", 440: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:2385000, IO3:2385000, limit: 1000 );
+
+"./flash.v", 439: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:2385000, IO2:2385000, limit: 1000 );
+
+"./flash.v", 438: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:2385000, IO1:2385000, limit: 1000 );
+
+"./flash.v", 437: Timing violation in test.f1
+    $hold( posedge WENeg &&& Check_IO0_WENeg:2385000, IO0:2385000, limit: 1000 );
+
+"./flash.v", 472: Timing violation in test.f1
+    $hold( posedge WENeg:2385000, ALE:2385000, limit: 1000 );
+
+------------------------------------------
+Internal Memory check successfully!
+-------------------PASS-------------------
+$finish called from file "testfixture.v", line 168.
+$finish at simulation time              4362000
+Simulation complete, time is 4362000 ps.
+
+ucli% synEnv::hasFataled
+0
+ucli% ucliCore::getToolPID
+20438
+ucli% save::getUserdefinedProcs
+::stateVerdiChangeCB ::LoadFSDBDumpCmd
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% fsdbDumpflush 
+*Verdi* : Flush all FSDB Files at 4,362,000 ps.
+
+ucli% senv
+activeDomain: Verilog
+activeFile: 
+activeFrame: 
+activeLine: 0
+activeScope: test
+activeThread: 
+endCol: 0
+file: 
+frame: 
+fsdbFilename: 
+hasTB: 0
+inputFilename: 
+keyFilename: ucli.key
+line: 0
+logFilename: /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/verdiLog/sim.log
+macroIndex: -1
+macroOffset: -1
+pid: 20438
+scope: test
+startCol: 0
+state: stopped
+thread: 
+time: 4362000
+timePrecision: 1 ps
+vcdFilename: 
+vpdFilename:
+ucli% puts $::ucliCore::cbug_active
+0
+
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% checkpoint -list -all
+There are no checkpoints present.
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% stop
+No stop points are set
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% 

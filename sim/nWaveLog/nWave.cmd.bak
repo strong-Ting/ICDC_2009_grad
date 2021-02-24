@@ -1,0 +1,8 @@
+wvRestoreSignal -win $_nWave1 \
+           "/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/signal.rc" \
+           -overWriteAutoAlias on
+wvResizeWindow -win $_nWave1 1536 45 1344 777
+wvSelectSignal -win $_nWave1 {( "G1" 13 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 14 )} 
+wvSetCursor -win $_nWave1 2009056.306079 -snap {("G1" 12)}
+wvSetCursor -win $_nWave1 2009253.910408 -snap {("G1" 13)}

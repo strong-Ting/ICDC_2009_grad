@@ -1,131 +1,37 @@
 debImport "-f" "run.f"
 debLoadSimResult /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/nfc.fsdb
 wvCreateWindow
+verdiWindowBeWindow -win $_nWave2
+wvResizeWindow -win $_nWave2 8 493 900 281
 wvRestoreSignal -win $_nWave2 \
            "/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/signal.rc" \
            -overWriteAutoAlias on
-verdiWindowBeWindow -win $_nWave2
-wvResizeWindow -win $_nWave2 112 102 305 308
-wvResizeWindow -win $_nWave2 0 23 1536 801
-wvDisplayGridCount -win $_nWave2 -off
-wvGetSignalClose -win $_nWave2
-wvReloadFile -win $_nWave2
-wvDisplayGridCount -win $_nWave2 -off
-wvGetSignalClose -win $_nWave2
-wvReloadFile -win $_nWave2
-wvDisplayGridCount -win $_nWave2 -off
-wvGetSignalClose -win $_nWave2
-wvReloadFile -win $_nWave2
-wvResizeWindow -win $_nWave2 1563 252 305 308
 wvResizeWindow -win $_nWave2 1536 45 1344 777
-wvResizeWindow -win $_nWave2 1536 45 1344 777
-wvDisplayGridCount -win $_nWave2 -off
-wvGetSignalClose -win $_nWave2
-wvReloadFile -win $_nWave2
-wvDisplayGridCount -win $_nWave2 -off
-wvGetSignalClose -win $_nWave2
-wvReloadFile -win $_nWave2
-wvSetCursor -win $_nWave2 2280758.239066 -snap {("G1" 8)}
-wvSetCursor -win $_nWave2 2246970.469282 -snap {("G1" 23)}
-wvGetSignalOpen -win $_nWave2
-wvGetSignalSetScope -win $_nWave2 "/test/top"
-wvSetPosition -win $_nWave2 {("G1" 26)}
-wvSetPosition -win $_nWave2 {("G1" 26)}
-wvAddSignal -win $_nWave2 -clear
-wvAddSignal -win $_nWave2 -group {"G1" \
-{/test/top/clk} \
-{/test/top/rst} \
-{/test/top/done} \
-{/test/top/cmd\[32:0\]} \
-{/test/top/cs\[3:0\]} \
-{/test/top/ns\[3:0\]} \
-{/test/top/cs_f\[3:0\]} \
-{/test/top/ns_f\[3:0\]} \
-{/test/top/M_RW} \
-{/test/top/M_A\[6:0\]} \
-{/test/top/M_D\[7:0\]} \
-{/test/top/M_IN\[7:0\]} \
-{/test/top/M_OUT\[7:0\]} \
-{/test/top/len_counter\[6:0\]} \
-{/test/top/CMD_F_ADDR\[17:0\]} \
-{/test/top/CMD_LEN\[6:0\]} \
-{/test/top/CMD_M_ADDR\[6:0\]} \
-{/test/top/CMD_RW} \
-{/test/top/F_ALE} \
-{/test/top/F_CLE} \
-{/test/top/F_EN} \
-{/test/top/F_IO\[7:0\]} \
-{/test/top/F_RB} \
-{/test/top/F_REN} \
-{/test/top/F_WEN} \
-{/test/top/len_counter_temp\[6:0\]} \
-}
-wvAddSignal -win $_nWave2 -group {"G2" \
-}
-wvSelectSignal -win $_nWave2 {( "G1" 26 )} 
-wvSetPosition -win $_nWave2 {("G1" 26)}
-wvSetPosition -win $_nWave2 {("G1" 26)}
-wvSetPosition -win $_nWave2 {("G1" 26)}
-wvAddSignal -win $_nWave2 -clear
-wvAddSignal -win $_nWave2 -group {"G1" \
-{/test/top/clk} \
-{/test/top/rst} \
-{/test/top/done} \
-{/test/top/cmd\[32:0\]} \
-{/test/top/cs\[3:0\]} \
-{/test/top/ns\[3:0\]} \
-{/test/top/cs_f\[3:0\]} \
-{/test/top/ns_f\[3:0\]} \
-{/test/top/M_RW} \
-{/test/top/M_A\[6:0\]} \
-{/test/top/M_D\[7:0\]} \
-{/test/top/M_IN\[7:0\]} \
-{/test/top/M_OUT\[7:0\]} \
-{/test/top/len_counter\[6:0\]} \
-{/test/top/CMD_F_ADDR\[17:0\]} \
-{/test/top/CMD_LEN\[6:0\]} \
-{/test/top/CMD_M_ADDR\[6:0\]} \
-{/test/top/CMD_RW} \
-{/test/top/F_ALE} \
-{/test/top/F_CLE} \
-{/test/top/F_EN} \
-{/test/top/F_IO\[7:0\]} \
-{/test/top/F_RB} \
-{/test/top/F_REN} \
-{/test/top/F_WEN} \
-{/test/top/len_counter_temp\[6:0\]} \
-}
-wvAddSignal -win $_nWave2 -group {"G2" \
-}
-wvSelectSignal -win $_nWave2 {( "G1" 26 )} 
-wvSetPosition -win $_nWave2 {("G1" 26)}
-wvGetSignalClose -win $_nWave2
-wvGetSignalClose -win $_nWave2
-wvSetCursor -win $_nWave2 2245220.225907 -snap {("G2" 0)}
-wvSelectSignal -win $_nWave2 {( "G1" 26 )} 
-wvSetCursor -win $_nWave2 2204892.887778 -snap {("G2" 0)}
-wvSetCursor -win $_nWave2 2144674.362598 -snap {("G1" 25)}
-wvSetCursor -win $_nWave2 2188543.966914 -snap {("G1" 20)}
-wvSelectSignal -win $_nWave2 {( "G1" 26 )} 
-wvResizeWindow -win $_nWave2 96 34 305 309
+wvResizeWindow -win $_nWave2 1537 53 670 768
+wvResizeWindow -win $_nWave2 1322 154 1344 777
+wvResizeWindow -win $_nWave2 1537 53 670 768
+wvResizeWindow -win $_nWave2 1440 208 1344 777
 wvResizeWindow -win $_nWave2 0 23 1536 801
 wvSelectSignal -win $_nWave2 {( "G1" 14 )} 
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
 wvSelectSignal -win $_nWave2 {( "G1" 16 )} 
-wvDisplayGridCount -win $_nWave2 -off
-wvGetSignalClose -win $_nWave2
-wvReloadFile -win $_nWave2
-wvDisplayGridCount -win $_nWave2 -off
-wvGetSignalClose -win $_nWave2
-wvReloadFile -win $_nWave2
-wvDisplayGridCount -win $_nWave2 -off
-wvGetSignalClose -win $_nWave2
-wvReloadFile -win $_nWave2
-wvSetCursor -win $_nWave2 2165362.926512 -snap {("G1" 16)}
+wvSetCursor -win $_nWave2 5397773.653638 -snap {("G1" 8)}
 wvSelectSignal -win $_nWave2 {( "G1" 14 )} 
-wvResizeWindow -win $_nWave2 0 23 1536 801
-wvResizeWindow -win $_nWave2 0 23 1536 801
 wvDisplayGridCount -win $_nWave2 -off
 wvGetSignalClose -win $_nWave2
 wvReloadFile -win $_nWave2
 wvDisplayGridCount -win $_nWave2 -off
 wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 14 )} 
+wvSetCursor -win $_nWave2 2007436.311818 -snap {("G1" 14)}
+wvSetCursor -win $_nWave2 2020826.557217 -snap {("G1" 14)}
+wvResizeWindow -win $_nWave2 -179 337 1344 777
+wvResizeWindow -win $_nWave2 1 31 766 792
+wvSelectSignal -win $_nWave2 {( "G1" 5 )} 
+wvTpfCloseForm -win $_nWave2
+wvGetSignalClose -win $_nWave2
+wvCloseWindow -win $_nWave2
+debExit

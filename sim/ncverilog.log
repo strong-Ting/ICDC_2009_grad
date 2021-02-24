@@ -1,5 +1,5 @@
 ncverilog: 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
-TOOL:	ncverilog	15.20-s039: Started on Feb 23, 2021 at 19:53:53 CST
+TOOL:	ncverilog	15.20-s039: Started on Feb 24, 2021 at 14:22:43 CST
 ncverilog
 	-f run.f
 		testfixture.v
@@ -7,43 +7,6 @@ ncverilog
 	+define+tb1
 	+define+FSDB
 	+access+r
-Recompiling... reason: file '../src/NFC.v' is newer than expected.
-	expected: Tue Feb 23 19:52:18 2021
-	actual:   Tue Feb 23 19:53:50 2021
-file: testfixture.v
-`define tb1
-           |
-ncvlog: *W,MACNDF (testfixture.v,3|11): The text macro 'tb1' has also been defined on the command line using the -DEFINE command line option.  The compiler will ignore the definition found in the Verilog source code.
-file: ../src/NFC.v
-	module worklib.NFC:v
-		errors: 0, warnings: 0
-	Total errors/warnings found outside modules and primitives:
-		errors: 0, warnings: 1
-		Caching library 'worklib' ....... Done
-	Elaborating the design hierarchy:
-	Building instance overlay tables: .................... Done
-	Generating native compiled code:
-		worklib.NFC:v <0x31409aa7>
-			streams:  30, words: 18706
-	Building instance specific data structures.
-	Loading native compiled code:     .................... Done
-	Design hierarchy summary:
-		                 Instances  Unique
-		Modules:                 9       5
-		Primitives:             53       2
-		Timing outputs:         17      10
-		Registers:             182     182
-		Scalar wires:           69       -
-		Expanded wires:         39       5
-		Vectored wires:         11       -
-		Named events:            2       2
-		Always blocks:          64      64
-		Initial blocks:         39      39
-		Cont. assignments:      14      29
-		Pseudo assignments:      2       2
-		Timing checks:         121      35
-		Simulation timescale:  1ps
-	Writing initial simulation snapshot: worklib.test:v
 Loading snapshot worklib.test:v .................... Done
 *Verdi* Loading libsscore_ius152.so
 ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
@@ -69,11 +32,13 @@ Warning!  Timing violation
             Time: 3 NS
 
 Command # 1: Write, A_flash = 00400H, A_memory = 00H, Length =  62.
+ERROR : flash[0043d] = ff (expect = 17) 
 Command # 2: Read, A_flash = 00400H, A_memory = 40H, Length =  64.
+ERROR : mem[7d] = ff (expect = 17) 
 ------------------------------------------
-Internal Memory check successfully!
--------------------PASS-------------------
-Simulation complete via $finish(1) at time 4322 NS + 0
+There are           2 errors!
+-------------------FAIL-------------------
+Simulation complete via $finish(1) at time 4362 NS + 0
 ./testfixture.v:168       #2 $finish;
 ncsim> exit
-TOOL:	ncverilog	15.20-s039: Exiting on Feb 23, 2021 at 19:54:02 CST  (total: 00:00:09)
+TOOL:	ncverilog	15.20-s039: Exiting on Feb 24, 2021 at 14:22:49 CST  (total: 00:00:06)

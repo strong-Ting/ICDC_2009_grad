@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-`define limit_cycle 90000
+`define limit_cycle 990000
 `define tb1
 `ifdef tb1
   `define CMD "p1_cmd.dat"
@@ -25,7 +25,7 @@
   `define NUM 10
 `endif
 
-`define CYCLE 15
+`define CYCLE 10
 `define SDFFILE  "../syn/NFC_syn.sdf"
 `include "./t13rf128x8.v"
 `include "./flash.v"
@@ -86,8 +86,13 @@ module test;
            .R(f_rb) );
 
   initial begin
-    `ifdef FSDB
-      $fsdbDumpfile("nfc.fsdb");
+    `ifdef NC
+      $fsdbDumpfile("nfc_nc.fsdb");
+      $fsdbDumpvars;
+      //$fsdbDumpMDA;
+    `endif
+    `ifdef VCS
+      $fsdbDumpfile("nfc_vcs.fsdb");
       $fsdbDumpvars;
       //$fsdbDumpMDA;
     `endif

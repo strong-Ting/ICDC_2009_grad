@@ -1,6 +1,6 @@
 Verdi (R)
 
-Release Verdi_O-2018.09 for (Linux) -- Thu Aug 30 04:56:23 PDT 2018
+Release Verdi_O-2018.09 for (RH Linux x86_64/64bit) -- Thu Aug 30 04:32:59 PDT 2018
 
 Copyright (c) 1999 - 2018 Synopsys, Inc.
 This software and the associated documentation are proprietary to Synopsys, Inc. 
@@ -8,50 +8,3 @@ This software may only be used in accordance with the terms and conditions of a 
 All other use, reproduction, or distribution of this software is strictly prohibited.
 
 
-Info: Running in interactive mode.
-Info: Running in interactive mode.
-Total number of converted HDL2CELL cells=0 (normal modules=0)
-Inferring module NFC, file ../src/NFC.v, line 2~334 (Verilog)
-
-
-Verdi design analysis: total error(s) 0, total warning(s) 0.
-Inferring module test, file testfixture.v, line 32~175 (Verilog)
-
-Warning!(BA-38) "testfixture.v", Line: 114~114
-'always' statement is inferred as a black box because of no sensitivity list.
-
-Module test, File testfixture.v, Line 32~175, Total error(s) 0, warning(s) 3
-
-
-Verdi design analysis: total error(s) 0, total warning(s) 3.
----- Any errors/warnings, please refer to file /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/verdiLog/novas.log -----------------------
-[Symbol Library from default setting]
-  library Path = /usr/cad/synopsys/verdi/cur/share/symlib/32
-  library Name = default_u
-[Symbol Library from manual setting]
-  There are 0 library path(s) and 0 library name(s):
-
-
-Inferring module flash, file ./flash.v, line 3~1675 (Verilog)
-
-Warning!(BA-69) "./flash.v", Line: 566~572
-The iteration number of 'loop' exceeds the maximum number: 0.
-Warning!(BA-69) "./flash.v", Line: 574~580
-The iteration number of 'loop' exceeds the maximum number: 0.
-Warning!(BA-69) "./flash.v", Line: 597~598
-The iteration number of 'loop' exceeds the maximum number: 0.
-Warning!(BA-69) "./flash.v", Line: 610~611
-The iteration number of 'loop' exceeds the maximum number: 0.
-Warning!(BA-69) "./flash.v", Line: 1179~1181
-The iteration number of 'loop' exceeds the maximum number: 0.
-
-Module flash, File ./flash.v, Line 3~1675, Total error(s) 0, warning(s) 46
-
-
-Verdi design analysis: total error(s) 0, total warning(s) 46.
----- Any errors/warnings, please refer to file /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/verdiLog/novas.log -----------------------
-TrX1: ==== start trace X =======================
-invalid window access!
-TrX: cpu_time = 0.82
-Info: Running in interactive mode.
-Info: Running in interactive mode.

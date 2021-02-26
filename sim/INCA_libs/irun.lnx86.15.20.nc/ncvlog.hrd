@@ -2,11 +2,7 @@
 // File created by:  ncverilog
 // Do not modify this file
 //
--VFILE
-/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v
 -DEFINE
-tb3
+tb4
 -DEFINE
-SDF
--DEFINE
-FSDB
+NC

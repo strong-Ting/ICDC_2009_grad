@@ -1,4 +1,10 @@
 {
+    "BUFFER": [
+        "BUFFER",
+        "sIeQK",
+        "module",
+        4
+    ],
     "flash": [
         "flash",
         "TKY6z",
@@ -10,12 +16,6 @@
         "amcQw",
         "module",
         3
-    ],
-    "BUFFER": [
-        "BUFFER",
-        "sIeQK",
-        "module",
-        4
     ],
     "test": [
         "test",

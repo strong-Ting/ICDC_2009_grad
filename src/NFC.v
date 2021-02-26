@@ -24,10 +24,10 @@ reg [3:0] cs,ns; //main state
 reg [3:0] cs_f,ns_f; //flash control state 
 reg [127:0] dirty_bits;
 reg [7:0] BLOCK_MEM [0:2047];
-reg [6:0] len_counter,len_counter_div,len_counter_temp;
-wire [9:0] CMD_F_ADDR_now = CMD_F_ADDR[8:0] + len_counter + 9'd1;
-wire [9:0] CMD_F_ADDR_now_flash = CMD_F_ADDR[8:0] + len_counter_div + 9'd1;
-wire [17:0] CNT_F_ADDR = CMD_F_ADDR + len_counter_temp;
+reg [6:0] CNT_M,CNT_F,CNT_Temp;
+wire [9:0] CMD_F_ADDR_now = CMD_F_ADDR[8:0] + CNT_M + 9'd1;
+wire [9:0] CMD_F_ADDR_now_flash = CMD_F_ADDR[8:0] + CNT_F + 9'd1;
+wire [17:0] CNT_F_ADDR = CMD_F_ADDR + CNT_Temp;
 //thri state gate F_IO
 wire [7:0] F_IN;
 reg [7:0] F_OUT;
@@ -43,6 +43,9 @@ assign M_IN = M_D;
 
 reg [6:0] M_A;
 
+reg [1:0] page;
+reg [3:0] CNT_F_EX; //extend
+wire [11:0] CNT_F_512 = {CNT_F_EX,CNT_F};
 parameter RST = 4'd0;
 parameter IDLE = 4'd1;
 parameter READ_M = 4'd2; //read memory
@@ -55,6 +58,7 @@ parameter READ_B = 4'd8; //read flash block
 parameter CHECK_F = 4'd9; //check flash dirty bit
 parameter WAIT_CMD = 4'd10;
 parameter RST_F = 4'd11;
+parameter WRITE_B = 4'd12; // write block
 //flash state
 parameter F_IDLE = 4'd0;
 parameter F_CMD = 4'd1;
@@ -69,6 +73,8 @@ parameter F_ADDR_2 = 4'd9;
 parameter F_CMD_01 = 4'd10;
 parameter F_CMD_80 = 4'd11;
 parameter F_CMD_10 = 4'd12;
+parameter F_CMD_60 = 4'd15;
+parameter F_CMD_D0 = 4'd14;
 
 reg clk_div;
 //clock div
@@ -108,7 +114,7 @@ always@(*) begin
 		else ns = READ_F;
 	end
 	WRITE_M: begin
-		if(len_counter == CMD_LEN) ns = DONE;
+		if(CNT_M == CMD_LEN) ns = DONE;
 		else ns = WRITE_M;
 	end
 	CHECK_F: begin
@@ -116,7 +122,10 @@ always@(*) begin
 		else ns = READ_M;
 	end
 	READ_M: begin
-		if(CMD_LEN == (len_counter-7'd1)) ns = WRITE_F;
+		if(CMD_LEN == (CNT_M-7'd1)) begin
+			if(dirty_bits[CMD_F_ADDR[17:11]]) ns = WRITE_B;
+			else ns = WRITE_F;
+		end
 		else ns = READ_M;
 	end
 	WRITE_F: begin
@@ -124,12 +133,16 @@ always@(*) begin
 		else ns = WRITE_F;
 	end
 	READ_B: begin
-		if(cs_f == F_DONE) ns = ERASE;
+		if(cs_f == F_DONE || ns_f == F_DONE) ns = ERASE;
 		else ns = READ_B;
 	end
 	ERASE: begin
 		if(cs_f == F_DONE) ns = READ_M;
 		else ns = ERASE;
+	end
+	WRITE_B: begin
+		if(cs_f == F_DONE) ns = DONE;
+		else ns = WRITE_B;
 	end
 	DONE: ns = IDLE;
 	default: ns = IDLE;
@@ -161,7 +174,7 @@ always@(*) begin
 			else ns_f = F_WAIT;
 		end
 		F_DATA_R: begin
-			if(len_counter_div == (CMD_LEN+7'd1)) ns_f = F_DONE;
+			if(CNT_F == (CMD_LEN+7'd1)) ns_f = F_DONE;
 			else if(CMD_F_ADDR_now_flash[8:0] == 9'd0) ns_f = F_CMD;
 			else ns_f = F_DATA_R;
 		end
@@ -185,14 +198,14 @@ always@(*) begin
 		F_ADDR_1: ns_f = F_ADDR_2;
 		F_ADDR_2: ns_f = F_DATA_W;
 		F_DATA_W: begin
-			if(len_counter_div == CMD_LEN) ns_f = F_CMD_10;
+			if(CNT_F == CMD_LEN) ns_f = F_CMD_10;
 			else if(CMD_F_ADDR_now_flash[8:0] == 9'd0) ns_f = F_CMD_10;
 			else ns_f = F_DATA_W;
 		end
 		F_CMD_10: ns_f = F_WAIT;
 		F_WAIT: begin
 			if(F_RB == 1'd1) begin
-				if(len_counter_div == CMD_LEN) ns_f = F_DONE;
+				if(CNT_F == CMD_LEN) ns_f = F_DONE;
 				else begin
 					if(CNT_F_ADDR[8] == 1'd1) ns_f = F_CMD_01;
 					else ns_f = F_CMD_80;
@@ -219,9 +232,54 @@ always@(*) begin
 			else ns_f = F_DATA_R;
 		end
 		F_DATA_R: begin
-			if(len_counter_div == (CMD_LEN+7'd1)) ns_f = F_DONE;
-			else if(CMD_F_ADDR_now_flash[8:0] == 9'd0) ns_f = F_CMD;
+			if({CNT_F_EX,CNT_F} == 11'd2047) ns_f = F_DONE;
+			else if({CNT_F_EX[1:0],CNT_F} == 9'd511) ns_f = F_IDLE;
+			//else if(CMD_F_ADDR_now_flash[8:0] == 9'd0) ns_f = F_CMD;
 			else ns_f = F_DATA_R;
+		end
+		F_DONE: ns_f = F_IDLE;
+		default: ns_f = F_IDLE;
+		endcase
+	end
+	ERASE: begin
+		case(cs_f) 
+		F_IDLE: ns_f = F_CMD_60;
+		F_CMD_60: ns_f = F_ADDR_0;
+		F_ADDR_0: ns_f = F_ADDR_1;
+		F_ADDR_1: ns_f = F_CMD_D0;
+		F_CMD_D0: ns_f = F_WAIT;
+		F_WAIT: begin
+			if(F_RB == 1'd1) ns_f = F_DONE;
+			else ns_f = F_WAIT;
+		end
+		F_DONE: ns_f = F_IDLE;
+		default: ns_f = F_IDLE;
+		endcase
+	end
+	WRITE_B: begin
+		case(cs_f)
+		F_IDLE: begin
+			ns_f = F_CMD_80;
+		end
+		F_CMD_80: begin
+			ns_f = F_ADDR_0;
+		end
+		F_ADDR_0: ns_f = F_ADDR_1;
+		F_ADDR_1: ns_f = F_ADDR_2;
+		F_ADDR_2: ns_f = F_DATA_W;
+		F_DATA_W: begin
+			if({CNT_F_EX[1:0],CNT_F} == 9'd511) ns_f = F_CMD_10;
+			else ns_f = F_DATA_W;
+		end
+		F_CMD_10: ns_f = F_WAIT;
+		F_WAIT: begin
+			if(F_RB == 1'd1) begin
+				if({CNT_F_EX,CNT_F} == 11'd2047) ns_f = F_DONE;
+				else begin
+					ns_f = F_IDLE;
+				end
+			end
+			else ns_f = F_WAIT;
 		end
 		F_DONE: ns_f = F_IDLE;
 		default: ns_f = F_IDLE;
@@ -249,9 +307,9 @@ wire F_CLE = (	(cs_f == F_CMD) ||
 reg F_CLE;
 always@(posedge clk_div or posedge rst) begin
 	if(rst) F_CLE <= 1'd0;
-	else if(	(ns_f == F_CMD) ||
+	else if(	(ns_f == F_CMD || ns_f == F_CMD_D0) ||
 				(ns_f == F_CMD_01 || ns_f == F_CMD_10) || 
-				ns_f == F_CMD_80 )  F_CLE <= 1'd1;
+				(ns_f == F_CMD_80 || ns_f == F_CMD_60) ) F_CLE <= 1'd1;
 	else F_CLE <= 1'd0;
 end
 //F_ALE
@@ -293,13 +351,14 @@ always@(posedge clk or posedge rst) begin
 	else F_WEN <= 1'd1;
 end
 //F_REN
-//wire F_REN = (cs_f == F_DATA_R) ? clk_div : 1'd1;
+wire F_REN = (ns_f == F_DATA_R) ? clk_div : 1'd1;
+/*
 reg F_REN;
 always@(posedge clk or posedge rst) begin
 	if(rst) F_REN <= 1'd1;
-	else if(cs_f == F_DATA_R) F_REN <= ~clk_div;
+	else if(ns_f == F_DATA_R) F_REN <= ~clk_div;
 	else F_REN <= 1'd1; 
-end
+end*/
 //F_OUT
 always @(*) begin
 	if(cs == RST_F) begin
@@ -308,9 +367,11 @@ always @(*) begin
 	else if(cs_f == F_CMD_01) F_OUT = 8'h1;
 	else if(cs_f == F_CMD_10) F_OUT = 8'h10;
 	else if(cs_f == F_CMD_80) F_OUT = 8'h80;
+	else if(cs_f == F_CMD_60) F_OUT = 8'h60;
+	else if(cs_f == F_CMD_D0) F_OUT = 8'hd0;
 	else if(cs_f == F_CMD) begin
 		if(cs == READ_B) begin
-			
+			F_OUT = 8'h0;
 		end
 		else begin
 			if(CNT_F_ADDR[8] == 1'd1) F_OUT = 8'h1;
@@ -328,14 +389,28 @@ always @(*) begin
 		else if(cs_f == F_ADDR_1) F_OUT = CNT_F_ADDR[16:9];
 		else if(cs_f == F_ADDR_2) F_OUT = {7'd0,CNT_F_ADDR[17]};
 		else if(cs_f == F_DATA_W) begin
-			F_OUT = BLOCK_MEM[CMD_F_ADDR[10:0]+len_counter_div];
+			F_OUT = BLOCK_MEM[CMD_F_ADDR[10:0]+CNT_F];
 		end
 		else F_OUT = 8'h0;
 	end
 	else if(cs == READ_B) begin
-		if(cs_f == F_ADDR_0) F_OUT = 8'h0;
-		else if(cs_f == F_ADDR_1)  F_OUT = 8'h0;
-		else if(cs_f == F_ADDR_2)  F_OUT = 8'h0;
+		if(cs_f == F_ADDR_0) F_OUT = 8'd0;
+		else if(cs_f == F_ADDR_1) F_OUT = {CMD_F_ADDR[16:11],CNT_F_EX[3:2]};
+		else if(cs_f == F_ADDR_2) F_OUT = {7'd0,CMD_F_ADDR[17]};
+		else F_OUT = 8'h0;
+	end
+	else if(cs == WRITE_B) begin
+		if(cs_f == F_ADDR_0) F_OUT = 8'd0;
+		else if(cs_f == F_ADDR_1) F_OUT = {CMD_F_ADDR[16:11],CNT_F_EX[3:2]};
+		else if(cs_f == F_ADDR_2) F_OUT = {7'd0,CMD_F_ADDR[17]};
+		else if(cs_f == F_DATA_W) begin
+			F_OUT = BLOCK_MEM[{CNT_F_EX,CNT_F}];
+		end
+		else F_OUT = 8'h0;
+	end
+	else if(cs == ERASE) begin
+		if(cs_f == F_ADDR_0) F_OUT = CMD_F_ADDR[16:9];
+		else if(cs_f == F_ADDR_1) F_OUT = {7'd0,CMD_F_ADDR[17]};
 		else F_OUT = 8'h0;
 	end
 	else F_OUT = 8'h0;
@@ -343,28 +418,42 @@ end
 
 //len counter posedge 
 always@(posedge clk or posedge rst) begin
-	if(rst) len_counter <= 7'd0;
-	else if(cs == READ_M && F_RB == 1'd1) len_counter <= len_counter + 7'd1;
-	else if(cs == WRITE_M) len_counter <= len_counter + 7'd1;
-	else if(cs_f == F_IDLE || cs_f == F_DONE) len_counter <= 7'd0;
+	if(rst) CNT_M <= 7'd0;
+	else if(cs == READ_M && F_RB == 1'd1) CNT_M <= CNT_M + 7'd1;
+	else if(cs == WRITE_M) CNT_M <= CNT_M + 7'd1;
+	else if(cs_f == F_IDLE || cs_f == F_DONE) CNT_M <= 7'd0;
 end
 
 always@(posedge clk_div or posedge rst) begin
-	if(rst) len_counter_div <= 7'd0;
-	else if(cs_f == F_ADDR_2) len_counter_div <= len_counter_temp;
-	else if(cs_f == F_DATA_W && ns_f == F_DATA_W) len_counter_div <= len_counter_div + 7'd1;
-	else if(cs_f == F_DATA_R) len_counter_div <= len_counter_div + 7'd1;
-	else if(cs_f == F_IDLE || cs_f == F_DONE) len_counter_div <= 7'd0;
+	if(rst) {CNT_F_EX,CNT_F} <= 11'd0;
+	//else if(cs == DONE)
+	else if(cs_f == F_ADDR_2 && (cs != WRITE_B && cs != READ_B)) CNT_F <= CNT_Temp;
+	else if(cs_f == F_DATA_W && ns_f == F_DATA_W) begin
+		CNT_F <= CNT_F + 7'd1;
+		if(CNT_F == 7'd127) CNT_F_EX <= CNT_F_EX + 4'd1; 
+	end
+	else if(cs_f == F_DATA_W || ns_f == F_DATA_W) begin
+		if(CNT_F == 7'd127 && CNT_F_EX != 4'd15) CNT_F_EX <= CNT_F_EX + 4'd1; 
+	end
+	else if(cs_f == F_DATA_R || ns_f == F_DATA_R) begin
+		CNT_F <= CNT_F + 7'd1;
+		if(CNT_F == 7'd127) CNT_F_EX <= CNT_F_EX + 4'd1;
+	end
+	else if(cs_f == F_IDLE || cs_f == F_DONE) begin
+		CNT_F <= 7'd0;
+		if(cs_f == F_DONE) CNT_F_EX[3:0] <= 2'd0;
+	end
+	
 end
 
 
 //temp
 always@(posedge clk or posedge rst) begin
-	if(rst) len_counter_temp <= 7'd0;
-	else if(cs == DONE) len_counter_temp <= 7'd0;
+	if(rst) CNT_Temp <= 7'd0;
+	else if(cs == DONE) CNT_Temp <= 7'd0;
 	else if(CMD_F_ADDR_now_flash[8:0] == 9'd0 && 
 			(cs_f == F_DATA_W || cs_f == F_DATA_R) ) begin
-		len_counter_temp <= len_counter_div + 7'd1;
+		CNT_Temp <= CNT_F + 7'd1;
 	end
 end
 
@@ -376,31 +465,36 @@ always@(posedge clk or posedge rst) begin
 			BLOCK_MEM[i] <= 8'd0;
 		end
 	end
-	else if(cs_f == F_DATA_R && F_RB == 1'd1) begin
-		BLOCK_MEM[CMD_F_ADDR[10:0]+len_counter_div] <= F_IN;
+	else if( (cs == READ_B && F_RB == 1'd1) && 
+			(cs_f == F_DATA_R && ns_f == F_DATA_R) ) begin
+		BLOCK_MEM[{CNT_F_EX,CNT_F}-11'd1] <= F_IN;			
+	end
+	else if((cs_f == F_DATA_R && ns_f == F_DATA_R) || 
+			(cs_f == F_WAIT && ns_f == F_DATA_R) && F_RB == 1'd1) begin
+		BLOCK_MEM[CMD_F_ADDR[10:0]+CNT_F] <= F_IN;
 	end
 	else if(cs == READ_M) begin
-		BLOCK_MEM[CMD_F_ADDR[10:0]+len_counter-7'd1] <= M_IN;
+		BLOCK_MEM[CMD_F_ADDR[10:0]+CNT_M-7'd1] <= M_IN;
 	end
 end
 
 //dirty_bit
 always@(posedge clk or posedge rst) begin
 	if(rst) dirty_bits <= 128'd0;
-	else if(cs == CHECK_F) dirty_bits[CMD_F_ADDR[17:11]] <= 1'd1;
+	else if(cs == DONE) dirty_bits[CMD_F_ADDR[17:11]] <= 1'd1;
 end
 
 //M_A
 always@(negedge clk or posedge rst) begin
 	if(rst) M_A <= 7'd0;
-	else if(cs == READ_M) M_A <= len_counter + CMD_M_ADDR;
-	else if(cs == WRITE_M) M_A <= len_counter + CMD_M_ADDR;
+	else if(cs == READ_M) M_A <= CNT_M + CMD_M_ADDR;
+	else if(cs == WRITE_M) M_A <= CNT_M + CMD_M_ADDR;
 end
 
 //M_OUT
 always@(negedge clk or posedge rst) begin
 	if(rst) M_OUT <= 8'd0;
-	else M_OUT <= BLOCK_MEM[CMD_F_ADDR[10:0]+len_counter];
+	else M_OUT <= BLOCK_MEM[CMD_F_ADDR[10:0]+CNT_M];
 end
 
 //M_RW

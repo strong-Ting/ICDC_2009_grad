@@ -3,13 +3,15 @@
 // Do not modify this file
 //
 +define+tb4
++define+SDF
++define+CYCLE=20
 +define+NC
 +access+r
 -MESSAGES
 +EMGRLOG
 ncverilog.log
 -XLSTIME
-1614347747
+1614361506
 -XLKEEP
 -XLMODE
 ./INCA_libs/irun.lnx86.15.20.nc

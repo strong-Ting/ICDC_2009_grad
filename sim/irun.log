@@ -1,25 +1,25 @@
 irun: 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
-TOOL:	irun	15.20-s039: Started on Feb 22, 2021 at 18:18:12 CST
+TOOL:	irun	15.20-s039: Started on Feb 27, 2021 at 01:43:59 CST
 irun
 	-f run.f
 		testfixture.v
 		../src/NFC.v
-	+define+tb3
-	+define+FSDB
+	+define+tb4
+	+define+NC
 	+access+r
 Recompiling... reason: file '../src/NFC.v' is newer than expected.
-	expected: Mon Feb 22 18:12:46 2021
-	actual:   Mon Feb 22 18:18:05 2021
+	expected: Sat Feb 27 01:41:43 2021
+	actual:   Sat Feb 27 01:43:56 2021
 file: testfixture.v
-  `define CMD "p3_cmd.dat"
+  `define CMD "p4_cmd.dat"
                           |
-ncvlog: *W,MACRDF (testfixture.v,17|26): text macro 'CMD' redefined - replaced with new definition.
-  `define MEM "p3_mem.dat"
+ncvlog: *W,MACRDF (testfixture.v,23|26): text macro 'CMD' redefined - replaced with new definition.
+  `define MEM "p4_mem.dat"
                           |
-ncvlog: *W,MACRDF (testfixture.v,18|26): text macro 'MEM' redefined - replaced with new definition.
+ncvlog: *W,MACRDF (testfixture.v,24|26): text macro 'MEM' redefined - replaced with new definition.
   `define NUM 10
                 |
-ncvlog: *W,MACRDF (testfixture.v,19|16): text macro 'NUM' redefined - replaced with new definition.
+ncvlog: *W,MACRDF (testfixture.v,25|16): text macro 'NUM' redefined - replaced with new definition.
 file: ../src/NFC.v
 	module worklib.NFC:v
 		errors: 0, warnings: 0
@@ -31,8 +31,8 @@ file: ../src/NFC.v
 		test
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.NFC:v <0x0ceb1b48>
-			streams:  34, words: 19699
+		worklib.NFC:v <0x251fbf81>
+			streams:  47, words: 35619
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -40,14 +40,14 @@ file: ../src/NFC.v
 		Modules:                 9       5
 		Primitives:             53       2
 		Timing outputs:         17      10
-		Registers:             183     183
-		Scalar wires:           72       -
+		Registers:             189     189
+		Scalar wires:           69       -
 		Expanded wires:         39       5
-		Vectored wires:         11       -
+		Vectored wires:         16       -
 		Named events:            2       2
-		Always blocks:          65      65
+		Always blocks:          72      72
 		Initial blocks:         39      39
-		Cont. assignments:      16      32
+		Cont. assignments:      14      29
 		Pseudo assignments:      2       2
 		Timing checks:         121      35
 		Simulation timescale:  1ps
@@ -59,7 +59,7 @@ ncsim> run
 FSDB Dumper for IUS, Release Verdi_O-2018.09, Linux, 08/30/2018
 (C) 1996 - 2018 by Synopsys, Inc.
 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
-*Verdi* : Create FSDB file 'nfc.fsdb'
+*Verdi* : Create FSDB file 'nfc_nc.fsdb'
 *Verdi* : Begin traversing the scopes, layer (0).
 *Verdi* : End of traversing.
 
@@ -76,490 +76,20 @@ Warning!  Timing violation
            Scope: test.f1
             Time: 3 NS
 
-Command # 1: Write, A_flash = 00064H, A_memory = 00H, Length = 127.
-Command # 2: Write, A_flash = 33d88H, A_memory = 00H, Length = 127.
-
-Warning!  Timing violation
-           $hold( posedge WENeg:4225 NS, CLE:4225 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 4225 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:4225 NS, ALE:4225 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 4225 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:4255 NS, ALE:4255 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 4255 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:5455 NS, CLE:5455 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 5455 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:5465 NS, CLE:5465 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 5465 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:5685 NS, CLE:5685 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 5685 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:5685 NS, ALE:5685 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 5685 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:5715 NS, ALE:5715 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 5715 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:5785 NS, CLE:5785 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 5785 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:5795 NS, CLE:5795 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 5795 NS
-
-Command # 3: Write, A_flash = 0c3cdH, A_memory = 00H, Length = 127.
-
-Warning!  Timing violation
-           $hold( posedge WENeg:7355 NS, CLE:7355 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 7355 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:7355 NS, ALE:7355 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 7355 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:7385 NS, ALE:7385 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 7385 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:7895 NS, CLE:7895 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 7895 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:7905 NS, CLE:7905 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 7905 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:8125 NS, CLE:8125 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 8125 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:8125 NS, ALE:8125 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 8125 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:8155 NS, ALE:8155 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 8155 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:8915 NS, CLE:8915 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 8915 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:8925 NS, CLE:8925 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 8925 NS
-
-Command # 4: Write, A_flash = 1b207H, A_memory = 00H, Length = 127.
-
-Warning!  Timing violation
-           $hold( posedge WENeg:10475 NS, CLE:10475 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 10475 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:10475 NS, ALE:10475 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 10475 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:10505 NS, ALE:10505 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 10505 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:11775 NS, CLE:11775 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 11775 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:11785 NS, CLE:11785 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 11785 NS
-
-Command # 5: Write, A_flash = 011e1H, A_memory = 00H, Length = 127.
-
-Warning!  Timing violation
-           $hold( posedge WENeg:13345 NS, CLE:13345 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 13345 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:13345 NS, ALE:13345 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 13345 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:13375 NS, ALE:13375 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 13375 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:13685 NS, CLE:13685 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 13685 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:13695 NS, CLE:13695 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 13695 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:13915 NS, CLE:13915 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 13915 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:13915 NS, ALE:13915 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 13915 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:13945 NS, ALE:13945 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 13945 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:14905 NS, CLE:14905 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 14905 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:14915 NS, CLE:14915 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 14915 NS
-
-Command # 6: Read, A_flash = 00064H, A_memory = 01H, Length = 127.
-
-Warning!  Timing violation
-           $hold( posedge WENeg:15175 NS, CLE:15175 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 15175 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:15175 NS, ALE:15175 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 15175 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:15205 NS, ALE:15205 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 15205 NS
-
-
-Warning!  Timing violation
-           $setup( WENeg:15205 NS, negedge RENeg:15210 NS,  6 : 6 NS );
-            File: ./flash.v, line = 469
-           Scope: test.f1
-            Time: 15210 NS
-
-Command # 7: Read, A_flash = 0c3cdH, A_memory = 01H, Length = 127.
-
-Warning!  Timing violation
-           $hold( posedge WENeg:17805 NS, CLE:17805 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 17805 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:17805 NS, ALE:17805 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 17805 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:17835 NS, ALE:17835 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 17835 NS
-
-
-Warning!  Timing violation
-           $setup( WENeg:17835 NS, negedge RENeg:17840 NS,  6 : 6 NS );
-            File: ./flash.v, line = 469
-           Scope: test.f1
-            Time: 17840 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:18355 NS, CLE:18355 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 18355 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:18355 NS, ALE:18355 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 18355 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:18385 NS, ALE:18385 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 18385 NS
-
-
-Warning!  Timing violation
-           $setup( WENeg:18385 NS, negedge RENeg:18390 NS,  6 : 6 NS );
-            File: ./flash.v, line = 469
-           Scope: test.f1
-            Time: 18390 NS
-
-Command # 8: Read, A_flash = 011e1H, A_memory = 01H, Length = 127.
-
-Warning!  Timing violation
-           $hold( posedge WENeg:20475 NS, CLE:20475 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 20475 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:20475 NS, ALE:20475 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 20475 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:20505 NS, ALE:20505 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 20505 NS
-
-
-Warning!  Timing violation
-           $setup( WENeg:20505 NS, negedge RENeg:20510 NS,  6 : 6 NS );
-            File: ./flash.v, line = 469
-           Scope: test.f1
-            Time: 20510 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:20825 NS, CLE:20825 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 20825 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:20825 NS, ALE:20825 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 20825 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:20855 NS, ALE:20855 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 20855 NS
-
-
-Warning!  Timing violation
-           $setup( WENeg:20855 NS, negedge RENeg:20860 NS,  6 : 6 NS );
-            File: ./flash.v, line = 469
-           Scope: test.f1
-            Time: 20860 NS
-
-Command # 9: Read, A_flash = 33d88H, A_memory = 01H, Length = 127.
-
-Warning!  Timing violation
-           $hold( posedge WENeg:23145 NS, CLE:23145 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 23145 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:23145 NS, ALE:23145 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 23145 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:23175 NS, ALE:23175 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 23175 NS
-
-
-Warning!  Timing violation
-           $setup( WENeg:23175 NS, negedge RENeg:23180 NS,  6 : 6 NS );
-            File: ./flash.v, line = 469
-           Scope: test.f1
-            Time: 23180 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:24385 NS, CLE:24385 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 24385 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:24385 NS, ALE:24385 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 24385 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:24415 NS, ALE:24415 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 24415 NS
-
-
-Warning!  Timing violation
-           $setup( WENeg:24415 NS, negedge RENeg:24420 NS,  6 : 6 NS );
-            File: ./flash.v, line = 469
-           Scope: test.f1
-            Time: 24420 NS
-
-Command #10: Read, A_flash = 1b207H, A_memory = 01H, Length = 127.
-
-Warning!  Timing violation
-           $hold( posedge WENeg:25815 NS, CLE:25815 NS,  1 : 1 NS );
-            File: ./flash.v, line = 471
-           Scope: test.f1
-            Time: 25815 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:25815 NS, ALE:25815 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 25815 NS
-
-
-Warning!  Timing violation
-           $hold( posedge WENeg:25845 NS, ALE:25845 NS,  1 : 1 NS );
-            File: ./flash.v, line = 472
-           Scope: test.f1
-            Time: 25845 NS
-
-
-Warning!  Timing violation
-           $setup( WENeg:25845 NS, negedge RENeg:25850 NS,  6 : 6 NS );
-            File: ./flash.v, line = 469
-           Scope: test.f1
-            Time: 25850 NS
-
-ERROR : mem[01] = 28 (expect = 5f) 
+Command # 1: Write, A_flash = 1e78cH, A_memory = 00H, Length = 127.
+Command # 2: Write, A_flash = 1e1e1H, A_memory = 00H, Length = 127.
+Command # 3: Read, A_flash = 1e1e1H, A_memory = 01H, Length = 127.
+Command # 4: Read, A_flash = 1e78cH, A_memory = 01H, Length = 127.
+Command # 5: Write, A_flash = 1e306H, A_memory = 02H, Length = 125.
+Command # 6: Write, A_flash = 03039H, A_memory = 02H, Length = 125.
+Command # 7: Read, A_flash = 1e306H, A_memory = 03H, Length = 125.
+Command # 8: Read, A_flash = 03039H, A_memory = 03H, Length = 125.
+Command # 9: Read, A_flash = 1e78cH, A_memory = 01H, Length = 127.
+Command #10: Read, A_flash = 1e1e1H, A_memory = 01H, Length = 127.
 ------------------------------------------
-There are           1 errors!
--------------------FAIL-------------------
-Simulation complete via $finish(1) at time 28432 NS + 0
-./testfixture.v:168       #2 $finish;
+Internal Memory check successfully!
+-------------------PASS-------------------
+Simulation complete via $finish(1) at time 204562 NS + 0
+./testfixture.v:173       #2 $finish;
 ncsim> exit
-TOOL:	irun	15.20-s039: Exiting on Feb 22, 2021 at 18:18:19 CST  (total: 00:00:07)
+TOOL:	irun	15.20-s039: Exiting on Feb 27, 2021 at 01:44:06 CST  (total: 00:00:07)

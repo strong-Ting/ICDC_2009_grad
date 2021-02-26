@@ -2,34 +2,35 @@
 ****************************************
 check_design summary:
 Version:     P-2019.03
-Date:        Thu Feb 25 02:05:13 2021
+Date:        Sat Feb 27 01:36:04 2021
 ****************************************
 
                    Name                                            Total
 --------------------------------------------------------------------------------
-Cells                                                              16
-    Cells do not drive (LINT-1)                                    16
+Cells                                                              17
+    Cells do not drive (LINT-1)                                    17
 
 Tristate                                                           16
     Single tristate driver drives an input pin (LINT-63)           16
 --------------------------------------------------------------------------------
 
-Warning: In design 'NFC', cell 'B_107' does not drive any nets. (LINT-1)
-Warning: In design 'NFC', cell 'B_108' does not drive any nets. (LINT-1)
-Warning: In design 'NFC', cell 'C72310' does not drive any nets. (LINT-1)
-Warning: In design 'NFC', cell 'C72364' does not drive any nets. (LINT-1)
-Warning: In design 'NFC', cell 'C72370' does not drive any nets. (LINT-1)
-Warning: In design 'NFC', cell 'C72408' does not drive any nets. (LINT-1)
-Warning: In design 'NFC', cell 'C72483' does not drive any nets. (LINT-1)
-Warning: In design 'NFC', cell 'C72514' does not drive any nets. (LINT-1)
-Warning: In design 'NFC', cell 'C72518' does not drive any nets. (LINT-1)
-Warning: In design 'NFC', cell 'C72537' does not drive any nets. (LINT-1)
-Warning: In design 'NFC', cell 'C72541' does not drive any nets. (LINT-1)
-Warning: In design 'NFC', cell 'C72554' does not drive any nets. (LINT-1)
-Warning: In design 'NFC', cell 'C72563' does not drive any nets. (LINT-1)
-Warning: In design 'NFC', cell 'C72567' does not drive any nets. (LINT-1)
-Warning: In design 'NFC', cell 'C72575' does not drive any nets. (LINT-1)
-Warning: In design 'NFC', cell 'C72576' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'B_140' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'B_141' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C75193' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C75245' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C75251' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C75437' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C75487' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C75491' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C75515' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C75521' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C75525' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C75541' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C75559' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C75563' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C75576' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C75580' does not drive any nets. (LINT-1)
+Warning: In design 'NFC', cell 'C75587' does not drive any nets. (LINT-1)
 Warning: Net 'F_IO[0]' has a single tri-state driver.  (LINT-63)
 Warning: Net 'F_IO[1]' has a single tri-state driver.  (LINT-63)
 Warning: Net 'F_IO[2]' has a single tri-state driver.  (LINT-63)

@@ -1,4 +1,4 @@
-@verdi rc file Version 1.0
+@nWave rc file Version 1.0
 [Library]
 work = ./work
 [Annotation]
@@ -229,9 +229,9 @@ wave/unknownSave.fm = 100,100,520,275
 autoSaveSession = FALSE
 TclAutoSource = 
 SyncBrowserDir = TRUE
-cmd_enter_form = FALSE
 version = Verdi_O-2018.09
 SignalCaseInSensitive = FALSE
+cmd_enter_form = FALSE
 ShowWndCtntDuringResizing = FALSE
 [GlobalProp]
 ErrWindow_Font = Helvetica_M_R_12
@@ -393,9 +393,9 @@ TraceXSettingWithMode = 512,206,511,435
 vgifToolTipViewerU = 1243,254,278,254
 ActiveFileDialog = 1978,297,460,272
 openFileDlg = 851,185,602,483
-restoreSigDlg = 876,208,551,438
 qWaveSignalDialog = 31,187,800,479
 QwUserAskDlg = 798,512,324,134
+restoreSigDlg = 108,208,551,438
 [Relationship]
 hideRecursiceNode = FALSE
 [Session Cache]
@@ -769,7 +769,7 @@ scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
 getSignalForm = 31 187 800 479 164 381 390 89
-viewPort = 0 27 900 254 100 65
+viewPort = 0 23 1536 801 141 65
 signalSpacing = 5
 digitalSignalHeight = 15
 analogSignalHeight = 98
@@ -1038,8 +1038,8 @@ curveWindow_Drag&Drop_Mode = TRUE
 hspiceIncOpenMode = TRUE
 pcSelectMode = TRUE
 hierarchyDelimiter = /
-RecentFile1 = "\"/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/nfc_nc.fsdb\""
-RecentFile2 = "\"/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/signal.rc\""
+RecentFile1 = "\"/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/signal.rc\""
+RecentFile2 = "\"/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/nfc_nc.fsdb\""
 RecentFile3 = "\"/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/nfc_vcs.fsdb\""
 RecentFile4 = "\"/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/nfc.fsdb\""
 open_file_time_range = FALSE
@@ -1138,7 +1138,7 @@ OutputPinStatus = 2
 RevisedComponentColor = ID_BLUE5
 SpareCellColor = ID_RED5
 UserName = M10912039
-CommentFormat = Novas ECO updated by ${UserName} ${Date} ${Time} 
+CommentFormat = Novas ECO updated by ${UserName} ${Date} ${Time}
 PrefixN = eco_n
 PrefixP = eco_p
 PrefixI = eco_i

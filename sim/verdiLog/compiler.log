@@ -5,22 +5,7 @@ Command arguments:
         testfixture.v
         ../src/NFC.v
 
-
-*Error* Syntax error at F_CLE
-"../src/NFC.v", 312: 
-
-*Error* Syntax error at else
-"../src/NFC.v", 313: 
-
-*Error* Syntax error at end
-"../src/NFC.v", 314: 
-
-*Error* missing condition in if statement
-"../src/NFC.v", 310: 
-
-*Error* missing then statement in if statement
-"../src/NFC.v", 310: 
 Highest level modules:
 test
 
-Total	5 error(s),   0 warning(s)
+Total	0 error(s),   0 warning(s)

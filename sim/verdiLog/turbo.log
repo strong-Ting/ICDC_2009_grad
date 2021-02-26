@@ -1,3 +1,2 @@
 Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/Novas -f run.f -ssf nfc_nc.fsdb
 uname(Linux dics03.ee.yuntech.edu.tw 3.10.0-1160.15.2.el7.x86_64 #1 SMP Wed Feb 3 15:06:38 UTC 2021 x86_64)
-au time 24.157319 3.476710 0.426980 delta 320208896 320208896 total 743755776 743755776

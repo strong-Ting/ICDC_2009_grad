@@ -611,3 +611,123 @@ s610(26Feb2021:21:47:46):  ncverilog -f run.f +define+tb4 +define+NC +access+r
 s611(26Feb2021:21:48:58):  ncverilog -f run.f +define+tb4 +define+NC +access+r 
 s612(26Feb2021:21:55:27):  ncverilog -f run.f +define+tb4 +define+NC +access+r 
 s613(26Feb2021:21:55:47):  ncverilog -f run.f +define+tb4 +define+NC +access+r 
+s614(26Feb2021:21:58:08):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb3 +define+SDF +define+NC +access+r 
+s615(26Feb2021:22:04:43):  irun -f run.f +define+tb3 +define+FSDB +access+r 
+s616(26Feb2021:22:15:15):  irun -f run.f +define+tb3 +define+FSDB +access+r 
+s617(26Feb2021:22:15:26):  irun -f run.f +define+tb4 +define+FSDB +access+r 
+s618(26Feb2021:22:15:58):  irun -f run.f +define+tb4 +define+FSDB +access+r 
+s619(26Feb2021:22:16:14):  irun -f run.f +define+tb4 +define+FSDB +access+r 
+s620(26Feb2021:22:16:39):  irun -f run.f +define+tb4 +define+FSDB +access+r 
+s621(26Feb2021:22:17:43):  irun -f run.f +define+tb4 +define+FSDB +access+r 
+s622(26Feb2021:22:17:59):  irun -f run.f +define+tb4 +define+FSDB +access+r 
+s623(26Feb2021:22:18:52):  irun -f run.f +define+tb4 +define+FSDB +access+r 
+s624(26Feb2021:22:22:09):  irun -f run.f +define+tb4 +define+FSDB +access+r 
+s625(26Feb2021:22:22:19):  irun -f run.f +define+tb3 +define+FSDB +access+r 
+s626(26Feb2021:22:23:04):  irun -f run.f +define+tb3 +define+FSDB +access+r 
+s627(26Feb2021:22:25:34):  irun -f run.f +define+tb3 +define+FSDB +access+r 
+s628(26Feb2021:22:25:47):  irun -f run.f +define+tb4 +define+FSDB +access+r 
+s629(26Feb2021:22:31:04):  irun -f run.f +define+tb4 +define+FSDB +access+r 
+s630(26Feb2021:22:31:34):  irun -f run.f +define+tb4 +define+FSDB +access+r 
+s631(26Feb2021:22:40:17):  irun -f run.f +define+tb4 +define+FSDB +access+r 
+s632(26Feb2021:22:40:50):  irun -f run.f +define+tb4 +define+FSDB +access+r 
+s633(26Feb2021:22:43:12):  irun -f run.f +define+tb4 +define+FSDB +access+r 
+s634(26Feb2021:22:43:53):  irun -f run.f +define+tb4 +define+FSDB +access+r 
+s635(26Feb2021:22:44:05):  irun -f run.f +define+tb4 +define+FSDB +access+r 
+s636(26Feb2021:22:55:31):  irun -f run.f +define+tb4 +define+FSDB +access+r 
+s637(26Feb2021:22:56:17):  irun -f run.f +define+tb4 +define+FSDB +access+r 
+s638(26Feb2021:23:00:17):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb4 +define+SDF +define+NC +access+r 
+s639(26Feb2021:23:01:15):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb3 +define+SDF +define+NC +access+r 
+s640(26Feb2021:23:02:16):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb3 +define+SDF +define+CYCLE=20 
+s641(26Feb2021:23:04:06):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb4 +define+SDF +define+CYCLE=20 
+s642(26Feb2021:23:04:40):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb4 +define+SDF +define+CYCLE=15 
+s643(26Feb2021:23:07:47):  irun -f run.f +define+tb4 +define+NC +access+r 
+s644(26Feb2021:23:11:04):  irun -f run.f +define+tb4 +define+NC +access+r 
+s645(26Feb2021:23:15:36):  irun -f run.f +define+tb4 +define+NC +access+r 
+s646(26Feb2021:23:15:39):  irun -f run.f +define+tb4 +define+NC +access+r 
+s647(26Feb2021:23:15:52):  irun -f run.f +define+tb4 +define+NC +access+r 
+s648(26Feb2021:23:17:36):  irun -f run.f +define+tb4 +define+NC +access+r 
+s649(26Feb2021:23:18:21):  irun -f run.f +define+tb4 +define+NC +access+r 
+s650(26Feb2021:23:18:49):  irun -f run.f +define+tb3 +define+NC +access+r 
+s651(26Feb2021:23:19:05):  irun -f run.f +define+tb4 +define+NC +access+r 
+s652(26Feb2021:23:22:32):  irun -f run.f +define+tb4 +define+NC +access+r 
+s653(26Feb2021:23:23:28):  irun -f run.f +define+tb4 +define+NC +access+r 
+s654(26Feb2021:23:24:05):  irun -f run.f +define+tb4 +define+NC +access+r 
+s655(26Feb2021:23:24:20):  irun -f run.f +define+tb3 +define+NC +access+r 
+s656(26Feb2021:23:24:33):  irun -f run.f +define+tb2 +define+NC +access+r 
+s657(26Feb2021:23:24:47):  irun -f run.f +define+tb1 +define+NC +access+r 
+s658(26Feb2021:23:29:27):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb4 +define+SDF +define+CYCLE=20 
+s659(26Feb2021:23:31:10):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb4 +define+SDF +define+CYCLE=25 
+s660(26Feb2021:23:32:28):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb4 +define+SDF +define+CYCLE=25 +define+NC +access+r 
+s661(26Feb2021:23:34:09):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb1 +define+SDF +define+CYCLE=20 +define+NC +access+r 
+s662(26Feb2021:23:42:59):  irun -f run.f +define+tb1 +define+NC +access+r 
+s663(26Feb2021:23:43:12):  irun -f run.f +define+tb4 +define+NC +access+r 
+s664(26Feb2021:23:49:45):  irun -f run.f +define+tb1 +define+NC +access+r 
+s665(26Feb2021:23:53:23):  irun -f run.f +define+tb1 +define+NC +access+r 
+s666(26Feb2021:23:55:16):  irun -f run.f +define+tb4 +define+NC +access+r 
+s667(26Feb2021:23:56:08):  irun -f run.f +define+tb4 +define+NC +access+r 
+s668(26Feb2021:23:56:22):  irun -f run.f +define+tb1 +define+NC +access+r 
+s669(26Feb2021:23:56:52):  irun -f run.f +define+tb1 +define+NC +access+r 
+s670(26Feb2021:23:59:39):  irun -f run.f +define+tb4 +define+NC +access+r 
+s671(27Feb2021:00:09:56):  irun -f run.f +define+tb4 +define+NC +access+r 
+s672(27Feb2021:00:10:27):  irun -f run.f +define+tb4 +define+NC +access+r 
+s673(27Feb2021:00:10:57):  irun -f run.f +define+tb4 +define+NC +access+r 
+s674(27Feb2021:00:11:13):  irun -f run.f +define+tb4 +define+NC +access+r 
+s675(27Feb2021:00:12:09):  irun -f run.f +define+tb4 +define+NC +access+r 
+s676(27Feb2021:00:12:23):  irun -f run.f +define+tb4 +define+NC +access+r 
+s677(27Feb2021:00:12:52):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb1 +define+SDF +define+CYCLE=20 +define+NC +access+r 
+s678(27Feb2021:00:13:33):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb4 +define+SDF +define+CYCLE=20 +define+NC +access+r 
+s679(27Feb2021:00:14:31):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb4 +define+SDF +define+CYCLE=20 +define+NC +access+r 
+s680(27Feb2021:00:16:15):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb3 +define+SDF +define+CYCLE=20 
+s681(27Feb2021:00:17:08):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb4 +define+SDF +define+CYCLE=20 +define+NC +access+r 
+s682(27Feb2021:00:20:43):  irun -f run.f +define+tb1 +define+NC +access+r 
+s683(27Feb2021:00:22:23):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb4 +define+SDF +define+CYCLE=20 +define+NC +access+r 
+s684(27Feb2021:00:25:42):  irun -f run.f +define+tb1 +define+NC +access+r 
+s685(27Feb2021:00:46:22):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb4 +define+SDF +define+CYCLE=20 +define+NC +access+r 
+s686(27Feb2021:00:47:24):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb1 +define+SDF +define+CYCLE=20 +define+NC +access+r 
+s687(27Feb2021:00:49:39):  irun -f run.f +define+tb1 +define+NC +access+r 
+s688(27Feb2021:00:50:54):  irun -f run.f +define+tb1 +define+NC +access+r 
+s689(27Feb2021:00:52:43):  irun -f run.f +define+tb1 +define+NC +access+r 
+s690(27Feb2021:00:53:00):  irun -f run.f +define+tb1 +define+NC +access+r 
+s691(27Feb2021:00:53:43):  irun -f run.f +define+tb1 +define+NC +access+r 
+s692(27Feb2021:00:54:21):  irun -f run.f +define+tb1 +define+NC +access+r 
+s693(27Feb2021:00:54:52):  irun -f run.f +define+tb1 +define+NC +access+r 
+s694(27Feb2021:00:55:55):  irun -f run.f +define+tb1 +define+NC +access+r 
+s695(27Feb2021:00:56:59):  irun -f run.f +define+tb1 +define+NC +access+r 
+s696(27Feb2021:00:57:11):  irun -f run.f +define+tb1 +define+NC +access+r 
+s697(27Feb2021:00:57:58):  irun -f run.f +define+tb1 +define+NC +access+r 
+s698(27Feb2021:00:58:35):  irun -f run.f +define+tb1 +define+NC +access+r 
+s699(27Feb2021:00:59:04):  irun -f run.f +define+tb1 +define+NC +access+r 
+s700(27Feb2021:00:59:28):  irun -f run.f +define+tb1 +define+NC +access+r 
+s701(27Feb2021:01:00:10):  irun -f run.f +define+tb1 +define+NC +access+r 
+s702(27Feb2021:01:00:18):  irun -f run.f +define+tb1 +define+NC +access+r 
+s703(27Feb2021:01:00:28):  irun -f run.f +define+tb4 +define+NC +access+r 
+s704(27Feb2021:01:11:01):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb1 +define+SDF +define+CYCLE=20 +define+NC +access+r 
+s705(27Feb2021:01:11:54):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb4 +define+SDF +define+CYCLE=20 +define+NC +access+r 
+s706(27Feb2021:01:13:38):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb3 +define+SDF +define+CYCLE=20 +define+NC +access+r 
+s707(27Feb2021:01:15:36):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb4 +define+SDF +define+CYCLE=20 +define+NC +access+r 
+s708(27Feb2021:01:16:37):  irun -f run.f +define+tb1 +define+NC +access+r 
+s709(27Feb2021:01:19:20):  irun -f run.f +define+tb1 +define+NC +access+r 
+s710(27Feb2021:01:19:30):  irun -f run.f +define+tb2 +define+NC +access+r 
+s711(27Feb2021:01:19:40):  irun -f run.f +define+tb3 +define+NC +access+r 
+s712(27Feb2021:01:19:51):  irun -f run.f +define+tb4 +define+NC +access+r 
+s713(27Feb2021:01:20:14):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb4 +define+SDF +define+CYCLE=22 +define+NC +access+r 
+s714(27Feb2021:01:20:27):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb4 +define+SDF +define+CYCLE=22 
+s715(27Feb2021:01:21:20):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb4 +define+SDF +define+CYCLE=25 
+s716(27Feb2021:01:22:20):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb4 +define+SDF +define+CYCLE=20 +define+NC +access+r 
+s717(27Feb2021:01:27:19):  irun -f run.f +define+tb4 +define+NC +access+r 
+s718(27Feb2021:01:27:30):  irun -f run.f +define+tb3 +define+NC +access+r 
+s719(27Feb2021:01:29:04):  irun -f run.f +define+tb3 +define+NC +access+r 
+s720(27Feb2021:01:29:28):  irun -f run.f +define+tb3 +define+NC +access+r 
+s721(27Feb2021:01:29:38):  irun -f run.f +define+tb4 +define+NC +access+r 
+s722(27Feb2021:01:30:18):  irun -f run.f +define+tb4 +define+NC +access+r 
+s723(27Feb2021:01:30:30):  irun -f run.f +define+tb4 +define+NC +access+r 
+s724(27Feb2021:01:31:20):  irun -f run.f +define+tb4 +define+NC +access+r 
+s725(27Feb2021:01:31:39):  irun -f run.f +define+tb3 +define+NC +access+r 
+s726(27Feb2021:01:31:50):  irun -f run.f +define+tb4 +define+NC +access+r 
+s727(27Feb2021:01:34:58):  irun -f run.f +define+tb4 +define+NC +access+r 
+s728(27Feb2021:01:39:03):  irun -f run.f +define+tb4 +define+NC +access+r 
+s729(27Feb2021:01:39:43):  irun -f run.f +define+tb4 +define+NC +access+r 
+s730(27Feb2021:01:41:15):  irun -f run.f +define+tb4 +define+NC +access+r 
+s731(27Feb2021:01:41:45):  irun -f run.f +define+tb4 +define+NC +access+r 
+s732(27Feb2021:01:43:59):  irun -f run.f +define+tb4 +define+NC +access+r 
+s733(27Feb2021:01:45:06):  ncverilog -f run_syn.f -v /usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v +define+tb4 +define+SDF +define+CYCLE=20 +define+NC +access+r 

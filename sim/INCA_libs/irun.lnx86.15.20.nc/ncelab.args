@@ -3,6 +3,8 @@
 // Do not modify this file
 //
 +define+tb4
++define+SDF
++define+CYCLE=20
 +define+NC
 +access+r
 -noshowtop

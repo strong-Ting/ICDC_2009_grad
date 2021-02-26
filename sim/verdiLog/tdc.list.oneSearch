@@ -1,0 +1,4 @@
+../src/NFC.v
+testfixture.v
+./t13rf128x8.v
+./flash.v

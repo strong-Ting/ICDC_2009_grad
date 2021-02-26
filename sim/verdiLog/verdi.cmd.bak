@@ -2,22 +2,20 @@ debImport "-f" "run.f"
 debLoadSimResult /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/nfc_nc.fsdb
 wvCreateWindow
 verdiWindowBeWindow -win $_nWave2
-wvResizeWindow -win $_nWave2 8 485 900 281
+wvResizeWindow -win $_nWave2 8 383 900 281
 wvResizeWindow -win $_nWave2 0 23 1536 801
 wvRestoreSignal -win $_nWave2 \
            "/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/signal.rc" \
            -overWriteAutoAlias on
-wvResizeWindow -win $_nWave2 1536 45 1344 777
-wvResizeWindow -win $_nWave2 1505 179 900 281
 wvResizeWindow -win $_nWave2 0 23 1536 801
-wvSetCursor -win $_nWave2 46525502.087411 -snap {("G1" 13)}
-wvSetCursor -win $_nWave2 45896698.928797 -snap {("G1" 7)}
-wvSetCursor -win $_nWave2 45894905.004688 -snap {("G1" 8)}
-schCreateWindow -hierFSM -win $_nSchema1 -mode all
-wvSaveSignal -win $_nWave2 \
-           "/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/signal.rc"
 wvDisplayGridCount -win $_nWave2 -off
 wvGetSignalClose -win $_nWave2
 wvReloadFile -win $_nWave2
-wvSelectSignal -win $_nWave2 {( "G1" 22 )} 
-wvSelectSignal -win $_nWave2 {( "G1" 19 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 23 )} 
+wvSetCursor -win $_nWave2 2425195.845140 -snap {("G1" 8)}
+wvSetCursor -win $_nWave2 2434433.887540 -snap {("G1" 8)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2

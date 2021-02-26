@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version P-2019.03 for linux64 -- Feb 27, 2019
-#@ # Date:   Thu Feb 25 02:05:04 2021
+#@ # Date:   Sat Feb 27 01:35:54 2021
 #@ # Run by: M10912039@dics03.ee.yuntech.edu.tw
 #@ 
 
@@ -6717,7 +6717,7 @@ source -echo -verbose /home/DICS_LAB/M10912039/CIC/CIC_2009_grad/syn/DC_syn.tcl
 
 #@ # operating conditions and boundary conditions #
 #@ 
-#@ set cycle  8         ;	#clock period defined by designer
+#@ set cycle  19         ;	#clock period defined by designer
 #@ 
 #@ create_clock -period $cycle [get_ports  clk]
 #@ set_dont_touch_network      [get_clocks clk]

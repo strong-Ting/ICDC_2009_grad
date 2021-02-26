@@ -1,7 +1,6 @@
 0 
-27
+26
 +define+tb4
-+define+vcs
 -Mamsrun=
 -Masflags=--32
 -Mcc=gcc
@@ -75,7 +74,7 @@ COLORTERM=truecolor
 5
 1613976444 ./flash.v
 1613710866 ./t13rf128x8.v
-1614347726 ../src/NFC.v
+1614355855 ../src/NFC.v
 1614347265 testfixture.v
 1535631252 /usr/cad/synopsys/verdi/cur//share/PLI/VCS/LINUX/verdi.tab
 4
@@ -83,5 +82,5 @@ COLORTERM=truecolor
 1535685624 /usr/cad/synopsys/vcs/cur/linux/lib/liberrorinf.so
 1535685580 /usr/cad/synopsys/vcs/cur/linux/lib/libsnpsmalloc.so
 1535685860 /usr/cad/synopsys/vcs/cur/linux/lib/libvfs.so
-1614347787 simv.daidir
+1614355898 simv.daidir
 -1 partitionlib

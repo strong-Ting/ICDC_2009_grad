@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-`define limit_cycle 990000
+`define limit_cycle 999000
 `define tb1
 `ifdef tb1
   `define CMD "p1_cmd.dat"

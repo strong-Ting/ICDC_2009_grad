@@ -66,6 +66,7 @@ parameter CHECK_F = 4'd9; //check flash dirty bit
 parameter WAIT_CMD = 4'd10;
 parameter RST_F = 4'd11;
 parameter WRITE_B = 4'd12; // write block
+parameter READ_CMD = 4'd13;
 //flash state
 parameter F_IDLE = 4'd0;
 parameter F_CMD = 4'd1;
@@ -113,6 +114,9 @@ always@(*) begin
 		ns = WAIT_CMD;
 	end
 	WAIT_CMD: begin
+		ns = READ_CMD;
+	end
+	READ_CMD: begin
 		if(CMD_RW == 1'd1) ns = READ_F;
 		else ns = CHECK_F;
 	end
@@ -296,18 +300,12 @@ always@(posedge clk or posedge rst) begin
 end
 
 //done
-/*
-always@(negedge clk or posedge rst) begin
-	if(rst) done <= 1'd0;
-	else if(ns == IDLE) done <= 1'd1;
-	else done <= 1'd0;
+always@(posedge clk or posedge rst) begin
+	if(rst) #1 done <= 1'd0;
+	else if( (cs == RST_F && cs_f == F_DONE) || ns == DONE ) #1 done <= 1'd1;
+	else #1 done <= 1'd0;
 end
-*/
 
-always@(*) begin
-	if(ns == IDLE) #1 done = 1'd1;
-	else #1 done = 1'd0;
-end
 //F_CLE
 always@(posedge clk_div or posedge rst) begin
 	if(rst) F_CLE <= 1'd0;
@@ -409,7 +407,6 @@ always@(posedge clk_div or posedge rst) begin
 	end
 end
 
-
 //counter temp
 always@(posedge clk or posedge rst) begin
 	if(rst) CNT_Temp <= 7'd0;
@@ -448,46 +445,23 @@ always@(posedge clk or posedge rst) begin
 end
 
 //M_A
-/*
-always@(negedge clk or posedge rst) begin
-	if(rst) M_A <= 7'd0;
-	else if(cs == READ_M) M_A <= CNT_M + CMD_M_ADDR;
-	else if(cs == WRITE_M) M_A <= CNT_M + CMD_M_ADDR;
-end
-*/
 always@(*) begin
-	if(rst) M_A = 7'd0;
-	else if(cs == READ_M) #1 M_A = CNT_M + CMD_M_ADDR; 
-	else if(cs == WRITE_M)#1  M_A = CNT_M + CMD_M_ADDR;
+	if(cs == READ_M) #1 M_A = CNT_M + CMD_M_ADDR;
+	else if(cs == WRITE_M) #1 M_A = CNT_M + CMD_M_ADDR;
 	else #1 M_A = 7'd0;
 end
 
 //M_OUT
-/*
-always@(negedge clk or posedge rst) begin
-	if(rst) M_OUT <= 8'd0;
-	else if(cs == WRITE_M || ns == WRITE_M) M_OUT <= BLOCK_MEM[BYTES_ADDR+CNT_M];
-end
-*/
 always@(*) begin
-	if(rst) #1 M_OUT = 8'd0;
-	else if(cs == WRITE_M || ns == WRITE_M) #1 M_OUT = BLOCK_MEM[BYTES_ADDR+CNT_M];
+	if(cs == WRITE_M) #1 M_OUT = BLOCK_MEM[BYTES_ADDR+CNT_M];
 	else #1 M_OUT = 8'd0;
 end
 
 //M_RW
-/*
-always@(negedge clk or posedge rst) begin
-	if(rst) M_RW <= 1'd1;
-	else if(cs == WRITE_M) M_RW <= 1'd0;
-	else M_RW <= 1'd1;
-end
-*/
-
-always@(*) begin
-	if(rst) #1 M_RW = 1'd1;
-	else if(cs == WRITE_M) #1 M_RW = 1'd0;
-	else #1 M_RW = 1'd1;
+always@(posedge clk or posedge rst) begin
+	if(rst) #1 M_RW <= 1'd1;
+	else if(ns == WRITE_M) #1 M_RW <= 1'd0;
+	else #1 M_RW <= 1'd1;
 end
 
 endmodule

@@ -1,4 +1,4 @@
-@nWave rc file Version 1.0
+@verdi rc file Version 1.0
 [Library]
 work = ./work
 [Annotation]
@@ -229,9 +229,9 @@ wave/unknownSave.fm = 100,100,520,275
 autoSaveSession = FALSE
 TclAutoSource = 
 SyncBrowserDir = TRUE
+cmd_enter_form = FALSE
 version = Verdi_O-2018.09
 SignalCaseInSensitive = FALSE
-cmd_enter_form = FALSE
 ShowWndCtntDuringResizing = FALSE
 [GlobalProp]
 ErrWindow_Font = Helvetica_M_R_12
@@ -386,16 +386,16 @@ savePropDtl = TRUE
 fileWithNote = 441,202,653,443
 FileWithNoteForm_base = 441,202,653,443
 saveSigDlg = 1940,248,551,386
-schExtrFSM = 624,371,287,105
 SetWindowTimeUnitDialog = 1991,390,433,86
-QwWarnMsgDlg = 458,247,600,250
 TraceXSettingWithMode = 512,206,511,435
 vgifToolTipViewerU = 1243,254,278,254
 ActiveFileDialog = 1978,297,460,272
-openFileDlg = 851,185,602,483
-qWaveSignalDialog = 31,187,800,479
+schExtrFSM = 806,479,287,105
+QwWarnMsgDlg = 458,247,600,250
+restoreSigDlg = 674,313,551,438
+openFileDlg = 467,182,602,483
+qWaveSignalDialog = 368,184,800,479
 QwUserAskDlg = 798,512,324,134
-restoreSigDlg = 108,208,551,438
 [Relationship]
 hideRecursiceNode = FALSE
 [Session Cache]
@@ -591,7 +591,7 @@ pdmlMacro = ID_BLACK
 font = COURIER12
 annotFont = Helvetica_M_R_10
 [Text.1]
-viewport = 500 182 900 700 45
+viewport = 0 23 1536 801 45
 [TextPrinter]
 Orientation = Landscape
 Indicator = FALSE
@@ -719,33 +719,33 @@ DefaultLogTimeUnit = "1.000000ns"
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0]
 parRuleSets = ""
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column0]
-name = Message
-width = 2000
-visualIndex = 4
-isHidden = FALSE
+name = Severity
+width = 60
+visualIndex = 1
+isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
-name = Time
-width = 60
-visualIndex = 0
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
-name = Type
-width = 60
-visualIndex = 3
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
 name = Code
 width = 60
 visualIndex = 2
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
-name = Severity
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
+name = Message
+width = 2000
+visualIndex = 4
+isHidden = FALSE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
+name = Time
 width = 60
-visualIndex = 1
+visualIndex = 0
+isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
+name = Type
+width = 60
+visualIndex = 3
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [VIA.parRule]
@@ -768,8 +768,8 @@ waveform_vertical_scroll_bar = TRUE
 scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
-getSignalForm = 31 187 800 479 164 381 390 89
-viewPort = 0 23 1536 801 141 65
+getSignalForm = 368 184 800 479 245 381 505 183
+viewPort = 0 27 1536 306 141 65
 signalSpacing = 5
 digitalSignalHeight = 15
 analogSignalHeight = 98
@@ -1138,7 +1138,7 @@ OutputPinStatus = 2
 RevisedComponentColor = ID_BLUE5
 SpareCellColor = ID_RED5
 UserName = M10912039
-CommentFormat = Novas ECO updated by ${UserName} ${Date} ${Time}
+CommentFormat = Novas ECO updated by ${UserName} ${Date} ${Time} 
 PrefixN = eco_n
 PrefixP = eco_p
 PrefixI = eco_i
@@ -1262,7 +1262,7 @@ schAsmTriColor = cyan4 lineSolid
 pre_select = True
 ShowPassThroughNet = False
 ComputedAnnotColor = ID_PURPLE5
-viewport = 0 27 1027 305
+viewport = 0 27 1027 307
 [schematics_print]
 Signature = FALSE
 DesignName = PCU
@@ -1347,7 +1347,7 @@ AddImportArgument = FALSE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -s
 [wave.0]
-viewPort = 0 27 900 254 100 65
+viewPort = 0 27 1536 306 141 65
 [wave.1]
 viewPort = 127 219 960 332 100 65
 [wave.2]

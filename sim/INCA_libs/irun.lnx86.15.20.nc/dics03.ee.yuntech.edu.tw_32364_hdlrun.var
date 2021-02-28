@@ -58,9 +58,8 @@ DEFINE LANG_MAP (\
 	.pslsc => psl_sc,\
 	.vhcfg => vhcfg,\
 	.vhcfgp => vhcfg,\
-	DEF => verilog\
+	DEF => unknown\
 )
-define VIEW_MAP ( $VIEW_MAP, * => verilog)
 define VIEW_MAP ( $VIEW_MAP \
 , .v => v \
 , .vp => vp \

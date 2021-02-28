@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : NFC
 Version: P-2019.03
-Date   : Sat Feb 27 01:44:57 2021
+Date   : Mon Mar  1 00:50:24 2021
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -14,10 +14,9 @@ Date   : Sat Feb 27 01:44:57 2021
 Operating Conditions: slow   Library: slow
 Wire Load Model Mode: top
 
-  Startpoint: cmd_reg_reg[14]
+  Startpoint: cmd_reg_reg[16]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: BLOCK_MEM_reg[13][0]
-            (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: F_IO[0] (output port clocked by clk)
   Path Group: clk
   Path Type: max
 
@@ -25,60 +24,51 @@ Wire Load Model Mode: top
   ------------------------------------------------
   NFC                tsmc13_wl10           slow
 
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock clk (rise edge)                                   0.00       0.00
-  clock network delay (ideal)                             1.00       1.00
-  cmd_reg_reg[14]/CK (DFFRX2)                             0.00 #     1.00 r
-  cmd_reg_reg[14]/Q (DFFRX2)                              0.73       1.73 f
-  add_1_root_add_49_2/A[0] (NFC_DW01_add_4)               0.00       1.73 f
-  add_1_root_add_49_2/U7/Y (CLKINVX1)                     0.19       1.92 r
-  add_1_root_add_49_2/U5/Y (NAND2X1)                      0.14       2.05 f
-  add_1_root_add_49_2/U1_1/CO (ADDFXL)                    0.50       2.55 f
-  add_1_root_add_49_2/U1_2/CO (ADDFXL)                    0.53       3.08 f
-  add_1_root_add_49_2/U1_3/CO (ADDFXL)                    0.53       3.60 f
-  add_1_root_add_49_2/U1_4/CO (ADDFXL)                    0.53       4.13 f
-  add_1_root_add_49_2/U1_5/CO (ADDFXL)                    0.53       4.66 f
-  add_1_root_add_49_2/U1_6/CO (ADDFXL)                    0.64       5.30 f
-  add_1_root_add_49_2/U4/Y (NAND2X1)                      0.26       5.56 r
-  add_1_root_add_49_2/U3/Y (XNOR2X1)                      0.27       5.83 r
-  add_1_root_add_49_2/SUM[8] (NFC_DW01_add_4)             0.00       5.83 r
-  U86924/Y (NOR3X1)                                       0.20       6.04 f
-  U54917/Y (NAND4BBXL)                                    0.71       6.75 r
-  U70334/Y (CLKINVX1)                                     0.43       7.17 f
-  U70227/Y (OAI21XL)                                      0.53       7.70 r
-  U70225/Y (AOI31X1)                                      0.26       7.96 f
-  U70223/Y (AOI211X1)                                     0.35       8.31 r
-  U70221/Y (NAND4BX1)                                     0.58       8.88 f
-  U69919/Y (CLKINVX1)                                     0.36       9.25 r
-  U67364/Y (NOR2X1)                                       0.28       9.53 f
-  U69921/Y (AND2X2)                                       0.36       9.89 f
-  U78630/Y (NAND4X2)                                      0.46      10.34 r
-  U21036/Y (OAI211X2)                                     0.51      10.85 f
-  U54828/Y (NOR3X2)                                       0.91      11.77 r
-  U69912/Y (NAND2X1)                                      0.81      12.58 f
-  U69401/Y (CLKBUFX3)                                     1.01      13.59 f
-  U64552/Y (CLKBUFX3)                                     1.03      14.62 f
-  U69359/Y (OAI222XL)                                     0.60      15.22 r
-  U69358/Y (CLKBUFX3)                                     0.50      15.72 r
-  U64399/Y (INVX3)                                        0.30      16.02 f
-  U86756/Y (OAI22XL)                                      0.41      16.43 r
-  U54231/Y (INVXL)                                        0.24      16.68 f
-  U54232/Y (CLKINVX1)                                     0.16      16.83 r
-  BLOCK_MEM_reg[13][0]/D (DFFRX1)                         0.00      16.83 r
-  data arrival time                                                 16.83
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              1.00       1.00
+  cmd_reg_reg[16]/CK (DFFRX4)              0.00 #     1.00 r
+  cmd_reg_reg[16]/Q (DFFRX4)               0.53       1.53 f
+  r507/A[2] (NFC_DW01_add_2)               0.00       1.53 f
+  r507/U1_2/CO (ADDFHX4)                   0.39       1.92 f
+  r507/U8/Y (NAND2X2)                      0.11       2.03 r
+  r507/U6/Y (AND2X2)                       0.18       2.21 r
+  r507/U4/Y (NAND2X2)                      0.10       2.31 f
+  r507/U1_4/CO (ADDFHX4)                   0.21       2.52 f
+  r507/U1_5/CO (ADDFX2)                    0.34       2.87 f
+  r507/U1_6/CO (ADDFHX2)                   0.29       3.15 f
+  r507/U9/Y (AND2X2)                       0.26       3.41 f
+  r507/U5/Y (AND2X2)                       0.26       3.68 f
+  r507/U2/Y (NAND2X2)                      0.21       3.89 r
+  r507/U3/Y (INVX1)                        0.14       4.03 f
+  r507/U15/Y (NAND2X1)                     0.24       4.27 r
+  r507/U10/Y (NAND2X4)                     0.30       4.57 f
+  r507/SUM[10] (NFC_DW01_add_2)            0.00       4.57 f
+  U73542/Y (NOR2X1)                        0.42       4.99 r
+  U85955/Y (CLKINVX1)                      0.26       5.25 f
+  U74082/Y (BUFX12)                        0.24       5.49 f
+  U103324/Y (AOI211X1)                     0.32       5.81 r
+  U103370/Y (NAND4X1)                      0.25       6.06 f
+  U103461/Y (OAI33X1)                      0.41       6.48 r
+  U74447/Y (OAI21X2)                       0.15       6.63 f
+  U104533/Y (NAND2X1)                      0.23       6.86 r
+  U73800/Y (AOI222X2)                      0.21       7.08 f
+  U74063/Y (OAI211X2)                      0.34       7.42 r
+  F_IO_tri[0]/Y (TBUFX20)                  0.58       8.00 r
+  F_IO[0] (inout)                          0.00       8.00 r
+  data arrival time                                   8.00
 
-  clock clk (rise edge)                                  19.00      19.00
-  clock network delay (ideal)                             1.00      20.00
-  clock uncertainty                                      -1.00      19.00
-  BLOCK_MEM_reg[13][0]/CK (DFFRX1)                        0.00      19.00 r
-  library setup time                                     -0.24      18.76
-  data required time                                                18.76
-  --------------------------------------------------------------------------
-  data required time                                                18.76
-  data arrival time                                                -16.83
-  --------------------------------------------------------------------------
-  slack (MET)                                                        1.93
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              1.00      11.00
+  clock uncertainty                       -1.00      10.00
+  output external delay                   -2.00       8.00
+  data required time                                  8.00
+  -----------------------------------------------------------
+  data required time                                  8.00
+  data arrival time                                  -8.00
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
 
 
 1

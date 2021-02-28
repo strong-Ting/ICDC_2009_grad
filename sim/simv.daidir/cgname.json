@@ -1,10 +1,4 @@
 {
-    "flash": [
-        "flash",
-        "TKY6z",
-        "module",
-        1
-    ],
     "test": [
         "test",
         "x9Hvb",
@@ -16,6 +10,12 @@
         "sIeQK",
         "module",
         4
+    ],
+    "flash": [
+        "flash",
+        "TKY6z",
+        "module",
+        1
     ],
     "...MASTER...": [
         "SIM",

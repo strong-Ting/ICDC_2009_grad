@@ -4,14 +4,14 @@
 //
 +define+tb4
 +define+SDF
-+define+CYCLE=20
++define+CYCLE=10
 +define+NC
 +access+r
 -MESSAGES
 +EMGRLOG
 ncverilog.log
 -XLSTIME
-1614361506
+1614531081
 -XLKEEP
 -XLMODE
 ./INCA_libs/irun.lnx86.15.20.nc
@@ -25,4 +25,4 @@ ncverilog
 -XLVERSION
 "TOOL:	ncverilog	15.20-s039"
 -XLNAME
-./INCA_libs/irun.lnx86.15.20.nc/dics03.ee.yuntech.edu.tw_12286
+./INCA_libs/irun.lnx86.15.20.nc/dics03.ee.yuntech.edu.tw_31825

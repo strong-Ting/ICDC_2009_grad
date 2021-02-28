@@ -1,5 +1,5 @@
 irun: 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
-TOOL:	irun	15.20-s039: Started on Feb 27, 2021 at 01:43:59 CST
+TOOL:	irun	15.20-s039: Started on Mar 01, 2021 at 00:31:04 CST
 irun
 	-f run.f
 		testfixture.v
@@ -7,9 +7,6 @@ irun
 	+define+tb4
 	+define+NC
 	+access+r
-Recompiling... reason: file '../src/NFC.v' is newer than expected.
-	expected: Sat Feb 27 01:41:43 2021
-	actual:   Sat Feb 27 01:43:56 2021
 file: testfixture.v
   `define CMD "p4_cmd.dat"
                           |
@@ -20,8 +17,13 @@ ncvlog: *W,MACRDF (testfixture.v,24|26): text macro 'MEM' redefined - replaced w
   `define NUM 10
                 |
 ncvlog: *W,MACRDF (testfixture.v,25|16): text macro 'NUM' redefined - replaced with new definition.
-file: ../src/NFC.v
-	module worklib.NFC:v
+	module worklib.t13rf128x8:v
+		errors: 0, warnings: 0
+	module worklib.flash:v
+		errors: 0, warnings: 0
+	module worklib.BUFFER:v
+		errors: 0, warnings: 0
+	module worklib.test:v
 		errors: 0, warnings: 0
 	Total errors/warnings found outside modules and primitives:
 		errors: 0, warnings: 3
@@ -31,8 +33,12 @@ file: ../src/NFC.v
 		test
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.NFC:v <0x251fbf81>
-			streams:  47, words: 35619
+		worklib.flash:v <0x11ed100e>
+			streams: 119, words: 80396
+		worklib.t13rf128x8:v <0x38adf0e9>
+			streams:  16, words:  7802
+		worklib.test:v <0x2cc8fedf>
+			streams:   7, words: 13648
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -89,7 +95,7 @@ Command #10: Read, A_flash = 1e1e1H, A_memory = 01H, Length = 127.
 ------------------------------------------
 Internal Memory check successfully!
 -------------------PASS-------------------
-Simulation complete via $finish(1) at time 204562 NS + 0
+Simulation complete via $finish(1) at time 204682 NS + 0
 ./testfixture.v:173       #2 $finish;
 ncsim> exit
-TOOL:	irun	15.20-s039: Exiting on Feb 27, 2021 at 01:44:06 CST  (total: 00:00:07)
+TOOL:	irun	15.20-s039: Exiting on Mar 01, 2021 at 00:31:12 CST  (total: 00:00:08)

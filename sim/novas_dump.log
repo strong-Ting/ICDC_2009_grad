@@ -85,13 +85,13 @@ argv[5]=-v
 argv[6]=/usr/cad/CBDK_IC_Contest_v2.1/Verilog/tsmc13_neg.v
 argv[7]=+define+tb4
 argv[8]=+define+SDF
-argv[9]=+define+CYCLE=20
+argv[9]=+define+CYCLE=10
 argv[10]=+define+NC
 argv[11]=+access+r
 90 profile - 100
-          CPU/Mem usage: 0.060 sys,  0.060 user,  137.89M sys,  0.00M vm
+          CPU/Mem usage: 0.080 sys,  0.080 user,  144.23M sys,  0.00M vm
 91 VC callback profile - scalar:0 vector:0
-92 Sat Feb 27 01:45:32 2021
+92 Mon Mar  1 00:51:46 2021
 93 pliAppInit
 94 FSDB_GATE is disabled.
 95 Enable Parallel Dumping.
@@ -110,38 +110,38 @@ argv[11]=+access+r
 108 Cell instance `test.top.clk_div_reg'.
 109 *Verdi* : End of traversing.
 110 fsdbDumpvars traverse var: profile - 
-          CPU/Mem usage: 0.130 sys,  9.010 user,  380.92M sys,  0.00M vm
-                   incr: 0.070 sys,  8.950 user,  164.20M sys,  0.00M vm
-                   accu: 0.070 sys,  8.950 user,  164.20M sys,  0.00M vm
-              accu incr: 0.070 sys,  8.950 user,  164.20M sys,  0.00M vm
+          CPU/Mem usage: 0.170 sys,  8.940 user,  396.97M sys,  0.00M vm
+                   incr: 0.080 sys,  8.850 user,  173.92M sys,  0.00M vm
+                   accu: 0.080 sys,  8.850 user,  173.92M sys,  0.00M vm
+              accu incr: 0.080 sys,  8.850 user,  173.92M sys,  0.00M vm
 
-          Count usage: 840479 var,  273051 idcode,  273051 callback
-                 incr: 840479 var,  273051 idcode,  273051 callback
-                 accu: 840479 var,  273051 idcode,  273051 callback
-            accu incr: 840479 var,  273051 idcode,  273051 callback
+          Count usage: 887010 var,  289713 idcode,  289713 callback
+                 incr: 887010 var,  289713 idcode,  289713 callback
+                 accu: 887010 var,  289713 idcode,  289713 callback
+            accu incr: 887010 var,  289713 idcode,  289713 callback
 111 VC callback profile - scalar:0 vector:0
-112 Sat Feb 27 01:45:41 2021
+112 Mon Mar  1 00:51:55 2021
 113 fsdbDumpvars: profile - 
-          CPU/Mem usage: 0.130 sys,  9.160 user,  394.60M sys,  0.00M vm
-                   incr: 0.000 sys,  0.150 user,  13.68M sys,  0.00M vm
-                   accu: 0.070 sys,  9.100 user,  177.89M sys,  0.00M vm
-              accu incr: 0.000 sys,  0.150 user,  13.68M sys,  0.00M vm
+          CPU/Mem usage: 0.180 sys,  9.100 user,  411.71M sys,  0.00M vm
+                   incr: 0.010 sys,  0.160 user,  14.74M sys,  0.00M vm
+                   accu: 0.090 sys,  9.010 user,  188.65M sys,  0.00M vm
+              accu incr: 0.010 sys,  0.160 user,  14.74M sys,  0.00M vm
 
-          Count usage: 840479 var,  273051 idcode,  273051 callback
+          Count usage: 887010 var,  289713 idcode,  289713 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 840479 var,  273051 idcode,  273051 callback
+                 accu: 887010 var,  289713 idcode,  289713 callback
             accu incr: 0 var,  0 idcode,  0 callback
-114 VC callback profile - scalar:272964 vector:87
-115 Sat Feb 27 01:45:42 2021
-116 End of simulation at 404902000
-117 VC callback profile - scalar:37037683 vector:203425
-118 Sat Feb 27 01:45:52 2021
+114 VC callback profile - scalar:289626 vector:87
+115 Mon Mar  1 00:51:55 2021
+116 End of simulation at 204682000
+117 VC callback profile - scalar:37873812 vector:204691
+118 Mon Mar  1 00:52:06 2021
 119 Begin FSDB profile info:
-120 FSDB Writer : bc1(37037683) bcn(203425) mtf/stf(0/2)
-FSDB Writer elapsed time : flush(2.615340) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+120 FSDB Writer : bc1(37873812) bcn(204691) mtf/stf(0/2)
+FSDB Writer elapsed time : flush(2.801051) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
 121 End FSDB profile info
-122 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:95 BlockUsed:135
-123                        ProduceTime:19.768894598 ConsumerTime:6.179153823 Buffer:64MB
+122 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:92 BlockUsed:146
+123                        ProduceTime:20.146703983 ConsumerTime:6.791329839 Buffer:64MB
 124 SimExit
 125 Sim process exit

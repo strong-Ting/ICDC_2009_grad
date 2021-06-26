@@ -43,3 +43,4 @@ sim/*.log
 Verdi*
 spyglass-1/
 fontconfig/
+sim/

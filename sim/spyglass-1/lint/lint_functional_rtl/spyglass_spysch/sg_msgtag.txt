@@ -1,7 +1,0 @@
--1 "Av_license01" 3
-"TEMPLATE"
-["lint/lint_functional_rtl"]
-"RULE_ORDER"
-[-1]
-"RULEGROUP"
-["auto-verify/Sanity"]

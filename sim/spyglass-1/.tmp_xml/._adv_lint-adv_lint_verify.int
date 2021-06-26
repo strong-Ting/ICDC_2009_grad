@@ -1,7 +1,0 @@
-INPUT@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/adv_lint/adv_lint_verify/spyglass_reports@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/html_reports/data_files/@@@@adv_lint-adv_lint_verify@@
-COPY@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/adv_lint/adv_lint_verify/spyglass_reports/moresimple.rpt@@data_files/_adv_lint-adv_lint_verify_moresimple.rpt@@
-COPY@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/adv_lint/adv_lint_verify/spyglass_reports/no_msg_reporting_rules.rpt@@data_files/_adv_lint-adv_lint_verify_no_msg_reporting_rules.rpt@@
-REGEN@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/adv_lint/adv_lint_verify/spyglass_reports/ADV-LINT.rpt@@data_files/_adv_lint-adv_lint_verify_ADV-LINT.rpt.html@@
-REGEN@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/adv_lint/adv_lint_verify/spyglass_reports/auto_verify.rpt@@data_files/_adv_lint-adv_lint_verify_auto_verify.rpt.html@@
-PROCESS@@auto-verify@@SpyGlass
-COPY@@/home/DICS_LAB/M10912039/CIC/CIC_2009_grad/sim/spyglass-1/adv_lint/adv_lint_verify/spyglass.log@@data_files/_adv_lint-adv_lint_verify_spyglass.log@@

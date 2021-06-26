@@ -1,2 +1,0 @@
-syn_set_option mux_collapsing 0
-syn_set_option enable_dw 1

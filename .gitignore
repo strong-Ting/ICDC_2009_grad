@@ -36,3 +36,4 @@ sram*
 rom*.v
 flash*
 alib-52/
+t13rf128x8.v

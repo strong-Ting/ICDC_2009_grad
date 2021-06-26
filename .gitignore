@@ -40,3 +40,6 @@ t13rf128x8.v
 inter*
 irun*
 sim/*.log
+Verdi*
+spyglass-1/
+fontconfig/

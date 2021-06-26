@@ -1,1 +1,13 @@
-../../../consolidated_reports/constraints_sdc_redundancy/tc_unparsed_command.rpt
+
+################################################################################
+# 
+# Purpose:
+#      Prints list of all unparsed and unpopulated commands 
+# 
+# Format: 
+#      Gives the following information :                                           
+#         - Invalid sdc commands                                       
+#         - Unpopulated commands which are syntactically correct         
+#         - Unparsed commands                                           
+################################################################################
+
